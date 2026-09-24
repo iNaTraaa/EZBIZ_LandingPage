@@ -1,4 +1,5 @@
 <script setup>
+import SplashScreen from './components/common/SplashScreen.vue'
 import Navbar from './components/common/Navbar.vue'
 import HeroSection from './components/sections/HeroSection.vue'
 import FeatureSection from './components/sections/FeatureSection.vue'
@@ -12,6 +13,9 @@ import Footer from './components/common/Footer.vue'
 
 <template>
   <div class="min-h-screen bg-white text-slate-900 selection:bg-sky-400 selection:text-white antialiased">
+    <!-- Initial Splash Screen Loader -->
+    <SplashScreen />
+
     <!-- Navbar Header -->
     <Navbar />
 
