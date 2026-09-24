@@ -119,18 +119,30 @@ onUnmounted(() => {
             {{ $t('nav.tryNow') }}
           </a-button>
 
-          <!-- Hamburger Button -->
+          <!-- Hamburger Button with Smooth Morphing Animation -->
           <button 
             @click="toggleMobileMenu" 
-            class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-sky-600 flex items-center justify-center border border-slate-200 transition-colors cursor-pointer"
+            class="w-10 h-10 rounded-xl bg-slate-100 hover:bg-sky-50 text-slate-700 hover:text-sky-600 flex flex-col items-center justify-center gap-[5px] border border-slate-200 transition-all duration-300 cursor-pointer active:scale-90"
             aria-label="Toggle Mobile Menu"
           >
-            <svg v-if="!isMobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <svg v-else class="w-6 h-6 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            <span 
+              :class="[
+                'w-5 h-[2px] rounded-full transition-all duration-300 ease-in-out transform origin-center',
+                isMobileMenuOpen ? 'rotate-45 translate-y-[7px] bg-sky-600' : 'bg-slate-700'
+              ]"
+            ></span>
+            <span 
+              :class="[
+                'w-5 h-[2px] rounded-full transition-all duration-300 ease-in-out',
+                isMobileMenuOpen ? 'opacity-0 translate-x-2' : 'bg-slate-700 opacity-100'
+              ]"
+            ></span>
+            <span 
+              :class="[
+                'w-5 h-[2px] rounded-full transition-all duration-300 ease-in-out transform origin-center',
+                isMobileMenuOpen ? '-rotate-45 -translate-y-[7px] bg-sky-600' : 'bg-slate-700'
+              ]"
+            ></span>
           </button>
         </div>
       </div>
