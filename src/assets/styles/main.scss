@@ -1,0 +1,105 @@
+/* EzBiz Design System - Light Blue & White Theme */
+:root {
+  --primary: #0284c7;
+  --primary-light: #38bdf8;
+  --primary-lighter: #e0f2fe;
+  --primary-soft-bg: #f0f9ff;
+  --primary-hover: #0369a1;
+  --bg-light: #f8fafc;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+}
+
+/* Custom Body Styling */
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 13px;
+}
+
+/* EzBiz Clean Card Styling (Light Blue Tint & Soft Shadow) */
+.ezbiz-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-5px);
+    border-color: #7dd3fc;
+    box-shadow: 0 20px 40px -10px rgba(56, 189, 248, 0.22);
+  }
+}
+
+/* Light Blue Primary Button */
+.btn-primary-blue {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  color: #ffffff !important;
+  font-weight: 700;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.35);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: linear-gradient(135deg, #7dd3fc 0%, #0369a1 100%);
+    box-shadow: 0 12px 25px -4px rgba(2, 132, 199, 0.5);
+    transform: translateY(-2px);
+  }
+}
+
+/* Text Gradient Sky Blue */
+.text-gradient-blue {
+  background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Ant Design Override for Light Blue Theme */
+.ant-btn-primary {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+
+  &:hover, &:focus {
+    background-color: #0369a1 !important;
+    border-color: #0369a1 !important;
+  }
+}
+
+.ant-tabs-ink-bar {
+  background-color: #0284c7 !important;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #0284c7 !important;
+}
+
+.ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+}
+
+.ant-steps-item-process .ant-steps-item-icon {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+}
+
+/* Sticky Bottom Action Bar */
+.sticky-bottom-bar {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  width: calc(100% - 32px);
+  max-width: 560px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid #bae6fd;
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.15);
+  border-radius: 999px;
+  padding: 8px 20px;
+}
