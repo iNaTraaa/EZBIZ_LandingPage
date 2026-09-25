@@ -6,7 +6,8 @@ export default {
     pricing: 'Pricing',
     faq: 'FAQ',
     tryNow: 'Try Now',
-    launguage: 'Language'
+    launguage: 'Language',
+    team: 'Team'
   },
   hero: {
     badge: 'Next-Gen Business Automation & Management Platform',
@@ -143,6 +144,42 @@ export default {
       f3: 'Full premium features & AI tax',
       f4: 'Free lifetime version updates',
       f5: '1-on-1 VIP technical support'
+    }
+  },
+  team: {
+    sectionTag: 'Core Team',
+    titlePrefix: 'Meet Our',
+    titleSuffix: 'Development Team',
+    subtitle: 'Dedicated professionals building the next-generation platform for your business.',
+    member1: {
+      name: 'Alex Minh Nguyen',
+      role: 'Leader',
+      roleDetail: 'Project Leader',
+      desc: 'Strategic direction & product development lead.'
+    },
+    member2: {
+      name: 'Nam Hoang Tran',
+      role: 'Developer',
+      roleDetail: 'Senior Developer',
+      desc: 'Core architecture & UI/UX performance optimization.'
+    },
+    member3: {
+      name: 'Thao Thu Le',
+      role: 'Business Analyst',
+      roleDetail: 'Business Analyst',
+      desc: 'Business process analysis & feature workflow design.'
+    },
+    member4: {
+      name: 'Anh Quoc Pham',
+      role: 'Marketing',
+      roleDetail: 'Marketing Lead',
+      desc: 'Brand strategy & growth marketing across markets.'
+    },
+    member5: {
+      name: 'Ha Thanh Vu',
+      role: 'Tester / QA',
+      roleDetail: 'Quality Assurance',
+      desc: 'Quality testing & ensuring zero-defect system operation.'
     }
   },
   faq: {

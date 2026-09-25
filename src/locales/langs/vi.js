@@ -6,7 +6,8 @@ export default {
     pricing: 'Bảng Giá',
     faq: 'Hỏi Đáp',
     tryNow: 'Trải nghiệm ngay',
-    launguage: 'Ngôn Ngữ'
+    launguage: 'Ngôn Ngữ',
+    team: 'Đội Ngũ'
   },
   hero: {
     badge: 'Nền Tảng Tự Động Hóa & Quản Lý Doanh Nghiệp Thế Hệ Mới',
@@ -143,6 +144,42 @@ export default {
       f3: 'Đầy đủ tính năng cao cấp & AI thuế',
       f4: 'Cập nhật phiên bản mới trọn đời',
       f5: 'Hỗ trợ kỹ thuật VIP 1:1 ưu tiên'
+    }
+  },
+  team: {
+    sectionTag: 'Đội Ngũ Sáng Tạo',
+    titlePrefix: 'Đội Ngũ',
+    titleSuffix: 'Phát Triển EZBIZ',
+    subtitle: 'Những con người tâm huyết xây dựng giải pháp tối ưu cho hộ kinh doanh & doanh nghiệp.',
+    member1: {
+      name: 'ABC',
+      role: 'Leader',
+      roleDetail: 'Project Leader',
+      desc: 'Định hướng chiến lược & điều hành phát triển sản phẩm.'
+    },
+    member2: {
+      name: 'XYZ',
+      role: 'Developer',
+      roleDetail: 'Senior Developer',
+      desc: 'Phát triển hạ tầng kỹ thuật & tối ưu trải nghiệm người dùng.'
+    },
+    member3: {
+      name: 'ABC',
+      role: 'Business Analyst',
+      roleDetail: 'Business Analyst',
+      desc: 'Phân tích nghiệp vụ & thiết kế luồng quy trình tối ưu.'
+    },
+    member4: {
+      name: 'XYZ',
+      role: 'Marketing',
+      roleDetail: 'Marketing ',
+      desc: 'Xây dựng thương hiệu & phát triển thị trường toàn quốc.'
+    },
+    member5: {
+      name: 'ABC',
+      role: 'Marketing',
+      roleDetail: 'Marketing ',
+      desc: 'Kiểm thử chất lượng & đảm bảo sản phẩm vận hành hoàn hảo.'
     }
   },
   faq: {

@@ -67,6 +67,7 @@ onUnmounted(() => {
           <a href="#workflow" class="hover:text-sky-600 transition-colors">{{ $t('nav.workflow') }}</a>
           <a href="#stats" class="hover:text-sky-600 transition-colors">{{ $t('nav.stats') }}</a>
           <a href="#pricing" class="hover:text-sky-600 transition-colors">{{ $t('nav.pricing') }}</a>
+          <a href="#team" class="hover:text-sky-600 transition-colors">{{ $t('nav.team') }}</a>
           <a href="#faq" class="hover:text-sky-600 transition-colors">{{ $t('nav.faq') }}</a>
         </nav>
 
@@ -192,6 +193,14 @@ onUnmounted(() => {
               class="p-2.5 rounded-xl hover:bg-sky-50 hover:text-sky-600 transition-colors flex items-center justify-between"
             >
               <span>{{ $t('nav.pricing') }}</span>
+              <span class="text-xs text-slate-400">➔</span>
+            </a>
+            <a 
+              href="#team" 
+              @click="closeMobileMenu"
+              class="p-2.5 rounded-xl hover:bg-sky-50 hover:text-sky-600 transition-colors flex items-center justify-between"
+            >
+              <span>{{ $t('nav.team') }}</span>
               <span class="text-xs text-slate-400">➔</span>
             </a>
             <a 

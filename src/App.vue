@@ -6,6 +6,7 @@ import FeatureSection from './components/sections/FeatureSection.vue'
 import StatsSection from './components/sections/StatsSection.vue'
 import WorkflowSection from './components/sections/WorkflowSection.vue'
 import PricingSection from './components/sections/PricingSection.vue'
+import TeamSection from './components/sections/TeamSection.vue'
 import FaqSection from './components/sections/FaqSection.vue'
 import CtaSection from './components/sections/CtaSection.vue'
 import Footer from './components/common/Footer.vue'
@@ -26,6 +27,7 @@ import Footer from './components/common/Footer.vue'
       <StatsSection />
       <WorkflowSection />
       <PricingSection />
+      <TeamSection />
       <FaqSection />
       <CtaSection />
     </main>
