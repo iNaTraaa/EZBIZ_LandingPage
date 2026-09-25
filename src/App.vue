@@ -31,7 +31,7 @@ import Footer from './components/common/Footer.vue'
     </main>
 
     <!-- Sticky Bottom Quick Action Bar -->
-    <div class="sticky-bottom-bar flex items-center justify-between gap-4">
+    <!-- <div class="sticky-bottom-bar flex items-center justify-between gap-4">
       <div class="flex items-center gap-3">
         <span class="w-3 h-3 rounded-full bg-sky-400 animate-ping"></span>
         <div class="text-xs text-slate-800">
@@ -50,7 +50,7 @@ import Footer from './components/common/Footer.vue'
           {{ $t('stickyBar.btnAction') }}
         </a-button>
       </div>
-    </div>
+    </div> -->
 
     <!-- Footer -->
     <Footer />
