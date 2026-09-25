@@ -76,25 +76,29 @@ export default {
     item4: '24/7 Tech Support'
   },
   workflow: {
-    sectionTag: 'Implementation Process',
-    titlePrefix: 'In Just',
+    sectionTag: 'App User Guide',
+    titlePrefix: 'Get Started With EZBIZ In',
     titleSuffix: '4 Simple Steps',
-    subtitle: 'Deploy in 15 minutes with zero disruption to your daily operations.',
+    subtitle: 'Easily install and start selling right on your smartphone in minutes.',
     step1: {
-      title: '1. Initialize Project',
-      desc: 'Register an account and select the management solution suitable for your company model.'
+      title: 'Download EZBIZ App',
+      desc: 'Download EZBIZ app for free on App Store (iOS) or Google Play (Android).',
+      tag: '100% Free'
     },
     step2: {
-      title: '2. Integrate Data',
-      desc: 'Sync HR lists, financial records, and existing workflows seamlessly into the platform.'
+      title: 'Open App & Explore',
+      desc: 'Launch the app on your smartphone with a clean, intuitive, user-friendly UI.',
+      tag: 'Intuitive'
     },
     step3: {
-      title: '3. Automate Workflows',
-      desc: 'Configure expense approvals, leave requests, and KPI reminders automatically.'
+      title: 'Login / Sign Up',
+      desc: 'Create your merchant account fast via Phone Number or Google in 30 seconds.',
+      tag: '30 Seconds'
     },
     step4: {
-      title: '4. Monitor & Scale',
-      desc: 'View real-time executive reports and scale your operational efficiency.'
+      title: 'Start Selling',
+      desc: 'Begin using features like POS sales, inventory management, convenient QR payments, and HKD tax support through the EZBIZ assistant.',
+      tag: 'Start Now'
     }
   },
   pricing: {

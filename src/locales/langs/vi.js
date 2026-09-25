@@ -76,25 +76,29 @@ export default {
     item4: 'Hỗ trợ kỹ thuật 24/7'
   },
   workflow: {
-    sectionTag: 'Quy Trình Triển Khai',
-    titlePrefix: 'Chỉ Với',
+    sectionTag: 'Hướng Dẫn Tải & Sử Dụng App',
+    titlePrefix: 'Bắt Đầu Với EZBIZ Chỉ Trong',
     titleSuffix: '4 Bước Đơn Giản',
-    subtitle: 'Triển khai nhanh chóng trong 15 phút không gián đoạn hoạt động doanh nghiệp.',
+    subtitle: 'Dễ dàng cài đặt và bắt đầu bán hàng ngay trên chiếc điện thoại thông minh của bạn.',
     step1: {
-      title: '1. Khởi Tạo Dự Án',
-      desc: 'Đăng ký tài khoản và chọn bộ giải pháp quản lý phù hợp cho mô hình công ty bạn.'
+      title: 'Tải Ứng Dụng EZBIZ',
+      desc: 'Tải ứng dụng EZBIZ miễn phí trên App Store (iOS) hoặc Google Play (Android).',
+      tag: 'Miễn phí 100%'
     },
     step2: {
-      title: '2. Tích Hợp Dữ Liệu',
-      desc: 'Đồng bộ danh sách nhân sự, tài chính và quy trình làm việc có sẵn lên hệ thống.'
+      title: 'Mở App & Khám Phá',
+      desc: 'Mở ứng dụng ngay trên Smartphone với giao diện trực quan, tối giản, cực kỳ dễ dùng.',
+      tag: 'Trực quan'
     },
     step3: {
-      title: '3. Tự Động Hóa Workflow',
-      desc: 'Thiết lập luồng duyệt chi, duyệt nghỉ phép và nhắc nhở KPI hoàn toàn tự động.'
+      title: 'Đăng Nhập / Đăng Ký',
+      desc: 'Tạo tài khoản bán hàng nhanh chóng, dễ dàng hoặc qua Google.',
+      tag: 'Chỉ 30 giây'
     },
     step4: {
-      title: '4. Theo Dõi & Bứt Phá',
-      desc: 'Xem báo cáo quản trị trực quan theo thời gian thực và bứt phá hiệu suất vận hành.'
+      title: 'Trải Nghiệm Bán Hàng',
+      desc: 'Bắt đầu trải nghiệm các tính năng như: Bán hàng, quản lý kho hàng, thanh toán tiện lợi qua ứng dụng và hỗ trợ HKD trong luật thuế thông qua trợ lý EZBIZ.',
+      tag: 'Bán hàng ngay'
     }
   },
   pricing: {
