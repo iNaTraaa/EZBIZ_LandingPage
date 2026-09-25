@@ -67,7 +67,7 @@ onMounted(() => {
                 'font-extrabold uppercase px-4 py-1.5 text-[11px] sm:text-xs rounded-full shadow-md whitespace-nowrap inline-block',
                 plan.popular 
                   ? 'bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-sky-500/30' 
-                  : 'bg-slate-900 text-sky-300 border border-sky-400/30'
+                  : 'bg-slate-900 text-white border border-sky-400/30'
               ]"
             >
               {{ $t(plan.badgeKey) }}
