@@ -185,10 +185,11 @@ export default {
   awards: {
     sectionTag: 'Achievements & Awards',
     titlePrefix: 'Our Prestigious',
-    titleSuffix: 'Project Awards',
+    titleSuffix: 'Product Awards',
     subtitle: 'Demonstrating technological solution quality and recognition from prestigious organizations.',
     viewCert: 'View Certificate ↗',
     verifiedDoc: 'Official Verification',
+    hint: 'Hover to view contest information',
     award1: {
       tag: '🏆 1ST PRIZE',
       title: '1st Prize - TechFest Innovation & Startup Award 2025',

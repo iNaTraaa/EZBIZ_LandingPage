@@ -5,7 +5,7 @@ import { useScrollAnimation } from '@/composables/useScrollAnimation'
 import gsap from 'gsap'
 
 import khdlImage from '@/assets/img/achive/khdl_26.jpg'
-
+import ttntImage from '@/assets/img/achive/ttnt_26.jpg'
 const { t } = useI18n()
 const { animateFadeIn } = useScrollAnimation()
 
@@ -25,21 +25,22 @@ const awards = computed(() => [
     tag: t('awards.award1.tag'),
     desc: t('awards.award1.desc'),
     details: t('awards.award1.details'),
-    link: 'https://techfest.vn'
+    link: 'https://cntt.ntt.edu.vn/tin-tuc/chung-ket-cuoc-thi-khoa-hoc-du-lieu-khoa-cntt-2026-khai-pha-du-lieu-kien-tao-tuong-lai/'
   },
   {
     key: 'award2',
-    image: khdlImage,
-    year: '2025',
+    image: ttntImage,
+    year: '2026',
     tag: t('awards.award2.tag'),
     desc: t('awards.award2.desc'),
     details: t('awards.award2.details'),
-    link: 'https://vinasa.org.vn'
+    link: 'https://cntt.ntt.edu.vn/nghien-cuu-khoa-hoc/phat-trien-san-pham/cuoc-thi-tri-tue-nhan-tao-khoa-cong-nghe-thong-tin-nam-2026-but-pha-sang-tao-kien-tao-tuong-lai/'
   }
 ])
 
 // GSAP Single Unified Card Horizontal Overlapping Expansion
 const handleMouseEnter = (idx) => {
+  if (window.innerWidth < 768) return // Mobile: info panel is visible by default
   activeIndex.value = idx
 
   cardRefs.value.forEach((cardEl, i) => {
@@ -56,8 +57,8 @@ const handleMouseEnter = (idx) => {
       // Expand single unified card container horizontally (Level 2 hover)
       gsap.to(cardEl, {
         zIndex: 50,
-        width: window.innerWidth >= 768 ? '180%' : '100%',
-        x: (window.innerWidth >= 768 && !isFirst) ? '-44%' : '0%',
+        width: '180%',
+        x: !isFirst ? '-44%' : '0%',
         opacity: 1,
         borderColor: '#38bdf8',
         boxShadow: '0 30px 60px -12px rgba(14, 165, 233, 0.35)',
@@ -66,8 +67,8 @@ const handleMouseEnter = (idx) => {
         overwrite: 'auto'
       })
 
-      // Image box width transitions to 400px on desktop at Level 2 (+20% wider)
-      if (imgBox && window.innerWidth >= 768) {
+      // Image box width transitions to 400px on desktop at Level 2
+      if (imgBox) {
         gsap.to(imgBox, { width: '400px', duration: 0.45, ease: 'power2.out', overwrite: 'auto' })
       }
 
@@ -120,6 +121,7 @@ const handleMouseEnter = (idx) => {
 }
 
 const handleMouseLeave = () => {
+  if (window.innerWidth < 768) return // Mobile: info panel remains visible
   activeIndex.value = null
 
   cardRefs.value.forEach((cardEl) => {
@@ -208,43 +210,45 @@ onMounted(() => {
           class="ezbiz-card rounded-3xl bg-white border-2 border-sky-100 shadow-md transition-all duration-300 relative z-10 cursor-pointer overflow-hidden p-3 sm:p-4 w-full"
         >
           <!-- Ambient Glow Blur -->
-          <div class="award-glow-blur absolute inset-0 bg-sky-400/30 blur-3xl opacity-0 pointer-events-none rounded-3xl transition-opacity"></div>
+          <!-- <div class="award-glow-blur absolute inset-0 bg-sky-400/30 blur-3xl opacity-0 pointer-events-none rounded-3xl transition-opacity"></div> -->
 
           <!-- Single Seamless Card Flex Container (Horizontal 2 columns inside SAME card) -->
           <div class="flex flex-col md:flex-row items-center gap-5 sm:gap-6 relative z-20 w-full min-h-[360px]">
             
-            <!-- Left Column: Award Image Container (Full width in Level 1, resizes to 340px on hover in Level 2) -->
-            <div class="award-img-box relative w-full h-80 sm:h-96 rounded-2xl overflow-hidden bg-slate-900 border-2 sm:border-4 border-slate-100 shadow-lg shrink-0">
-              <img 
-                :src="award.image" 
-                alt="Award Certificate" 
-                class="award-img-zoom w-full h-full object-cover object-center transition-transform duration-700"
-              />
+            <!-- Left Column: Award Image Container (Full width in Level 1, resizes to 400px on hover in Level 2) -->
+            <div class="award-img-box relative w-full h-80 sm:h-96 rounded-2xl bg-white border-2 sm:border-4 border-white shadow-md shrink-0">
               
-              <!-- Tag Badge -->
-              <div class="absolute top-3 left-3 z-10">
-                <span class="px-3.5 py-1 text-xs font-black uppercase tracking-wider rounded-full bg-slate-900/85 backdrop-blur-md text-sky-300 border border-sky-400/40 shadow-lg inline-flex items-center gap-1.5">
-                  <span>🏆</span> {{ award.tag }}
-                </span>
+              <!-- Pinned Basic Star Icon on Corner Border (Rotated 30deg) -->
+              <div class="absolute -top-3 -left-3 z-30 drop-shadow-md pointer-events-none rotate-[30deg]">
+                <svg class="w-7 h-7 text-amber-400 fill-amber-400" viewBox="0 0 24 24">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                </svg>
               </div>
 
-              <!-- Level 1 Hover Hint Tag -->
-              <div class="hover-hint-tag absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-4 py-1.5 rounded-full border border-white/20 shadow-md flex items-center gap-1.5 whitespace-nowrap">
-                <span>✨</span> Rê chuột để xem thông tin cuộc thi
+              <!-- Inner Rounded Container for Zoomable Image -->
+              <div class="w-full h-full rounded-2xl overflow-hidden">
+                <img 
+                  :src="award.image" 
+                  alt="Award Certificate" 
+                  class="award-img-zoom w-full h-full object-cover object-center transition-transform duration-700"
+                />
+              </div>
+
+              <!-- Level 1 Hover Hint Tag (Desktop only) -->
+              <div class="hover-hint-tag absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-4 py-1.5 rounded-full border border-white/20 shadow-md hidden md:flex items-center gap-1.5 whitespace-nowrap">
+                {{ $t('awards.hint') }}
               </div>
             </div>
 
-            <!-- Right Column: Competition Info Panel (Integrated seamlessly inside the SAME single card) -->
-            <div class="award-right-panel w-0 opacity-0 overflow-hidden shrink-0 flex-1 flex flex-col justify-between py-1 transition-all">
-              <div class="p-5 rounded-2xl bg-sky-50/70 border border-sky-100/80 text-left w-full min-w-[280px] sm:min-w-[340px]">
+            <!-- Right Column: Competition Info Panel (Always open & visible on mobile, expanding hover on desktop) -->
+            <div class="award-right-panel w-full opacity-100 md:w-0 md:opacity-0 overflow-hidden shrink-0 flex-1 flex flex-col justify-between py-1 transition-all">
+              <div class="p-4 sm:p-5 rounded-2xl border border-sky-100/80 text-left w-full min-w-0 md:min-w-[340px]">
                 
                 <div class="flex items-center justify-between gap-2 mb-3">
                   <span class="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-white px-3 py-1 rounded-full border border-sky-200">
                     {{ award.year }} Official Award
                   </span>
-                  <span class="text-xs font-semibold text-slate-400 shrink-0">
-                    🏆 {{ $t('awards.verifiedDoc') }}
-                  </span>
+                  
                 </div>
 
                 <h3 class="text-base sm:text-lg font-black text-slate-900 mb-2 leading-snug">
@@ -256,10 +260,6 @@ onMounted(() => {
                 </p>
 
                 <div class="pt-3 border-t border-sky-100 flex items-center justify-between gap-2">
-                  <span class="text-[11px] text-slate-400 font-bold uppercase tracking-wider shrink-0">
-                    EZBIZ Certified
-                  </span>
-
                   <a 
                     :href="award.link" 
                     target="_blank" 

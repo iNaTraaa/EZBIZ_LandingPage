@@ -185,10 +185,11 @@ export default {
   awards: {
     sectionTag: 'Thành Tựu & Giải Thưởng',
     titlePrefix: 'Giải Thưởng',
-    titleSuffix: 'Danh Giá Đạt Được',
+    titleSuffix: 'Sản Phẩm Đạt Được',
     subtitle: 'Minh chứng cho chất lượng giải pháp công nghệ và sự công nhận từ các tổ chức uy tín.',
     viewCert: 'Xem chứng nhận ↗',
     verifiedDoc: 'Xác minh chính thức',
+    hint: 'Rê chuột để xem thông tin cuộc thi',
     award1: {
       tag: '🏆 GIẢI NHẤT',
       title: 'Giải Nhất Khởi Nghiệp Đổi Mới Sáng Tạo TechFest 2025',
