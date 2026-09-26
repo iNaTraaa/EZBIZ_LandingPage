@@ -57,7 +57,7 @@ onUnmounted(() => {
             class="h-10 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
           />
           <span class="text-2xl font-black tracking-tight text-slate-900 leading-none">
-            Ez<span class="text-gradient-blue">Biz</span>
+            EZ<span class="text-gradient-blue">BIZ</span>
           </span>
         </a>
 

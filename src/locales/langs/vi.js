@@ -152,34 +152,56 @@ export default {
     titleSuffix: 'Phát Triển EZBIZ',
     subtitle: 'Những con người tâm huyết xây dựng giải pháp tối ưu cho hộ kinh doanh & doanh nghiệp.',
     member1: {
-      name: 'ABC',
+      name: 'Võ Lê Hải Đăng',
       role: 'Leader',
       roleDetail: 'Project Leader',
       desc: 'Định hướng chiến lược & điều hành phát triển sản phẩm.'
     },
     member2: {
-      name: 'XYZ',
+      name: 'Đỗ Na Tra',
       role: 'Developer',
       roleDetail: 'Senior Developer',
       desc: 'Phát triển hạ tầng kỹ thuật & tối ưu trải nghiệm người dùng.'
     },
     member3: {
-      name: 'ABC',
+      name: 'Nguyễn Quang Minh',
       role: 'Business Analyst',
       roleDetail: 'Business Analyst',
       desc: 'Phân tích nghiệp vụ & thiết kế luồng quy trình tối ưu.'
     },
     member4: {
-      name: 'XYZ',
+      name: 'Thanh Vy',
       role: 'Marketing',
       roleDetail: 'Marketing ',
       desc: 'Xây dựng thương hiệu & phát triển thị trường toàn quốc.'
     },
     member5: {
-      name: 'ABC',
+      name: 'Mai Thy',
       role: 'Marketing',
-      roleDetail: 'Marketing ',
-      desc: 'Kiểm thử chất lượng & đảm bảo sản phẩm vận hành hoàn hảo.'
+      roleDetail: 'Marketing',
+      desc: 'Xây dựng thương hiệu & phát triển thị trường toàn quốc.'
+    }
+  },
+  awards: {
+    sectionTag: 'Thành Tựu & Giải Thưởng',
+    titlePrefix: 'Giải Thưởng',
+    titleSuffix: 'Danh Giá Đạt Được',
+    subtitle: 'Minh chứng cho chất lượng giải pháp công nghệ và sự công nhận từ các tổ chức uy tín.',
+    viewCert: 'Xem chứng nhận ↗',
+    verifiedDoc: 'Xác minh chính thức',
+    award1: {
+      tag: '🏆 GIẢI NHẤT',
+      title: 'Giải Nhất Khởi Nghiệp Đổi Mới Sáng Tạo TechFest 2025',
+      org: 'Bộ Khoa Học & Công Nghệ',
+      desc: 'Vinh danh giải pháp công nghệ quản lý & tự động hóa bán bán lẻ xuất sắc nhất năm dành cho hộ kinh doanh.',
+      details: 'Vượt qua hơn 500 dự án khởi nghiệp công nghệ toàn quốc, EZBIZ xuất sắc chinh phục hội đồng giám khảo nhờ mô hình tự động hóa quy trình bán hàng & báo cáo tài chính tích hợp AI đột phá.'
+    },
+    award2: {
+      tag: '🥇 TOP 10 XUẤT SẮC',
+      title: 'Top 10 Giải Pháp Công Nghệ Bán Lẻ Đột Phá 2025',
+      org: 'Hiệp Hội Phần Mềm & Dịch Vụ CNTT (VINASA)',
+      desc: 'Bằng khen giải pháp chuyển đổi số có tốc độ tăng trưởng và trải nghiệm người dùng tối ưu hàng đầu.',
+      details: 'Được bình chọn dựa trên các tiêu chí khắt khe về tốc độ xử lý giao dịch, khả năng mở rộng hệ thống và sự hài lòng của hơn 10.000 hộ kinh doanh trên toàn quốc.'
     }
   },
   faq: {

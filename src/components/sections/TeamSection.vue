@@ -3,11 +3,11 @@ import { onMounted, ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 
-import cow1 from '@/assets/img/team_member/cow1.jpg'
-import cow2 from '@/assets/img/team_member/cow2.jpg'
-import cow3 from '@/assets/img/team_member/cow3.jpg'
-import cow4 from '@/assets/img/team_member/cow4.jpg'
-import cow5 from '@/assets/img/team_member/cow5.jpg'
+import lead from '@/assets/img/team_member/lead.jpg'
+import ba from '@/assets/img/team_member/ba.jpg'
+import dev from '@/assets/img/team_member/dev.jpg'
+import mkt from '@/assets/img/team_member/mkt.jpg'
+import mkt1 from '@/assets/img/team_member/mkt1.jpg'
 
 const { t } = useI18n()
 const { animateFadeIn } = useScrollAnimation()
@@ -21,7 +21,7 @@ const members = computed(() => [
     role: t('team.member1.role'),
     roleDetail: t('team.member1.roleDetail'),
     desc: t('team.member1.desc'),
-    avatar: cow1
+    avatar: lead
   },
   {
     key: 'member2',
@@ -29,7 +29,7 @@ const members = computed(() => [
     role: t('team.member2.role'),
     roleDetail: t('team.member2.roleDetail'),
     desc: t('team.member2.desc'),
-    avatar: cow2
+    avatar: dev
   },
   {
     key: 'member3',
@@ -37,7 +37,7 @@ const members = computed(() => [
     role: t('team.member3.role'),
     roleDetail: t('team.member3.roleDetail'),
     desc: t('team.member3.desc'),
-    avatar: cow3
+    avatar: ba
   },
   {
     key: 'member4',
@@ -45,7 +45,7 @@ const members = computed(() => [
     role: t('team.member4.role'),
     roleDetail: t('team.member4.roleDetail'),
     desc: t('team.member4.desc'),
-    avatar: cow4
+    avatar: mkt
   },
   {
     key: 'member5',
@@ -53,7 +53,7 @@ const members = computed(() => [
     role: t('team.member5.role'),
     roleDetail: t('team.member5.roleDetail'),
     desc: t('team.member5.desc'),
-    avatar: cow5
+    avatar: mkt1
   }
 ])
 
@@ -93,11 +93,11 @@ onMounted(() => {
             
             <!-- Row 1: Avatar Image -->
             <div class="relative mb-4">
-              <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-4 border-white shadow-xl shadow-sky-500/15 overflow-hidden group-hover:scale-105 transition-transform duration-300 relative z-10 bg-slate-100">
+              <div class="w-32 h-32 sm:w-32 sm:h-32 rounded-full border-4 border-white shadow-xl shadow-sky-500/15 overflow-hidden group-hover:scale-105 transition-transform duration-300 relative z-10 bg-slate-100">
                 <img 
                   :src="member.avatar" 
                   :alt="member.name"
-                  class="w-full h-full object-cover object-center"
+                  class="w-full h-full object-cover object-top"
                 />
               </div>
             </div>

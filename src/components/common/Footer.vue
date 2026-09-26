@@ -14,7 +14,7 @@ import logoEb from '@/assets/img/logo_eb.png'
               alt="EzBiz Logo" 
               class="h-10 w-auto object-contain"
             />
-            <span class="text-2xl font-black text-white">Ez<span class="text-gradient-blue">Biz</span></span>
+            <span class="text-2xl font-black text-white">EZ<span class="text-gradient-blue">BIZ</span></span>
           </div>
           <p class="text-xs text-slate-400 leading-relaxed mb-4">
             {{ $t('footer.tagline') }}

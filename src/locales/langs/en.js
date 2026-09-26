@@ -152,34 +152,56 @@ export default {
     titleSuffix: 'Development Team',
     subtitle: 'Dedicated professionals building the next-generation platform for your business.',
     member1: {
-      name: 'Alex Minh Nguyen',
+      name: 'Võ Lê Hải Đăng',
       role: 'Leader',
       roleDetail: 'Project Leader',
       desc: 'Strategic direction & product development lead.'
     },
     member2: {
-      name: 'Nam Hoang Tran',
+      name: 'Đỗ Na Tra',
       role: 'Developer',
       roleDetail: 'Senior Developer',
       desc: 'Core architecture & UI/UX performance optimization.'
     },
     member3: {
-      name: 'Thao Thu Le',
+      name: 'Nguyễn Quang Minh',
       role: 'Business Analyst',
       roleDetail: 'Business Analyst',
       desc: 'Business process analysis & feature workflow design.'
     },
     member4: {
-      name: 'Anh Quoc Pham',
+      name: 'Thanh Vy',
       role: 'Marketing',
       roleDetail: 'Marketing Lead',
       desc: 'Brand strategy & growth marketing across markets.'
     },
     member5: {
-      name: 'Ha Thanh Vu',
-      role: 'Tester / QA',
-      roleDetail: 'Quality Assurance',
-      desc: 'Quality testing & ensuring zero-defect system operation.'
+      name: 'Mai Thy',
+      role: 'Marketing',
+      roleDetail: 'Marketing Lead',
+      desc: 'Brand strategy & growth marketing across markets.'
+    }
+  },
+  awards: {
+    sectionTag: 'Achievements & Awards',
+    titlePrefix: 'Our Prestigious',
+    titleSuffix: 'Project Awards',
+    subtitle: 'Demonstrating technological solution quality and recognition from prestigious organizations.',
+    viewCert: 'View Certificate ↗',
+    verifiedDoc: 'Official Verification',
+    award1: {
+      tag: '🏆 1ST PRIZE',
+      title: '1st Prize - TechFest Innovation & Startup Award 2025',
+      org: 'Ministry of Science & Technology',
+      desc: 'Honored as the most outstanding retail automation & management solution for SMBs.',
+      details: 'Outperforming over 500 technology startups nationwide, EZBIZ won top honors for its AI-integrated retail automation and instant financial reporting platform.'
+    },
+    award2: {
+      tag: '🥇 TOP 10 AWARD',
+      title: 'Top 10 Breakthrough Retail Tech Solutions 2025',
+      org: 'Vietnam Software & IT Services Association (VINASA)',
+      desc: 'Recognized for top digital transformation growth performance and user experience.',
+      details: 'Selected based on rigorous evaluation criteria including transaction processing speed, system scalability, and high customer satisfaction from 10,000+ business owners.'
     }
   },
   faq: {
