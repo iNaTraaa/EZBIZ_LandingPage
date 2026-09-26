@@ -21,7 +21,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="fixed top-0 left-0 right-0 h-1 bg-sky-100/60 z-50 overflow-hidden pointer-events-none">
+  <div class="fixed top-0 left-0 right-0 h-1 z-50 overflow-hidden pointer-events-none">
     <div 
       class="h-full bg-gradient-to-r from-sky-400 via-sky-500 to-sky-600 shadow-sm shadow-sky-400/50 transition-all duration-150 ease-out"
       :style="{ width: `${scrollProgress}%` }"
