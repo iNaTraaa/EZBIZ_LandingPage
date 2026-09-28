@@ -330,11 +330,24 @@ export default {
     a4: 'EzBiz provides valid electronic VAT invoices immediately after registration.'
   },
   cta: {
-    tag: '⚡ 14-Day Free Trial',
-    title: 'Accelerate Your Business Operations With EzBiz Today!',
-    desc: 'Our expert team is ready to help you set up your workflow in just 15 minutes.',
-    btnPrimary: 'Start Free Trial ➔',
-    btnHotline: '📞 Call Support: 1900 1234'
+    tag: 'Free Consultation & Trial',
+    titlePrefix: 'Leave Your Contact Details So We Can',
+    titleHighlight: 'Get In Touch With You',
+    desc: 'Our EzBiz expert team will call you to consult tailored solutions and assist free trial setup.',
+    formTitle: 'Consultation Signup',
+    formSubtitle: '100% Free',
+    companyLabel: 'Store Name',
+    companyPlaceholder: 'Enter store name...',
+    nameLabel: 'Full Name (*)',
+    namePlaceholder: 'Enter full name...',
+    phoneLabel: 'Phone Number (*)',
+    phonePlaceholder: 'Enter phone number...',
+    btnSubmit: 'Submit Details ➔',
+    submitting: 'Submitting...',
+    successTitle: 'Details Received! 🎉',
+    successDesc: 'Thank you. An EzBiz specialist will call you directly within 15 minutes.',
+    securityNote: '100% Data Privacy Guaranteed & Zero Spam',
+    hotlineNote: '📞 Or call Hotline directly:'
   },
   footer: {
     tagline: 'Next-Gen intelligent business automation & management platform. Simple, elegant, cost-effective.',

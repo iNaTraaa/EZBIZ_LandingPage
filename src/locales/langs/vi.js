@@ -330,11 +330,24 @@ export default {
     a4: 'EzBiz cung cấp đầy đủ hóa đơn điện tử GTGT (VAT) hợp lệ ngay sau khi đăng ký thành công.'
   },
   cta: {
-    tag: '⚡ Dùng Thử 14 Ngày Miễn Phí',
-    title: 'Tăng Tốc Vận Hành Doanh Nghiệp Cùng EzBiz Ngay Hôm Nay!',
-    desc: 'Đội ngũ chuyên gia của chúng tôi sẵn sàng hỗ trợ bạn thiết lập quy trình chỉ trong 15 phút.',
-    btnPrimary: 'Bắt Đầu Ngay (Miễn Phí) ➔',
-    btnHotline: '📞 Hotline Tư Vấn: 1900 1234'
+    tag: 'Tư Vấn & Dùng Thử Miễn Phí',
+    titlePrefix: 'Để Lại Thông Tin Liên Hệ Để Chúng Tôi Có Thể',
+    titleHighlight: 'Liên Lạc Với Bạn',
+    desc: 'Đội ngũ chuyên gia của EzBiz sẽ chủ động gọi điện tư vấn giải pháp phù hợp và hỗ trợ thiết lập dùng thử miễn phí.',
+    formTitle: 'Đăng Ký Tư Vấn',
+    formSubtitle: 'Miễn phí 100%',
+    companyLabel: 'Tên Cửa Hàng',
+    companyPlaceholder: 'Nhập tên cửa hàng...',
+    nameLabel: 'Họ Và Tên (*)',
+    namePlaceholder: 'Nhập họ và tên...',
+    phoneLabel: 'Số Điện Thoại (*)',
+    phonePlaceholder: 'Nhập số điện thoại...',
+    btnSubmit: 'Gửi Thông Tin ➔',
+    submitting: 'Đang Gửi...',
+    successTitle: 'Đã Nhận Thông Tin! 🎉',
+    successDesc: 'Cảm ơn bạn. Chuyên viên EzBiz sẽ gọi điện liên hệ tư vấn trực tiếp cho bạn trong vòng 15 phút.',
+    securityNote: 'Cam kết bảo mật thông tin tuyệt đối & Không spam',
+    hotlineNote: '📞 Hoặc gọi trực tiếp Hotline:'
   },
   footer: {
     tagline: 'Nền tảng tự động hóa & quản trị doanh nghiệp thông minh. Đơn giản, tinh tế, tối ưu chi phí.',
