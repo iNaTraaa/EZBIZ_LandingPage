@@ -38,9 +38,29 @@ const awards = computed(() => [
   }
 ])
 
-// GSAP Single Unified Card Horizontal Overlapping Expansion
+// GSAP Single Unified Card Horizontal Overlapping Expansion (Desktop lg screens only)
+const checkScreenAndReset = () => {
+  if (window.innerWidth < 1024) {
+    activeIndex.value = null
+    cardRefs.value.forEach((cardEl) => {
+      if (!cardEl) return
+      const imgBox = cardEl.querySelector('.award-img-box')
+      const imgEl = cardEl.querySelector('.award-img-zoom')
+      const rightPanel = cardEl.querySelector('.award-right-panel')
+      const glowBlur = cardEl.querySelector('.award-glow-blur')
+      const hintTag = cardEl.querySelector('.hover-hint-tag')
+      if (cardEl) gsap.set(cardEl, { clearProps: 'all' })
+      if (imgBox) gsap.set(imgBox, { clearProps: 'all' })
+      if (imgEl) gsap.set(imgEl, { clearProps: 'all' })
+      if (rightPanel) gsap.set(rightPanel, { clearProps: 'all' })
+      if (glowBlur) gsap.set(glowBlur, { clearProps: 'all' })
+      if (hintTag) gsap.set(hintTag, { clearProps: 'all' })
+    })
+  }
+}
+
 const handleMouseEnter = (idx) => {
-  if (window.innerWidth < 768) return // Mobile: info panel is visible by default
+  if (window.innerWidth < 1024) return // Mobile/Tablet: info panel is visible by default
   activeIndex.value = idx
 
   cardRefs.value.forEach((cardEl, i) => {
@@ -54,7 +74,6 @@ const handleMouseEnter = (idx) => {
     if (i === idx) {
       const isFirst = (idx === 0)
       
-      // Expand single unified card container horizontally (Level 2 hover)
       gsap.to(cardEl, {
         zIndex: 50,
         width: '180%',
@@ -67,17 +86,14 @@ const handleMouseEnter = (idx) => {
         overwrite: 'auto'
       })
 
-      // Image box width transitions to 400px on desktop at Level 2
       if (imgBox) {
         gsap.to(imgBox, { width: '400px', duration: 0.45, ease: 'power2.out', overwrite: 'auto' })
       }
 
-      // Image zooms slightly inside container
       if (imgEl) {
         gsap.to(imgEl, { scale: 1.08, duration: 0.5, ease: 'power2.out', overwrite: 'auto' })
       }
 
-      // Ambient blur glow
       if (glowBlur) {
         gsap.to(glowBlur, { opacity: 1, scale: 1.25, duration: 0.5, ease: 'power2.out', overwrite: 'auto' })
       }
@@ -86,7 +102,6 @@ const handleMouseEnter = (idx) => {
         gsap.to(hintTag, { opacity: 0, duration: 0.2, overwrite: 'auto' })
       }
 
-      // Smoothly expand Right Info Panel inside the SAME unified card
       if (rightPanel) {
         gsap.to(rightPanel, {
           width: '100%',
@@ -98,7 +113,6 @@ const handleMouseEnter = (idx) => {
         })
       }
     } else {
-      // Non-hovered Card: Dimmed underneath
       gsap.to(cardEl, {
         zIndex: 1,
         width: '100%',
@@ -121,7 +135,7 @@ const handleMouseEnter = (idx) => {
 }
 
 const handleMouseLeave = () => {
-  if (window.innerWidth < 768) return // Mobile: info panel remains visible
+  if (window.innerWidth < 1024) return // Mobile/Tablet: info panel remains visible
   activeIndex.value = null
 
   cardRefs.value.forEach((cardEl) => {
@@ -132,7 +146,6 @@ const handleMouseLeave = () => {
     const glowBlur = cardEl.querySelector('.award-glow-blur')
     const hintTag = cardEl.querySelector('.hover-hint-tag')
 
-    // Reset single card back to Level 1
     gsap.to(cardEl, {
       zIndex: 10,
       width: '100%',
@@ -176,6 +189,8 @@ const handleMouseLeave = () => {
 
 onMounted(() => {
   if (awardsSection.value) animateFadeIn(awardsSection.value)
+  checkScreenAndReset()
+  window.addEventListener('resize', checkScreenAndReset)
 })
 </script>
 
@@ -197,7 +212,7 @@ onMounted(() => {
       </div>
 
       <!-- 2-Column Overlapping Single Unified Card Gallery -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto relative items-start min-h-[420px]">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-7xl mx-auto relative items-start min-h-[420px]">
         
         <!-- SINGLE UNIFIED CARD CONTAINER -->
         <div 
@@ -213,7 +228,7 @@ onMounted(() => {
           <!-- <div class="award-glow-blur absolute inset-0 bg-sky-400/30 blur-3xl opacity-0 pointer-events-none rounded-3xl transition-opacity"></div> -->
 
           <!-- Single Seamless Card Flex Container (Horizontal 2 columns inside SAME card) -->
-          <div class="flex flex-col md:flex-row items-center gap-5 sm:gap-6 relative z-20 w-full min-h-[360px]">
+          <div class="flex flex-col lg:flex-row items-center gap-5 sm:gap-6 relative z-20 w-full min-h-[360px]">
             
             <!-- Left Column: Award Image Container (Full width in Level 1, resizes to 400px on hover in Level 2) -->
             <div class="award-img-box relative w-full h-80 sm:h-96 rounded-2xl bg-white border-2 sm:border-4 border-white shadow-md shrink-0">
@@ -235,14 +250,14 @@ onMounted(() => {
               </div>
 
               <!-- Level 1 Hover Hint Tag (Desktop only) -->
-              <div class="hover-hint-tag absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-4 py-1.5 rounded-full border border-white/20 shadow-md hidden md:flex items-center gap-1.5 whitespace-nowrap">
+              <div class="hover-hint-tag absolute bottom-4 left-1/2 -translate-x-1/2 z-10 bg-slate-900/80 backdrop-blur-md text-white text-[11px] font-bold px-4 py-1.5 rounded-full border border-white/20 shadow-md hidden lg:flex items-center gap-1.5 whitespace-nowrap">
                 {{ $t('awards.hint') }}
               </div>
             </div>
 
-            <!-- Right Column: Competition Info Panel (Always open & visible on mobile, expanding hover on desktop) -->
-            <div class="award-right-panel w-full opacity-100 md:w-0 md:opacity-0 overflow-hidden shrink-0 flex-1 flex flex-col justify-between py-1 transition-all">
-              <div class="p-4 sm:p-5 rounded-2xl border border-sky-100/80 text-left w-full min-w-0 md:min-w-[340px]">
+            <!-- Right Column: Competition Info Panel (Always open & visible on mobile/tablet, expanding hover on desktop) -->
+            <div class="award-right-panel w-full opacity-100 lg:w-0 lg:opacity-0 overflow-hidden shrink-0 flex-1 flex flex-col justify-between py-1 transition-all">
+              <div class="p-4 sm:p-5 rounded-2xl border border-sky-100/80 text-left w-full min-w-0 lg:min-w-[340px]">
                 
                 <div class="flex items-center justify-between gap-2 mb-3">
                   <span class="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-white px-3 py-1 rounded-full border border-sky-200">

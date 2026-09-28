@@ -4,7 +4,7 @@ import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 
 const { t } = useI18n()
-const { animateFadeIn } = useScrollAnimation()
+const { animateFadeIn, refreshScrollTrigger } = useScrollAnimation()
 const faqContainer = ref(null)
 
 const activeKey = ref(['1'])
@@ -34,6 +34,9 @@ const faqs = computed(() => [
 
 onMounted(() => {
   if (faqContainer.value) animateFadeIn(faqContainer.value)
+  setTimeout(() => {
+    refreshScrollTrigger()
+  }, 400)
 })
 </script>
 

@@ -34,30 +34,99 @@ export default {
     securityNote: '🔒 Cam kết không spam & Bảo mật thông tin tuyệt đối'
   },
   features: {
-    sectionTag: 'Tính Năng Cốt Lõi',
-    titlePrefix: 'Mọi Công Cụ Bạn Cần Để',
-    titleSuffix: 'Tăng Tốc Doanh Nghiệp',
-    subtitle: 'Thiết kế tối giản, tinh tế giúp bạn tập trung vào bứt phá doanh thu.',
+    sectionTag: 'Trải Nghiệm Thực Tế',
+    titlePrefix: 'Khám Phá',
+    titleHighlight: '4 Chức Năng Cốt Lõi',
+    titleSuffix: 'Của EZBIZ',
+    subtitle: 'Bấm chọn các chức năng bên dưới để xem video demo ứng dụng thực tế.',
     learnMore: 'Tìm hiểu chi tiết',
     item1: {
-      badge: 'Nổi Bật',
-      title: 'Tự Động Hóa Quy Trình (Workflow)',
-      desc: 'Thiết lập luồng duyệt chi, thông báo hợp đồng và phân công công việc tự động không cần lập trình.'
+      badge: 'Phổ Biến',
+      title: 'Bán Hàng Tại Điểm (POS)',
+      subtitle: 'Tạo hóa đơn & quét mã thanh toán 3s',
+      desc: 'Hỗ trợ tính tiền siêu tốc, in hóa đơn cầm tay và tạo mã QR động cho khách quét thanh toán tức thì.',
+      adv1: {
+        title: 'Tính Tiền 3 Giây',
+        desc: 'Tạo đơn & in phiếu siêu tốc, không để khách đợi lâu.'
+      },
+      adv2: {
+        title: 'Dùng Trên Điện Thoại',
+        desc: 'Không cần mua máy POS đắt tiền, dùng trực tiếp trên Smartphone.'
+      },
+      adv3: {
+        title: 'Mã QR Dynamic',
+        desc: 'Tự động tạo mã QR đúng số tiền đơn hàng.'
+      },
+      adv4: {
+        title: 'Kết Nối Máy In',
+        desc: 'Hỗ trợ tất cả máy in hóa đơn Bluetooth & Wi-Fi.'
+      }
     },
     item2: {
       badge: 'Thời Gian Thực',
       title: 'Báo Cáo KPI & Tài Chính AI',
-      desc: 'Tổng hợp chỉ số doanh thu, chi phí và hiệu suất trực quan tức thì trên mọi thiết bị.'
+      subtitle: 'Tổng hợp doanh thu & lợi nhuận tự động',
+      desc: 'Không cần ghi sổ tay! AI tự động tổng hợp doanh số ngày, tuần, tháng và phân tích món bán chạy.',
+      adv1: {
+        title: 'Báo Cáo Trực Quan',
+        desc: 'Theo dõi doanh thu, chi phí và lợi nhuận qua biểu đồ trực quan, dễ hiểu.'
+      },
+      adv2: {
+        title: 'Top Hàng Bán Chạy',
+        desc: 'Tự động thống kê sản phẩm doanh số cao nhất để chủ động nhập hàng.'
+      },
+      adv3: {
+        title: 'Cập Nhật Realtime',
+        desc: 'Dữ liệu bán hàng tự động nhảy theo từng đơn, nắm bắt tình hình ngay tức thì.'
+      },
+      adv4: {
+        title: 'So Sánh Tăng Trưởng',
+        desc: 'Dễ dàng đối chiếu doanh số và lợi nhuận theo ngày, tuần, tháng hoặc năm.'
+      }
     },
     item3: {
-      badge: 'Tích Hợp',
-      title: 'Quản Lý Khách Hàng CRM & Nhân Sự',
-      desc: 'Theo dõi hành trình khách hàng, chấm công & tính lương nhân sự minh bạch trong 1 nền tảng.'
+      badge: 'Tự Động',
+      title: 'Quản Lý Tồn Kho Thông Minh',
+      subtitle: 'Tự động trừ kho & cảnh báo nhập hàng',
+      desc: 'Kiểm soát hàng tồn theo thời gian thực. Hệ thống tự động gửi thông báo khi mặt hàng sắp hết.',
+      adv1: {
+        title: 'Quản Lý Nhập Xuất',
+        desc: 'Tạo phiếu nhập/xuất kho nhanh chóng, theo dõi biến động hàng tồn dễ dàng.'
+      },
+      adv2: {
+        title: 'Cảnh Báo Tồn Kho',
+        desc: 'Tự động thông báo khi mặt hàng sắp hết hoặc vượt ngưỡng an toàn.'
+      },
+      adv3: {
+        title: 'Lịch Sử Minh Bạch',
+        desc: 'Tra cứu chính xác chi tiết lịch sử xuất nhập kho theo thời gian thực.'
+      },
+      adv4: {
+        title: 'Quét OCR Hóa Đơn',
+        desc: 'Chụp ảnh hóa đơn nhập hàng, AI tự đọc dữ liệu & tạo phiếu kho trong 3 giây.'
+      }
     },
     item4: {
       badge: 'An Toàn',
-      title: 'Bảo Mật Dữ Liệu ISO 27001',
-      desc: 'Mã hóa end-to-end, sao lưu dữ liệu tự động hàng ngày đảm bảo an toàn tuyệt đối cho doanh nghiệp.'
+      title: 'Thanh Toán QR Ngân Hàng',
+      subtitle: 'Tự động đối soát & gạch nợ tức thì',
+      desc: 'Khách quét QR VietQR/ZaloPay là hệ thống báo "Đã nhận tiền" qua loa thông minh, tránh lừa đảo.',
+      adv1: {
+        title: 'Báo Tiền Qua Loa',
+        desc: 'Phát âm thanh báo tiền về ngay khi khách chuyển.'
+      },
+      adv2: {
+        title: 'Tránh Lừa Đảo',
+        desc: 'Không cần xem màn hình chuyển khoản giả của khách.'
+      },
+      adv3: {
+        title: 'Gạch Nợ Đơn Hàng',
+        desc: 'Hệ thống tự đối soát & đóng đơn tức thì.'
+      },
+      adv4: {
+        title: 'Hỗ Trợ 40+ Ngân Hàng',
+        desc: 'Tích hợp mã VietQR chuẩn quốc gia.'
+      }
     },
     item5: {
       badge: 'Mở Rộng',
@@ -68,6 +137,48 @@ export default {
       badge: 'Thông Minh',
       title: 'Trợ Lý AI Dự Báo Dòng Tiền',
       desc: 'Phân tích thói quen tài chính và đề xuất tối ưu chi phí vận hành dựa trên máy học.'
+    }
+  },
+  demo: {
+    sectionTag: 'DEMO TRẢI NGHIỆM UNIFIED',
+    titlePrefix: 'Trải Nghiệm EZBIZ Trên',
+    titleHighlight: 'Thiết Bị Di Động',
+    subtitle: 'Khám phá sức mạnh quản lý bán hàng, theo dõi kho bãi và luồng tiền trực quan ngay trên chiếc điện thoại của bạn.',
+    tab0: {
+      title: 'Bán Hàng POS & Thanh Toán',
+      badge: 'Tính Năng Nổi Bật',
+      heading: 'Bán Hàng Tốc Độ Chỉ Trong Vài Thao Tác',
+      desc: 'Giao diện thu ngân POS tối giản, tạo đơn bán hàng và hiển thị mã VietQR thanh toán tự động giúp tiết kiệm 80% thời gian phục vụ khách hàng.',
+      f1: 'Tự động tạo mã VietQR theo từng đơn hàng',
+      f2: 'Đồng bộ tức thì với kho bãi & sổ sách thu chi',
+      f3: 'Hoạt động mượt mà trên mọi thiết bị di động'
+    },
+    tab1: {
+      title: 'Quản Lý Kho Hàng',
+      badge: 'Thời Gian Thực',
+      heading: 'Kiểm Soát Tồn Kho & Xuất Nhập Tự Động',
+      desc: 'Quét mã vạch sản phẩm qua camera điện thoại, tự động trừ tồn kho khi bán và cảnh báo sản phẩm sắp hết hàng theo thời gian thực.',
+      f1: 'Quét mã vạch sản phẩm siêu tốc bằng camera',
+      f2: 'Cảnh báo tồn kho tối thiểu phòng đứt hàng',
+      f3: 'Quản lý chi tiết danh mục & phân loại hàng hóa'
+    },
+    tab2: {
+      title: 'Báo Cáo Thu Chi & Dòng Tiền',
+      badge: 'Phân Tích Trực Quan',
+      heading: 'Nắm Bắt Tình Hình Kinh Doanh Mọi Lúc Mọi Nơi',
+      desc: 'Báo cáo doanh thu, lợi nhuận và dòng tiền thu chi tức thời dạng biểu đồ trực quan, giúp chủ cửa hàng ra quyết định nhanh chóng.',
+      f1: 'Biểu đồ tăng trưởng doanh thu trực quan',
+      f2: 'Tự động tổng hợp sổ thu chi không lo sai sót',
+      f3: 'Xuất báo cáo tài chính nhanh chỉ với 1-click'
+    },
+    tab3: {
+      title: 'Trợ Lý AI & Tư Vấn 24/7',
+      badge: 'Thông Minh',
+      heading: 'Trợ Lý AI Đồng Hành & Hỗ Trợ Đăng Ký',
+      desc: 'Tích hợp trợ lý AI thông minh tư vấn chiến lược bán hàng, giải đáp thắc mắc quy trình và hỗ trợ đăng ký dùng thử 100% miễn phí.',
+      f1: 'Trợ lý AI giải đáp thắc mắc bán hàng 24/7',
+      f2: 'Hỗ trợ thiết lập quy trình dùng thử nhanh chóng',
+      f3: 'Bảo mật dữ liệu tuyệt đối theo tiêu chuẩn'
     }
   },
   stats: {

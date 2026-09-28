@@ -19,7 +19,8 @@ export function useScrollAnimation() {
       scrollTrigger: {
         trigger: target,
         start: options.start ?? 'top 85%',
-        toggleActions: options.toggleActions ?? 'play none none reverse',
+        once: options.once ?? false,
+        toggleActions: options.toggleActions ?? 'play none play reverse',
         ...options.scrollTrigger
       }
     })
@@ -39,8 +40,9 @@ export function useScrollAnimation() {
       ease: options.ease ?? 'power3.out',
       scrollTrigger: {
         trigger: options.trigger || targets,
-        start: options.start ?? 'top 80%',
-        toggleActions: options.toggleActions ?? 'play none none reverse',
+        start: options.start ?? 'top 85%',
+        once: options.once ?? false,
+        toggleActions: options.toggleActions ?? 'play none play reverse',
         ...options.scrollTrigger
       }
     })

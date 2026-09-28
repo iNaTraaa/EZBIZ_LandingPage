@@ -34,30 +34,99 @@ export default {
     securityNote: '🔒 Guaranteed no spam & strict data privacy'
   },
   features: {
-    sectionTag: 'Core Features',
-    titlePrefix: 'Every Tool You Need To',
-    titleSuffix: 'Scale Your Business',
-    subtitle: 'Minimalist and elegant design focused on boosting your revenue.',
+    sectionTag: 'Hands-on Experience',
+    titlePrefix: 'Discover',
+    titleHighlight: '4 Core Features',
+    titleSuffix: 'Of EZBIZ',
+    subtitle: 'Select any feature below to watch real application demo videos.',
     learnMore: 'Learn more',
     item1: {
-      badge: 'Featured',
-      title: 'Workflow Automation',
-      desc: 'Set up expense approvals, contract alerts, and task assignments automatically without coding.'
+      badge: 'Popular',
+      title: 'Point of Sale (POS)',
+      subtitle: 'Create invoices & scan payment QR in 3s',
+      desc: 'Superfast checkout, handheld receipt printing, and dynamic QR generation for instant payments.',
+      adv1: {
+        title: '3-Second Checkout',
+        desc: 'Fast invoice creation & receipt printing, zero wait time for customers.'
+      },
+      adv2: {
+        title: 'Use On Smartphone',
+        desc: 'No expensive POS machine required, use directly on your Smartphone.'
+      },
+      adv3: {
+        title: 'Dynamic QR Code',
+        desc: 'Automatically generate QR code with the exact order amount.'
+      },
+      adv4: {
+        title: 'Printer Connection',
+        desc: 'Supports all Bluetooth & Wi-Fi receipt printers.'
+      }
     },
     item2: {
       badge: 'Real-time',
       title: 'AI Financial & KPI Reports',
-      desc: 'Consolidate revenue, costs, and performance metrics visually across all devices.'
+      subtitle: 'Automated revenue & profit summary',
+      desc: 'No manual bookkeeping needed! AI automatically summarizes daily, weekly, monthly sales and analyzes top-selling items.',
+      adv1: {
+        title: 'Visual Reports',
+        desc: 'Track revenue, costs, and profits via intuitive, easy-to-understand charts.'
+      },
+      adv2: {
+        title: 'Top Best Sellers',
+        desc: 'Automatically compile top revenue products for proactive inventory restocking.'
+      },
+      adv3: {
+        title: 'Realtime Updates',
+        desc: 'Sales data updates instantly with every order for immediate insights.'
+      },
+      adv4: {
+        title: 'Growth Comparison',
+        desc: 'Easily compare sales and profits by day, week, month, or year.'
+      }
     },
     item3: {
-      badge: 'Integrated',
-      title: 'CRM & HR Management',
-      desc: 'Track customer journeys, employee attendance & payroll transparently in one platform.'
+      badge: 'Automated',
+      title: 'Smart Inventory Management',
+      subtitle: 'Auto stock reduction & reorder alerts',
+      desc: 'Real-time inventory control. The system automatically alerts when items are running low.',
+      adv1: {
+        title: 'In/Out Management',
+        desc: 'Create stock inward/outward slips quickly and track inventory fluctuations easily.'
+      },
+      adv2: {
+        title: 'Stock Alerts',
+        desc: 'Automatic notification when items are running out or exceed safe thresholds.'
+      },
+      adv3: {
+        title: 'Transparent History',
+        desc: 'Accurately look up detailed stock entry and exit history in real time.'
+      },
+      adv4: {
+        title: 'OCR Receipt Scan',
+        desc: 'Snap a picture of the purchase receipt; AI auto-reads data & creates stock slips in 3 seconds.'
+      }
     },
     item4: {
       badge: 'Secure',
-      title: 'ISO 27001 Security',
-      desc: 'End-to-end encryption with daily automatic data backups for enterprise safety.'
+      title: 'Bank QR Payment',
+      subtitle: 'Auto reconciliation & instant debt clear',
+      desc: 'When customers scan VietQR/ZaloPay, smart speaker instantly announces "Money received", avoiding fraud.',
+      adv1: {
+        title: 'Voice Speaker Alert',
+        desc: 'Audio alert as soon as funds arrive.'
+      },
+      adv2: {
+        title: 'Fraud Prevention',
+        desc: 'No need to inspect fake transfer screens.'
+      },
+      adv3: {
+        title: 'Auto Order Closing',
+        desc: 'System automatically reconciles & completes orders.'
+      },
+      adv4: {
+        title: '40+ Banks Supported',
+        desc: 'Integrated with national VietQR standard.'
+      }
     },
     item5: {
       badge: 'Scalable',
@@ -68,6 +137,48 @@ export default {
       badge: 'Smart',
       title: 'AI Cash Flow Forecast',
       desc: 'Analyze financial patterns and suggest operational cost optimizations via machine learning.'
+    }
+  },
+  demo: {
+    sectionTag: 'UNIFIED DEMO EXPERIENCE',
+    titlePrefix: 'Experience EZBIZ On',
+    titleHighlight: 'Mobile Devices',
+    subtitle: 'Explore POS sales, stock management, and financial flow visually right on your mobile phone.',
+    tab0: {
+      title: 'POS Sales & Payment',
+      badge: 'Key Feature',
+      heading: 'High-speed Checkout in Seconds',
+      desc: 'Minimalist POS cashier interface, auto VietQR generation saving 80% customer service time.',
+      f1: 'Automatic VietQR code generation per order',
+      f2: 'Instant sync with inventory & financial books',
+      f3: 'Runs smoothly on all mobile devices'
+    },
+    tab1: {
+      title: 'Inventory Control',
+      badge: 'Real-time',
+      heading: 'Automated Stock In/Out & Low Stock Alert',
+      desc: 'Scan barcodes via camera, auto-deduct stock on sales, and alert low stock in real time.',
+      f1: 'Fast barcode scanning with phone camera',
+      f2: 'Low stock alerts to prevent stockouts',
+      f3: 'Detailed category & product classification'
+    },
+    tab2: {
+      title: 'Cashflow & Reports',
+      badge: 'Visual Analytics',
+      heading: 'Track Business Anywhere, Anytime',
+      desc: 'Instant revenue, profit, and cash flow reports in visual charts for quick decision making.',
+      f1: 'Intuitive revenue growth charts',
+      f2: 'Automated error-free bookkeeping',
+      f3: '1-click financial report export'
+    },
+    tab3: {
+      title: 'AI Assistant 24/7',
+      badge: 'Smart',
+      heading: 'AI Companion & Onboarding Support',
+      desc: 'Integrated AI assistant offering sales strategy advice and 100% free trial registration.',
+      f1: '24/7 AI sales Q&A assistant',
+      f2: 'Fast trial setup assistance',
+      f3: 'Enterprise-grade data security'
     }
   },
   stats: {

@@ -3,6 +3,11 @@ import { ref, onMounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 
+import demo1 from '@/assets/img/demo/demo_1.mp4'
+import demo2 from '@/assets/img/demo/demo_2.mp4'
+import demo3 from '@/assets/img/demo/demo_3.mp4'
+import demo4 from '@/assets/img/demo/demo_4.mp4'
+
 const { t } = useI18n()
 const { animateFadeIn } = useScrollAnimation()
 
@@ -18,61 +23,61 @@ const mainFeatures = computed(() => [
   {
     id: 0,
     icon: '🛒',
-    title: t('features.item1.title') || 'Bán Hàng Tại Điểm (POS)',
-    subtitle: 'Tạo hóa đơn & quét mã thanh toán 3s',
-    desc: 'Hỗ trợ tính tiền siêu tốc, in hóa đơn cầm tay và tạo mã QR động cho khách quét thanh toán tức thì.',
-    badge: 'Phổ Biến',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-point-of-sale-system-in-a-coffee-shop-41527-large.mp4',
+    title: t('features.item1.title'),
+    subtitle: t('features.item1.subtitle'),
+    desc: t('features.item1.desc'),
+    badge: t('features.item1.badge'),
+    videoUrl: demo1,
     advantages: [
-      { icon: '⚡', title: 'Tính Tiền 3 Giây', desc: 'Tạo đơn & in phiếu siêu tốc, không để khách đợi lâu.' },
-      { icon: '📱', title: 'Dùng Trên Điện Thoại', desc: 'Không cần mua máy POS đắt tiền, dùng trực tiếp trên Smartphone.' },
-      { icon: '📲', title: 'Mã QR Dynamic', desc: 'Tự động tạo mã QR đúng số tiền đơn hàng.' },
-      { icon: '🖨️', title: 'Kết Nối Máy In', desc: 'Hỗ trợ tất cả máy in hóa đơn Bluetooth & Wi-Fi.' }
+      { icon: '⚡', title: t('features.item1.adv1.title'), desc: t('features.item1.adv1.desc') },
+      { icon: '📱', title: t('features.item1.adv2.title'), desc: t('features.item1.adv2.desc') },
+      { icon: '🔲', title: t('features.item1.adv3.title'), desc: t('features.item1.adv3.desc') },
+      { icon: '🖨️', title: t('features.item1.adv4.title'), desc: t('features.item1.adv4.desc') }
     ]
   },
   {
     id: 1,
-    icon: '📦',
-    title: t('features.item2.title') || 'Quản Lý Tồn Kho Thông Minh',
-    subtitle: 'Tự động trừ kho & cảnh báo nhập hàng',
-    desc: 'Kiểm soát hàng tồn theo thời gian thực. Hệ thống tự động gửi thông báo khi mặt hàng sắp hết.',
-    badge: 'Tự Động',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-hands-holding-a-smartphone-checking-stock-41525-large.mp4',
+    icon: '',
+    title: t('features.item2.title'),
+    subtitle: t('features.item2.subtitle'),
+    desc: t('features.item2.desc'),
+    badge: t('features.item2.badge'),
+    videoUrl: demo2,
     advantages: [
-      { icon: '🔄', title: 'Tự Động Trừ Kho', desc: 'Bán hàng tới đâu trừ tồn kho chính xác tới đó.' },
-      { icon: '🔔', title: 'Cảnh Báo Hàng Sắp Hết', desc: 'Nhận thông báo nhắc nhập thêm sản phẩm bán chạy.' },
-      { icon: '📋', title: 'Kiểm Kho 1-Click', desc: 'Quét mã vạch kiểm hàng tồn trong vài phút.' },
-      { icon: '📈', title: 'Dự Báo Tiêu Thụ', desc: 'AI phân tích tốc độ hết hàng của từng món.' }
+      { icon: '📊', title: t('features.item2.adv1.title'), desc: t('features.item2.adv1.desc') },
+      { icon: '🔥', title: t('features.item2.adv2.title'), desc: t('features.item2.adv2.desc') },
+      { icon: '⚡', title: t('features.item2.adv3.title'), desc: t('features.item2.adv3.desc') },
+      { icon: '📅', title: t('features.item2.adv4.title'), desc: t('features.item2.adv4.desc') }
     ]
   },
   {
     id: 2,
-    icon: '📊',
-    title: t('features.item3.title') || 'Báo Cáo Sổ Sách Thu Chi AI',
-    subtitle: 'Tổng hợp doanh thu & lợi nhuận tự động',
-    desc: 'Không cần ghi sổ tay! AI tự động tổng hợp doanh số ngày, tuần, tháng và phân tích món bán chạy.',
-    badge: 'Báo Cáo AI',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-financial-graphs-on-a-digital-tablet-41526-large.mp4',
+    icon: '',
+    title: t('features.item3.title'),
+    subtitle: t('features.item3.subtitle'),
+    desc: t('features.item3.desc'),
+    badge: t('features.item3.badge'),
+    videoUrl: demo3,
     advantages: [
-      { icon: '💰', title: 'Lợi Nhuận Thuần', desc: 'Tự động trừ chi phí vốn để tính lãi thực tế.' },
-      { icon: '📈', title: 'Biểu Đồ Trực Quan', desc: 'Xem nhịp đập kinh doanh theo ngày, tuần, tháng.' },
-      { icon: '📖', title: 'Thay Thế Sổ Tay', desc: 'Bảo mật dữ liệu 100%, không sợ thất lạc sổ.' },
-      { icon: '🏆', title: 'Top Sản Phẩm Hot', desc: 'Biết chính xác mặt hàng mang lại doanh thu cao nhất.' }
+      { icon: '📦', title: t('features.item3.adv1.title'), desc: t('features.item3.adv1.desc') },
+      { icon: '⚠️', title: t('features.item3.adv2.title'), desc: t('features.item3.adv2.desc') },
+      { icon: '📜', title: t('features.item3.adv3.title'), desc: t('features.item3.adv3.desc') },
+      { icon: '📸', title: t('features.item3.adv4.title'), desc: t('features.item3.adv4.desc') }
     ]
   },
   {
     id: 3,
     icon: '💳',
-    title: t('features.item5.title') || 'Thanh Toán QR Ngân Hàng',
-    subtitle: 'Tự động đối soát & gạch nợ tức thì',
-    desc: 'Khách quét QR VietQR/ZaloPay là hệ thống báo "Đã nhận tiền" qua loa thông minh, tránh lừa đảo.',
-    badge: 'An Toàn',
-    videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-paying-with-a-smartphone-via-qr-code-41524-large.mp4',
+    title: t('features.item4.title'),
+    subtitle: t('features.item4.subtitle'),
+    desc: t('features.item4.desc'),
+    badge: t('features.item4.badge'),
+    videoUrl: demo4,
     advantages: [
-      { icon: '🔊', title: 'Báo Tiền Qua Loa', desc: 'Phát âm thanh báo tiền về ngay khi khách chuyển.' },
-      { icon: '🛡️', title: 'Tránh Lừa Đảo', desc: 'Không cần xem màn hình chuyển khoản giả của khách.' },
-      { icon: '⚡', title: 'Gạch Nợ Đơn Hàng', desc: 'Hệ thống tự đối soát & đóng đơn tức thì.' },
-      { icon: '🏦', title: 'Hỗ Trợ 40+ Ngân Hàng', desc: 'Tích hợp mã VietQR chuẩn quốc gia.' }
+      { icon: '🔊', title: t('features.item4.adv1.title'), desc: t('features.item4.adv1.desc') },
+      { icon: '🛡️', title: t('features.item4.adv2.title'), desc: t('features.item4.adv2.desc') },
+      { icon: '⚡', title: t('features.item4.adv3.title'), desc: t('features.item4.adv3.desc') },
+      { icon: '🏦', title: t('features.item4.adv4.title'), desc: t('features.item4.adv4.desc') }
     ]
   }
 ])
@@ -126,12 +131,12 @@ onMounted(() => {
       
       <!-- Section Header -->
       <div ref="sectionHeader" class="text-center max-w-3xl mx-auto mb-10">
-        <span class="text-xs font-bold tracking-widest text-sky-600 uppercase mb-2 inline-block">Trải Nghiệm Thực Tế</span>
+        <span class="text-xs font-bold tracking-widest text-sky-600 uppercase mb-2 inline-block">{{ $t('features.sectionTag') }}</span>
         <h2 class="text-3xl sm:text-5xl font-black text-slate-900">
-          Khám Phá <span class="text-gradient-blue">4 Chức Năng Cốt Lõi</span> Của EZBIZ
+          {{ $t('features.titlePrefix') }} <span class="text-gradient-blue">{{ $t('features.titleHighlight') }}</span> {{ $t('features.titleSuffix') }}
         </h2>
         <p class="mt-4 text-slate-600 text-base sm:text-lg">
-          Bấm chọn các chức năng bên dưới để xem video demo ứng dụng thực tế.
+          {{ $t('features.subtitle') }}
         </p>
       </div>
 
@@ -159,45 +164,31 @@ onMounted(() => {
           <!-- Center Column: iPhone Video Player Mockup & Progress Navigation -->
           <div class="lg:col-span-4 flex flex-col items-center justify-center">
             
-            <!-- iPhone Outer Frame -->
-            <div class="relative w-[270px] sm:w-[300px] h-[540px] sm:h-[580px] bg-slate-900 rounded-[48px] p-3 shadow-2xl border-4 border-slate-800 ring-1 ring-slate-950/20">
+            <!-- iPhone Outer Frame (Full Bleed Edge-to-Edge) -->
+            <div class="relative w-[270px] sm:w-[300px] aspect-[9/19] bg-slate-900 rounded-[38px] p-1.5 shadow-2xl border-2 border-slate-700/80 ring-1 ring-slate-950/20">
               
-              <!-- Phone Dynamic Island Notch -->
-              <div class="absolute top-5 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-30 flex items-center justify-end px-3">
-                <div class="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
+              <!-- Top Camera Punch-Hole Dot -->
+              <div class="absolute top-3 left-1/2 -translate-x-1/2 z-30 w-3.5 h-3.5 bg-black rounded-full border border-slate-700 shadow-sm flex items-center justify-center pointer-events-none">
+                <div class="w-1.5 h-1.5 rounded-full bg-slate-900"></div>
               </div>
 
               <!-- Viewport Screen -->
-              <div class="relative w-full h-full rounded-[38px] overflow-hidden bg-slate-950 flex flex-col justify-between">
+              <div class="relative w-full h-full rounded-[32px] overflow-hidden bg-white flex flex-col justify-between">
                 
-                <!-- Live Tag Overlay -->
-                <div class="absolute top-3 left-4 z-20 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white border border-white/10">
-                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                  <span>EZBIZ Video Demo</span>
-                </div>
-
                 <!-- Video Element -->
-                <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
+                <div class="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
                   <video
                     ref="videoRef"
                     :src="activeFeature.videoUrl"
                     autoplay
+                    loop
                     muted
                     playsinline
                     @ended="handleVideoEnded"
-                    class="w-full h-full object-cover transition-all duration-500"
+                    class="w-full h-full object-cover rounded-[32px] transition-all duration-500"
                   ></video>
 
-                  <button 
-                    @click="togglePlay"
-                    class="absolute inset-0 bg-black/15 hover:bg-black/30 flex items-center justify-center transition-colors cursor-pointer group"
-                    title="Bấm để tạm dừng / phát"
-                  >
-                    <div class="w-14 h-14 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform">
-                      <span v-if="!isPlaying" class="text-xl pl-1">▶</span>
-                      <span v-else class="text-xl">❚❚</span>
-                    </div>
-                  </button>
+                 
                 </div>
               </div>
             </div>
@@ -262,37 +253,42 @@ onMounted(() => {
         <!-- Mobile & Tablet Layout (< lg screens) -->
         <div class="lg:hidden flex flex-col items-center">
           
-          <!-- iPhone Video Player Mockup -->
-          <div class="relative w-[270px] sm:w-[310px] h-[540px] sm:h-[600px] bg-slate-900 rounded-[48px] p-3 shadow-2xl border-4 border-slate-800 ring-1 ring-slate-950/20">
-            <div class="absolute top-5 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-30 flex items-center justify-end px-3">
-              <div class="w-2.5 h-2.5 rounded-full bg-slate-800"></div>
+          <!-- iPhone Video Player Mockup (Full Bleed Edge-to-Edge) -->
+          <div class="relative w-[270px] sm:w-[310px] aspect-[9/19] bg-slate-900 rounded-[38px] p-1.5 shadow-2xl border-2 border-slate-700/80 ring-1 ring-slate-950/20">
+
+            <!-- Top Camera Punch-Hole Dot -->
+            <div class="absolute top-3 left-1/2 -translate-x-1/2 z-30 w-3.5 h-3.5 bg-black rounded-full border border-slate-700 shadow-sm flex items-center justify-center pointer-events-none">
+              <div class="w-1.5 h-1.5 rounded-full bg-slate-900"></div>
             </div>
 
-            <div class="relative w-full h-full rounded-[38px] overflow-hidden bg-slate-950 flex flex-col justify-between">
-              <div class="absolute top-3 left-4 z-20 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white border border-white/10">
+            <div class="relative w-full h-full rounded-[32px] overflow-hidden bg-white flex flex-col justify-between">
+              <!-- <div class="absolute top-3 left-4 z-20 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold text-white border border-white/10">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 <span>EZBIZ Video Demo</span>
-              </div>
+              </div> -->
 
-              <div class="relative w-full h-full flex items-center justify-center overflow-hidden">
+              <div class="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
                 <video
                   ref="videoRef"
                   :src="activeFeature.videoUrl"
                   autoplay
+                  loop
                   muted
                   playsinline
                   @ended="handleVideoEnded"
-                  class="w-full h-full object-cover transition-all duration-500"
+                  class="w-full h-full object-cover rounded-[32px] transition-all duration-500"
                 ></video>
 
                 <button 
                   @click="togglePlay"
-                  class="absolute inset-0 bg-black/15 hover:bg-black/30 flex items-center justify-center transition-colors cursor-pointer group"
+                  class="absolute inset-0 flex items-center justify-center transition-colors cursor-pointer group"
                   title="Bấm để tạm dừng / phát"
                 >
-                  <div class="w-14 h-14 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform">
-                    <span v-if="!isPlaying" class="text-xl pl-1">▶</span>
-                    <span v-else class="text-xl">❚❚</span>
+                  <div 
+                    v-if="!isPlaying"
+                    class="w-14 h-14 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-sky-600 shadow-xl group-hover:scale-110 transition-transform"
+                  >
+                    <span class="text-xl pl-1">▶</span>
                   </div>
                 </button>
               </div>
