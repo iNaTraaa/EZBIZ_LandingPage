@@ -18,6 +18,12 @@ const featuresSectionRef = ref(null)
 
 const activeFeatureIndex = ref(0)
 const isPlaying = ref(true)
+const isVideoLoading = ref(false)
+
+const onVideoWaiting = () => { isVideoLoading.value = true }
+const onVideoPlaying = () => { isVideoLoading.value = false }
+const onVideoCanPlay = () => { isVideoLoading.value = false }
+const onVideoLoadStart = () => { isVideoLoading.value = true }
 
 const mainFeatures = computed(() => [
   {
@@ -92,6 +98,7 @@ const selectFeature = (index) => {
   if (activeFeatureIndex.value === index) return
   activeFeatureIndex.value = index
   isPlaying.value = true
+  isVideoLoading.value = true
 
   if (isSectionVisible.value) {
     setTimeout(() => {
@@ -152,13 +159,10 @@ onMounted(() => {
         </p>
       </div>
 
-      <!-- Main Section Showcase -->
       <div ref="showcaseContainer" class="max-w-7xl mx-auto">
         
-        <!-- Desktop Symmetrical 3-Column Layout (lg & xl screens) -->
         <div class="hidden lg:grid lg:grid-cols-12 gap-8 items-center">
           
-          <!-- Left Column: 2 Advantage Cards -->
           <div class="lg:col-span-4 flex flex-col gap-6">
             <div
               v-for="(adv, aIdx) in leftAdvantages"
@@ -173,21 +177,16 @@ onMounted(() => {
             </div>
           </div>
 
-          <!-- Center Column: iPhone Video Player Mockup & Progress Navigation -->
           <div class="lg:col-span-4 flex flex-col items-center justify-center">
             
-            <!-- iPhone Outer Frame (Full Bleed Edge-to-Edge) -->
             <div class="relative w-[270px] sm:w-[300px] aspect-[9/19] bg-slate-900 rounded-[38px] p-1.5 shadow-2xl border-2 border-slate-700/80 ring-1 ring-slate-950/20">
               
-              <!-- Top Camera Punch-Hole Dot -->
               <div class="absolute top-3 left-1/2 -translate-x-1/2 z-30 w-3.5 h-3.5 bg-black rounded-full border border-slate-700 shadow-sm flex items-center justify-center pointer-events-none">
                 <div class="w-1.5 h-1.5 rounded-full bg-slate-900"></div>
               </div>
 
-              <!-- Viewport Screen -->
               <div class="relative w-full h-full rounded-[32px] overflow-hidden bg-white flex flex-col justify-between">
                 
-                <!-- Video Element -->
                 <div class="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
                   <video
                     :src="isSectionVisible ? getCachedSrc(activeFeature.videoUrl) : ''"
@@ -196,16 +195,26 @@ onMounted(() => {
                     muted
                     playsinline
                     preload="none"
+                    @loadstart="onVideoLoadStart"
+                    @waiting="onVideoWaiting"
+                    @playing="onVideoPlaying"
+                    @canplay="onVideoCanPlay"
                     @ended="handleVideoEnded"
                     class="feature-video-element w-full h-full object-cover rounded-[32px] transition-all duration-500"
                   ></video>
+
+                  <div 
+                    v-if="isVideoLoading" 
+                    class="absolute inset-0 flex items-center justify-center bg-black/10 pointer-events-none z-10"
+                  >
+                    <div class="w-8 h-8 rounded-full border-2 border-white/40 border-t-sky-500 animate-spin"></div>
+                  </div>
 
                  
                 </div>
               </div>
             </div>
 
-            <!-- Progress Navigation Dots & Arrows -->
             <div class="flex items-center justify-center gap-3 mt-6">
               <button
                 @click="prevFeature"
@@ -245,7 +254,6 @@ onMounted(() => {
 
           </div>
 
-          <!-- Right Column: 2 Advantage Cards -->
           <div class="lg:col-span-4 flex flex-col gap-6">
             <div
               v-for="(adv, aIdx) in rightAdvantages"
@@ -262,13 +270,10 @@ onMounted(() => {
 
         </div>
 
-        <!-- Mobile & Tablet Layout (< lg screens) -->
         <div class="lg:hidden flex flex-col items-center">
           
-          <!-- iPhone Video Player Mockup (Full Bleed Edge-to-Edge) -->
           <div class="relative w-[270px] sm:w-[310px] aspect-[9/19] bg-slate-900 rounded-[38px] p-1.5 shadow-2xl border-2 border-slate-700/80 ring-1 ring-slate-950/20">
 
-            <!-- Top Camera Punch-Hole Dot -->
             <div class="absolute top-3 left-1/2 -translate-x-1/2 z-30 w-3.5 h-3.5 bg-black rounded-full border border-slate-700 shadow-sm flex items-center justify-center pointer-events-none">
               <div class="w-1.5 h-1.5 rounded-full bg-slate-900"></div>
             </div>
@@ -287,9 +292,20 @@ onMounted(() => {
                   muted
                   playsinline
                   preload="none"
+                  @loadstart="onVideoLoadStart"
+                  @waiting="onVideoWaiting"
+                  @playing="onVideoPlaying"
+                  @canplay="onVideoCanPlay"
                   @ended="handleVideoEnded"
                   class="feature-video-element w-full h-full object-cover rounded-[32px] transition-all duration-500"
                 ></video>
+
+                <div 
+                  v-if="isVideoLoading" 
+                  class="absolute inset-0 flex items-center justify-center bg-black/10 pointer-events-none z-10"
+                >
+                  <div class="w-8 h-8 rounded-full border-2 border-white/40 border-t-sky-500 animate-spin"></div>
+                </div>
 
                 <button 
                   @click="togglePlay"
@@ -307,7 +323,6 @@ onMounted(() => {
             </div>
           </div>
 
-          <!-- Bottom Navigation & Dots Indicator -->
           <div class="flex items-center justify-center gap-3 mt-6 mb-12">
             <button
               @click="prevFeature"
@@ -345,7 +360,6 @@ onMounted(() => {
             </button>
           </div>
 
-          <!-- Bottom Advantages Cards Grid on Mobile -->
           <div class="w-full max-w-xl">
             <div class="text-center mb-6">
               <span class="text-xs font-extrabold uppercase tracking-wider text-slate-500">

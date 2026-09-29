@@ -80,6 +80,13 @@ const tabs = computed(() => [
 const demoVideoUrls = computed(() => tabs.value.map((t) => t.video))
 const { getCachedSrc } = useLazyVideoPreloader(demoSectionRef, demoVideoUrls)
 
+const isVideoLoading = ref(false)
+
+const onVideoWaiting = () => { isVideoLoading.value = true }
+const onVideoPlaying = () => { isVideoLoading.value = false }
+const onVideoCanPlay = () => { isVideoLoading.value = false }
+const onVideoLoadStart = () => { isVideoLoading.value = true }
+
 const toggleMute = () => {
   if (videoPlayer.value) {
     videoPlayer.value.muted = !videoPlayer.value.muted
@@ -89,6 +96,7 @@ const toggleMute = () => {
 
 const selectTab = (idx) => {
   activeTab.value = idx
+  isVideoLoading.value = true
 }
 
 watch(activeTab, () => {
@@ -109,7 +117,6 @@ onMounted(() => {
   <section ref="demoSectionRef" id="demo" class="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-sky-50/20 to-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
       
-      <!-- Section Header -->
       <div ref="demoContainer" class="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
         <span class="text-xs font-bold tracking-widest text-sky-600 uppercase mb-2 inline-block">
           {{ $t('demo.sectionTag') }}
@@ -122,7 +129,6 @@ onMounted(() => {
         </p>
       </div>
 
-      <!-- Tabs Navigation Bar -->
       <div class="flex flex-wrap justify-center gap-2.5 sm:gap-3 mb-12 sm:mb-16">
         <button
           v-for="(tab, index) in tabs"
@@ -140,19 +146,15 @@ onMounted(() => {
         </button>
       </div>
 
-      <!-- Main Interactive Demo Showcase Container -->
       <div class="ezbiz-card p-6 sm:p-10 lg:p-12 rounded-3xl bg-white border-2 border-sky-100 shadow-xl relative overflow-hidden max-w-6xl mx-auto">
         
-        <!-- Ambient Backlight Blur -->
         <div class="absolute -top-24 -right-24 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-200/40 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
           
-          <!-- LEFT COLUMN: Active Tab Feature Description (7 columns on LG) -->
           <div class="lg:col-span-7 space-y-6 text-left">
             
-            <!-- Tag Badge -->
             <div>
               <span class="px-4 py-1.5 text-xs font-black uppercase tracking-wider rounded-full bg-sky-50 text-sky-600 border border-sky-200 shadow-xs inline-flex items-center gap-2">
                 <span>{{ tabs[activeTab].icon }}</span>
@@ -160,7 +162,6 @@ onMounted(() => {
               </span>
             </div>
 
-            <!-- Title & Description -->
             <h3 class="text-2xl sm:text-4xl font-black text-slate-900 leading-snug tracking-tight">
               {{ tabs[activeTab].heading }}
             </h3>
@@ -169,7 +170,6 @@ onMounted(() => {
               {{ tabs[activeTab].desc }}
             </p>
 
-            <!-- Key Points Checklist -->
             <div class="pt-2 pb-4 border-y border-sky-100/80 space-y-3">
               <div 
                 v-for="(feature, fIdx) in tabs[activeTab].features" 
@@ -183,7 +183,6 @@ onMounted(() => {
               </div>
             </div>
 
-            <!-- Interactive Action & Sound Button Controls -->
             <div class="flex flex-wrap items-center gap-4 pt-2">
               <button
                 @click="toggleMute"
@@ -205,29 +204,22 @@ onMounted(() => {
 
           </div>
 
-          <!-- RIGHT COLUMN: Realistic Mobile Phone Mockup Frame (5 columns on LG) -->
           <div class="lg:col-span-5 flex justify-center items-center py-4">
             
-            <!-- PHONE MOCKUP SHELL (Full Bleed Edge-to-Edge) -->
             <div class="relative w-[280px] xs:w-[300px] sm:w-[320px] aspect-[9/19] rounded-[38px] sm:rounded-[44px] bg-slate-950 p-1.5 shadow-2xl shadow-sky-500/20 ring-1 ring-slate-700/60 border-2 border-slate-700/80 flex flex-col justify-between overflow-hidden group">
               
-              <!-- Side Buttons (Left & Right hardware buttons) -->
               <div class="absolute -left-[14px] top-24 w-1 h-10 bg-slate-700 rounded-l-md"></div>
               <div class="absolute -left-[14px] top-38 w-1 h-10 bg-slate-700 rounded-l-md"></div>
               <div class="absolute -right-[14px] top-32 w-1 h-14 bg-slate-700 rounded-r-md"></div>
 
-              <!-- Top Camera Punch-Hole Dot -->
               <div class="absolute top-3.5 left-1/2 -translate-x-1/2 z-30 w-3.5 h-3.5 bg-black rounded-full border border-slate-700 shadow-sm flex items-center justify-center pointer-events-none">
                 <div class="w-1.5 h-1.5 rounded-full bg-slate-900"></div>
               </div>
 
-              <!-- Screen Reflection Glare Overlay -->
               <div class="pointer-events-none absolute inset-0 rounded-[32px] bg-gradient-to-tr from-transparent via-white/5 to-white/10 z-20"></div>
 
-              <!-- PHONE SCREEN DISPLAY AREA (White App Background) -->
               <div class="relative w-full h-full rounded-[32px] overflow-hidden bg-white flex items-center justify-center border border-slate-200">
                 
-                <!-- Embedded Demo Video Player -->
                 <video
                   ref="videoPlayer"
                   :src="getCachedSrc(tabs[activeTab].video)"
@@ -235,10 +227,21 @@ onMounted(() => {
                   loop
                   muted
                   playsinline
+                  @loadstart="onVideoLoadStart"
+                  @waiting="onVideoWaiting"
+                  @playing="onVideoPlaying"
+                  @canplay="onVideoCanPlay"
                   class="w-full h-full object-cover rounded-[32px] transition-all duration-500"
                 ></video>
 
-                <!-- Floating Play / Sound Overlay Button -->
+                <!-- Simple Loading Circle -->
+                <div 
+                  v-if="isVideoLoading" 
+                  class="absolute inset-0 flex items-center justify-center bg-black/10 pointer-events-none z-10"
+                >
+                  <div class="w-8 h-8 rounded-full border-2 border-white/40 border-t-sky-500 animate-spin"></div>
+                </div>
+
                 <button
                   @click="toggleMute"
                   class="absolute top-12 right-3 z-30 w-9 h-9 rounded-full bg-slate-900/80 backdrop-blur-md border border-white/20 text-white flex items-center justify-center text-xs shadow-lg hover:scale-110 transition-transform cursor-pointer"
@@ -249,7 +252,6 @@ onMounted(() => {
 
               </div>
 
-              <!-- Bottom Home Indicator Line -->
               <div class="absolute bottom-2.5 left-1/2 -translate-x-1/2 w-32 h-1 bg-white/40 rounded-full z-30"></div>
 
             </div>
