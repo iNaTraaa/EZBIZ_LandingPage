@@ -362,7 +362,7 @@ export default {
     tagline: 'Nền tảng tự động hóa & quản trị doanh nghiệp thông minh. Đơn giản, tinh tế, tối ưu chi phí.',
     address: '📍 Trụ sở chính: TP. Hồ Chí Minh & Hà Nội',
     hotline: '📞 Hotline: 1900 1234',
-    email: '✉️ Email: hotro@EZBIZ.vn',
+    email: "✉️ Email: hotro{'@'}EZBIZ.vn",
     colProduct: 'Sản Phẩm',
     colSupport: 'Hỗ Trợ & An Toàn',
     colNewsletter: 'Đăng Ký Nhận Bản Tin',

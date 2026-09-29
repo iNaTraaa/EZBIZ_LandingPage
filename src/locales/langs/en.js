@@ -362,7 +362,7 @@ export default {
     tagline: 'Next-Gen intelligent business automation & management platform. Simple, elegant, cost-effective.',
     address: '📍 Headquarters: Ho Chi Minh City & Hanoi',
     hotline: '📞 Hotline: 1900 1234',
-    email: '✉️ Email: hotro@ezbiz.vn',
+    email: "✉️ Email: hotro{'@'}ezbiz.vn",
     colProduct: 'Products',
     colSupport: 'Support & Security',
     colNewsletter: 'Subscribe Newsletter',
