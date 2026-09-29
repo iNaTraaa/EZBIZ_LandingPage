@@ -303,32 +303,32 @@ export default {
     verifiedDoc: 'Xác minh chính thức',
     hint: 'Rê chuột để xem thông tin cuộc thi',
     award1: {
-      tag: '🏆 GIẢI NHẤT',
-      title: 'Giải Nhất Khởi Nghiệp Đổi Mới Sáng Tạo TechFest 2025',
-      org: 'Bộ Khoa Học & Công Nghệ',
-      desc: 'Vinh danh giải pháp công nghệ quản lý & tự động hóa bán bán lẻ xuất sắc nhất năm dành cho hộ kinh doanh.',
-      details: 'Vượt qua hơn 500 dự án khởi nghiệp công nghệ toàn quốc, EZBIZ xuất sắc chinh phục hội đồng giám khảo nhờ mô hình tự động hóa quy trình bán hàng & báo cáo tài chính tích hợp AI đột phá.'
+      tag: 'Khoa Học Dữ Liệu 2026',
+      title: 'Giải Nhất Cuộc Thi Khoa Học Dữ Liệu Khoa CNTT 2026',
+      org: 'Khoa CNTT - Trường Đại học Nguyễn Tất Thành (NTTU)',
+      desc: 'Giải Nhất Cuộc thi Khoa học Dữ liệu 2026 dành cho Dự án "EZBIZ AI hỗ trợ hộ kinh doanh và buôn bán lẻ".',
+      details: 'Đội DMT xuất sắc vượt qua các đội thi chung kết để chinh phục Hội đồng Ban Giám khảo nhờ giải pháp EZBIZ AI ứng dụng Khoa học dữ liệu & Trí tuệ nhân tạo, tối ưu hóa vận hành, quản lý dòng tiền và kê khai thuế cho hộ kinh doanh bán lẻ.'
     },
     award2: {
-      tag: '🥇 TOP 10 XUẤT SẮC',
-      title: 'Top 10 Giải Pháp Công Nghệ Bán Lẻ Đột Phá 2025',
-      org: 'Hiệp Hội Phần Mềm & Dịch Vụ CNTT (VINASA)',
-      desc: 'Bằng khen giải pháp chuyển đổi số có tốc độ tăng trưởng và trải nghiệm người dùng tối ưu hàng đầu.',
-      details: 'Được bình chọn dựa trên các tiêu chí khắt khe về tốc độ xử lý giao dịch, khả năng mở rộng hệ thống và sự hài lòng của hơn 10.000 hộ kinh doanh trên toàn quốc.'
+      tag: 'Trí Tuệ Nhân Tạo 2026',
+      title: 'Cuộc Thi Trí Tuệ Nhân Tạo Khoa CNTT 2026',
+      org: 'Khoa CNTT - Trường Đại học Nguyễn Tất Thành (NTTU)',
+      desc: 'Giải Thưởng Đột Phá tại Cuộc thi Trí tuệ Nhân tạo 2026 với Giải pháp "EZBIZ - Nền Tảng Tự Động Hóa & Quản Lý Doanh Nghiệp".',
+      details: 'EZBIZ xuất sắc ghi dấu ấn tại Cuộc thi Trí tuệ Nhân tạo Khoa CNTT 2026 nhờ ứng dụng Trợ lý AI thông minh kết hợp bán hàng POS, tự động hóa quản lý kho bãi và đối soát tài chính tức thì cho doanh nghiệp.'
     }
   },
   faq: {
     sectionTag: 'Hỏi Đáp Thường Gặp',
     titlePrefix: 'Giải Đáp',
     titleSuffix: 'Thắc Mắc Của Bạn',
-    q1: 'EzBiz có hỗ trợ chuyển đổi dữ liệu từ hệ thống cũ sang không?',
-    a1: 'Có! Đội ngũ chuyên gia kỹ thuật của EzBiz hỗ trợ xuất và đồng bộ toàn bộ dữ liệu từ Excel, CRM hoặc ERP cũ sang EzBiz hoàn toàn miễn phí chỉ trong 24h.',
+    q1: 'EZBIZ có hỗ trợ chuyển đổi dữ liệu từ hệ thống cũ sang không?',
+    a1: 'Có! EZBIZ hỗ trợ xuất và đồng bộ toàn bộ dữ liệu từ Excel cũ sang EZBIZ hoàn toàn miễn phí.',
     q2: 'Dữ liệu doanh nghiệp của tôi có được đảm bảo an toàn tuyệt đối không?',
-    a2: 'EzBiz cam kết bảo mật 100% dữ liệu theo chuẩn quốc tế ISO/IEC 27001. Dữ liệu được mã hóa SSL/TLS 256-bit và sao lưu định kỳ hàng ngày trên hạ tầng Cloud cao cấp.',
-    q3: 'Tôi có thể dùng thử EzBiz trước khi quyết định mua gói dịch vụ không?',
-    a3: 'Bạn hoàn toàn được dùng thử trọn bộ tính năng nâng cao trong 14 ngày miễn phí mà không cần nhập thông tin thẻ thanh toán.',
-    q4: 'EzBiz có hỗ trợ xuất hóa đơn VAT cho doanh nghiệp không?',
-    a4: 'EzBiz cung cấp đầy đủ hóa đơn điện tử GTGT (VAT) hợp lệ ngay sau khi đăng ký thành công.'
+    a2: 'EZBIZ cam kết bảo mật 100% dữ liệu theo chuẩn quốc tế ISO/IEC 27001. Dữ liệu được mã hóa SSL/TLS 256-bit và sao lưu định kỳ hàng ngày trên hạ tầng Cloud.',
+    q3: 'Tôi có thể dùng thử EZBIZ trước khi quyết định mua gói dịch vụ không?',
+    a3: 'Bạn hoàn toàn được dùng thử trọn bộ tính năng nâng cao trong 14 ngày miễn phí.',
+    q4: 'EZBIZ có hỗ trợ xuất hóa đơn VAT cho doanh nghiệp không?',
+    a4: 'EZBIZ hướng đến các kết nối với cơ quan thuế trong tương lai nhằm cung cấp đầy đủ hóa đơn điện tử GTGT (VAT) hợp lệ.'
   },
   cta: {
     tag: 'Tư Vấn & Dùng Thử Miễn Phí',
@@ -356,19 +356,19 @@ export default {
     tagline: 'Nền tảng tự động hóa & quản trị doanh nghiệp thông minh. Đơn giản, tinh tế, tối ưu chi phí.',
     address: '📍 Trụ sở chính: TP. Hồ Chí Minh & Hà Nội',
     hotline: '📞 Hotline: 1900 1234',
-    email: '✉️ Email: hotro@ezbiz.vn',
+    email: '✉️ Email: hotro@EZBIZ.vn',
     colProduct: 'Sản Phẩm',
     colSupport: 'Hỗ Trợ & An Toàn',
     colNewsletter: 'Đăng Ký Nhận Bản Tin',
     newsletterDesc: 'Cập nhật tính năng mới & kinh nghiệm quản trị doanh nghiệp hiệu quả.',
     btnSubscribe: 'Gửi',
-    copyright: '© 2026 EzBiz - Nền tảng quản trị doanh nghiệp thông minh. All rights reserved.',
+    copyright: '© 2026 EZBIZ - Nền tảng quản trị doanh nghiệp thông minh. All rights reserved.',
     terms: 'Điều khoản',
     privacy: 'Bảo mật',
     sitemap: 'Sitemap'
   },
   stickyBar: {
-    trialTitle: 'EzBiz Dùng Thử 14 Ngày',
+    trialTitle: 'EZBIZ Dùng Thử 14 Ngày',
     trialDesc: 'Tối ưu vận hành ngay hôm nay',
     btnAction: 'Trải Nghiệm Ngay ➔'
   }

@@ -303,18 +303,18 @@ export default {
     verifiedDoc: 'Official Verification',
     hint: 'Hover to view contest information',
     award1: {
-      tag: '🏆 1ST PRIZE',
-      title: '1st Prize - TechFest Innovation & Startup Award 2025',
-      org: 'Ministry of Science & Technology',
-      desc: 'Honored as the most outstanding retail automation & management solution for SMBs.',
-      details: 'Outperforming over 500 technology startups nationwide, EZBIZ won top honors for its AI-integrated retail automation and instant financial reporting platform.'
+      tag: 'Data Science 2026',
+      title: 'First Prize - Faculty of IT Data Science Competition 2026',
+      org: 'Faculty of IT - Nguyen Tat Thanh University (NTTU)',
+      desc: 'First Prize at the 2026 Data Science Competition for the project "EZBIZ AI supporting household businesses & retail".',
+      details: 'Team DMT convincingly surpassed top finalist teams to win over the Board of Judges with the EZBIZ AI solution, applying Data Science & AI to optimize retail operations, cash flow management, and tax filing for small businesses.'
     },
     award2: {
-      tag: '🥇 TOP 10 AWARD',
-      title: 'Top 10 Breakthrough Retail Tech Solutions 2025',
-      org: 'Vietnam Software & IT Services Association (VINASA)',
-      desc: 'Recognized for top digital transformation growth performance and user experience.',
-      details: 'Selected based on rigorous evaluation criteria including transaction processing speed, system scalability, and high customer satisfaction from 10,000+ business owners.'
+      tag: 'Artificial Intelligence 2026',
+      title: 'Faculty of IT Artificial Intelligence Competition 2026',
+      org: 'Faculty of IT - Nguyen Tat Thanh University (NTTU)',
+      desc: 'Innovation & Breakthrough Award at the 2026 AI Contest for "EZBIZ - Business Automation Platform".',
+      details: 'EZBIZ made a powerful impression at the 2026 Faculty of IT Artificial Intelligence Competition with its smart AI Assistant integrating POS retail, automated inventory, and instant financial reconciliation for businesses.'
     }
   },
   faq: {
@@ -322,13 +322,13 @@ export default {
     titlePrefix: 'We Answer Your',
     titleSuffix: 'Common Questions',
     q1: 'Does EzBiz support migrating data from legacy systems?',
-    a1: 'Yes! EzBiz technical experts assist in exporting and syncing all data from Excel, legacy CRM, or ERP to EzBiz completely free within 24 hours.',
+    a1: 'Yes! EzBiz assist in exporting and syncing all data from Excel to EzBiz completely free.',
     q2: 'Is my enterprise data guaranteed 100% secure?',
     a2: 'EzBiz commits to 100% data security adhering to ISO/IEC 27001 standards. Data is 256-bit SSL/TLS encrypted and backed up daily on enterprise cloud infrastructure.',
     q3: 'Can I try EzBiz before purchasing a subscription?',
     a3: 'Absolutely! You get a 14-day free trial with full access to advanced features without entering credit card details.',
     q4: 'Does EzBiz issue official invoices for tax purposes?',
-    a4: 'EzBiz provides valid electronic VAT invoices immediately after registration.'
+    a4: 'EzBiz aims to connect with tax authorities in the future to provide valid electronic VAT invoices.'
   },
   cta: {
     tag: 'Free Consultation & Trial',

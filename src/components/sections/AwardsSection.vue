@@ -21,8 +21,10 @@ const awards = computed(() => [
   {
     key: 'award1',
     image: khdlImage,
-    year: '2025',
+    year: '2026',
     tag: t('awards.award1.tag'),
+    title: t('awards.award1.title'),
+    org: t('awards.award1.org'),
     desc: t('awards.award1.desc'),
     details: t('awards.award1.details'),
     link: 'https://cntt.ntt.edu.vn/tin-tuc/chung-ket-cuoc-thi-khoa-hoc-du-lieu-khoa-cntt-2026-khai-pha-du-lieu-kien-tao-tuong-lai/'
@@ -32,6 +34,8 @@ const awards = computed(() => [
     image: ttntImage,
     year: '2026',
     tag: t('awards.award2.tag'),
+    title: t('awards.award2.title'),
+    org: t('awards.award2.org'),
     desc: t('awards.award2.desc'),
     details: t('awards.award2.details'),
     link: 'https://cntt.ntt.edu.vn/nghien-cuu-khoa-hoc/phat-trien-san-pham/cuoc-thi-tri-tue-nhan-tao-khoa-cong-nghe-thong-tin-nam-2026-but-pha-sang-tao-kien-tao-tuong-lai/'
@@ -260,15 +264,18 @@ onMounted(() => {
               <div class="p-4 sm:p-5 rounded-2xl border border-sky-100/80 text-left w-full min-w-0 lg:min-w-[340px]">
                 
                 <div class="flex items-center justify-between gap-2 mb-3">
-                  <span class="text-xs font-extrabold uppercase tracking-wider text-sky-600 bg-white px-3 py-1 rounded-full border border-sky-200">
-                    {{ award.year }} Official Award
+                  <span class="text-xs font-black uppercase tracking-wider text-sky-600 bg-sky-50 px-3 py-1 rounded-full border border-sky-200">
+                    {{ award.tag }}
                   </span>
-                  
                 </div>
 
-                <h3 class="text-base sm:text-lg font-black text-slate-900 mb-2 leading-snug">
-                  {{ award.desc }}
+                <h3 class="text-base sm:text-lg font-black text-slate-900 mb-1 leading-snug">
+                  {{ award.title }}
                 </h3>
+
+                <p class="text-xs font-semibold text-sky-700 mb-3">
+                  {{ award.org }}
+                </p>
 
                 <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 font-medium">
                   {{ award.details }}
