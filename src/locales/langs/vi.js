@@ -263,6 +263,12 @@ export default {
     titlePrefix: 'Đội Ngũ',
     titleSuffix: 'Phát Triển EZBIZ',
     subtitle: 'Những con người tâm huyết xây dựng giải pháp tối ưu cho hộ kinh doanh & doanh nghiệp.',
+    mentor: {
+      name: 'ThS. Trần Châu Thanh Thiện',
+      role: 'Mentor',
+      roleDetail: 'Academic Mentor',
+      desc: 'Cố vấn chuyên môn, định hướng nghiên cứu & chiến lược phát triển sản phẩm.'
+    },
     member1: {
       name: 'Võ Lê Hải Đăng',
       role: 'Leader',

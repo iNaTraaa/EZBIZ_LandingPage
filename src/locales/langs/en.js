@@ -263,6 +263,12 @@ export default {
     titlePrefix: 'Meet Our',
     titleSuffix: 'Development Team',
     subtitle: 'Dedicated professionals building the next-generation platform for your business.',
+    mentor: {
+      name: 'M.Sc. Trần Châu Thanh Thiện',
+      role: 'Mentor',
+      roleDetail: 'Academic Mentor',
+      desc: 'Expert advisor, research orientation & product development strategy mentor.'
+    },
     member1: {
       name: 'Võ Lê Hải Đăng',
       role: 'Leader',
