@@ -359,7 +359,7 @@ export default {
     hotlineNote: '📞 Hoặc gọi trực tiếp Hotline:'
   },
   footer: {
-    tagline: 'Nền tảng tự động hóa & quản trị doanh nghiệp thông minh. Đơn giản, tinh tế, tối ưu chi phí.',
+    tagline: 'Giải pháp hỗ trợ hộ kinh doanh & buôn bán lẻ. Đơn giản, tiện lợi, tối ưu chi phí.',
     address: '📍 Trụ sở chính: TP. Hồ Chí Minh & Hà Nội',
     hotline: '📞 Hotline: 1900 1234',
     email: "✉️ Email: hotro{'@'}EZBIZ.vn",
@@ -368,7 +368,7 @@ export default {
     colNewsletter: 'Đăng Ký Nhận Bản Tin',
     newsletterDesc: 'Cập nhật tính năng mới & kinh nghiệm quản trị doanh nghiệp hiệu quả.',
     btnSubscribe: 'Gửi',
-    copyright: '© 2026 EZBIZ - Nền tảng quản trị doanh nghiệp thông minh. All rights reserved.',
+    copyright: '© 2026 EZBIZ - Giải pháp hỗ trợ hộ kinh doanh & buôn bán lẻ. All rights reserved.',
     terms: 'Điều khoản',
     privacy: 'Bảo mật',
     sitemap: 'Sitemap'

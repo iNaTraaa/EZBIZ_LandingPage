@@ -359,7 +359,7 @@ export default {
     hotlineNote: '📞 Or call Hotline directly:'
   },
   footer: {
-    tagline: 'Next-Gen intelligent business automation & management platform. Simple, elegant, cost-effective.',
+    tagline: 'Solution for small businesses & retailers. Simple, convenient, cost-effective.',
     address: '📍 Headquarters: Ho Chi Minh City & Hanoi',
     hotline: '📞 Hotline: 1900 1234',
     email: "✉️ Email: hotro{'@'}ezbiz.vn",
@@ -368,7 +368,7 @@ export default {
     colNewsletter: 'Subscribe Newsletter',
     newsletterDesc: 'Get the latest features & business management insights.',
     btnSubscribe: 'Send',
-    copyright: '© 2026 EzBiz - Intelligent Business Management Platform. All rights reserved.',
+    copyright: '© 2026 EzBiz - Solution for small businesses & retailers. All rights reserved.',
     terms: 'Terms',
     privacy: 'Privacy',
     sitemap: 'Sitemap'
