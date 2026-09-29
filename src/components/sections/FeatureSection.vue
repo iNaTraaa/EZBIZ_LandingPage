@@ -2,6 +2,7 @@
 import { ref, onMounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
+import { useLazyVideoPreloader } from '@/composables/useLazyVideoPreloader'
 
 import demo1 from '@/assets/img/demo/demo_1.mp4'
 import demo2 from '@/assets/img/demo/demo_2.mp4'
@@ -13,12 +14,11 @@ const { animateFadeIn } = useScrollAnimation()
 
 const sectionHeader = ref(null)
 const showcaseContainer = ref(null)
+const featuresSectionRef = ref(null)
 
 const activeFeatureIndex = ref(0)
 const isPlaying = ref(true)
-const videoRef = ref(null)
 
-// 4 Main Features Data with Advantage Items for each Feature
 const mainFeatures = computed(() => [
   {
     id: 0,
@@ -85,23 +85,36 @@ const mainFeatures = computed(() => [
 const activeFeature = computed(() => mainFeatures.value[activeFeatureIndex.value])
 const leftAdvantages = computed(() => activeFeature.value.advantages.slice(0, 2))
 const rightAdvantages = computed(() => activeFeature.value.advantages.slice(2, 4))
+const videoUrls = computed(() => mainFeatures.value.map((f) => f.videoUrl))
+const { isSectionVisible, preloadNext } = useLazyVideoPreloader(featuresSectionRef, videoUrls)
 
 const selectFeature = (index) => {
+  if (activeFeatureIndex.value === index) return
   activeFeatureIndex.value = index
   isPlaying.value = true
-  if (videoRef.value) {
-    videoRef.value.load()
-    videoRef.value.play().catch(() => {})
+
+  if (isSectionVisible.value) {
+    setTimeout(() => {
+      const videoEls = document.querySelectorAll('.feature-video-element')
+      videoEls.forEach((el) => {
+        el.load()
+        el.play().catch(() => {})
+      })
+    }, 20)
   }
+
+  preloadNext(index)
 }
 
 const togglePlay = () => {
-  if (!videoRef.value) return
-  if (isPlaying.value) {
-    videoRef.value.pause()
-  } else {
-    videoRef.value.play()
-  }
+  const videoEls = document.querySelectorAll('.feature-video-element')
+  videoEls.forEach((el) => {
+    if (isPlaying.value) {
+      el.pause()
+    } else {
+      el.play().catch(() => {})
+    }
+  })
   isPlaying.value = !isPlaying.value
 }
 
@@ -126,7 +139,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="features" class="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-sky-50/20 to-white relative overflow-hidden">
+  <section ref="featuresSectionRef" id="features" class="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-sky-50/20 to-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
       
       <!-- Section Header -->
@@ -178,14 +191,14 @@ onMounted(() => {
                 <!-- Video Element -->
                 <div class="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
                   <video
-                    ref="videoRef"
-                    :src="activeFeature.videoUrl"
-                    autoplay
+                    :src="isSectionVisible ? activeFeature.videoUrl : ''"
+                    :autoplay="isSectionVisible"
                     loop
                     muted
                     playsinline
+                    preload="none"
                     @ended="handleVideoEnded"
-                    class="w-full h-full object-cover rounded-[32px] transition-all duration-500"
+                    class="feature-video-element w-full h-full object-cover rounded-[32px] transition-all duration-500"
                   ></video>
 
                  
@@ -269,14 +282,14 @@ onMounted(() => {
 
               <div class="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
                 <video
-                  ref="videoRef"
-                  :src="activeFeature.videoUrl"
-                  autoplay
+                  :src="isSectionVisible ? activeFeature.videoUrl : ''"
+                  :autoplay="isSectionVisible"
                   loop
                   muted
                   playsinline
+                  preload="none"
                   @ended="handleVideoEnded"
-                  class="w-full h-full object-cover rounded-[32px] transition-all duration-500"
+                  class="feature-video-element w-full h-full object-cover rounded-[32px] transition-all duration-500"
                 ></video>
 
                 <button 
