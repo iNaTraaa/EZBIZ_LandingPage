@@ -17,7 +17,7 @@ import Footer from './components/common/Footer.vue'
   <div class="min-h-screen bg-white text-slate-900 selection:bg-sky-400 selection:text-white antialiased">
     <!-- Initial Splash Screen Loader -->
     <SplashScreen />
-
+<Footer />
     <!-- Navbar Header -->
     <Navbar />
 
@@ -57,7 +57,7 @@ import Footer from './components/common/Footer.vue'
     </div> -->
 
     <!-- Footer -->
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
 
