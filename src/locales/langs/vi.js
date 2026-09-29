@@ -7,7 +7,8 @@ export default {
     faq: 'Hỏi Đáp',
     tryNow: 'Trải nghiệm ngay',
     launguage: 'Ngôn Ngữ',
-    team: 'Đội Ngũ'
+    team: 'Đội Ngũ',
+    contact: 'Liên Hệ'
   },
   hero: {
     badge: 'Nền Tảng Tự Động Hóa & Quản Lý Doanh Nghiệp Thế Hệ Mới',
@@ -281,13 +282,13 @@ export default {
       desc: 'Phân tích nghiệp vụ & thiết kế luồng quy trình tối ưu.'
     },
     member4: {
-      name: 'Thanh Vy',
+      name: 'Nguyễn Thị Thanh Vy',
       role: 'Marketing',
       roleDetail: 'Marketing ',
       desc: 'Xây dựng thương hiệu & phát triển thị trường toàn quốc.'
     },
     member5: {
-      name: 'Mai Thy',
+      name: 'Nguyễn Đinh Mai Thy',
       role: 'Marketing',
       roleDetail: 'Marketing',
       desc: 'Xây dựng thương hiệu & phát triển thị trường toàn quốc.'
@@ -333,7 +334,7 @@ export default {
     tag: 'Tư Vấn & Dùng Thử Miễn Phí',
     titlePrefix: 'Để Lại Thông Tin Liên Hệ Để Chúng Tôi Có Thể',
     titleHighlight: 'Liên Lạc Với Bạn',
-    desc: 'Đội ngũ chuyên gia của EzBiz sẽ chủ động gọi điện tư vấn giải pháp phù hợp và hỗ trợ thiết lập dùng thử miễn phí.',
+    desc: 'Đội ngũ chuyên gia của EZBIZ sẽ chủ động gọi điện tư vấn giải pháp phù hợp và hỗ trợ thiết lập dùng thử miễn phí.',
     formTitle: 'Đăng Ký Tư Vấn',
     formSubtitle: 'Miễn phí 100%',
     companyLabel: 'Tên Cửa Hàng',

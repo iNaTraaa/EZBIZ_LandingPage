@@ -57,7 +57,6 @@ const handleSubmit = async () => {
         company: form.value.company,
         fullName: form.value.fullName,
         phone: form.value.phone,
-        note: 'Đăng ký tư vấn từ Form Chiều Dọc'
       }
 
       // Gửi JSON dưới dạng text/plain để tránh CORS preflight và lỗi 404 redirect của Google

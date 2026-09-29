@@ -7,7 +7,8 @@ export default {
     faq: 'FAQ',
     tryNow: 'Try Now',
     launguage: 'Language',
-    team: 'Team'
+    team: 'Team',
+    contact: 'Contact'
   },
   hero: {
     badge: 'Next-Gen Business Automation & Management Platform',
@@ -281,13 +282,13 @@ export default {
       desc: 'Business process analysis & feature workflow design.'
     },
     member4: {
-      name: 'Thanh Vy',
+      name: 'Nguyễn Thị Thanh Vy',
       role: 'Marketing',
       roleDetail: 'Marketing Lead',
       desc: 'Brand strategy & growth marketing across markets.'
     },
     member5: {
-      name: 'Mai Thy',
+      name: 'Nguyễn Đinh Mai Thy',
       role: 'Marketing',
       roleDetail: 'Marketing Lead',
       desc: 'Brand strategy & growth marketing across markets.'
@@ -333,7 +334,7 @@ export default {
     tag: 'Free Consultation & Trial',
     titlePrefix: 'Leave Your Contact Details So We Can',
     titleHighlight: 'Get In Touch With You',
-    desc: 'Our EzBiz expert team will call you to consult tailored solutions and assist free trial setup.',
+    desc: 'Our EZBIZ expert team will call you to consult tailored solutions and assist free trial setup.',
     formTitle: 'Consultation Signup',
     formSubtitle: '100% Free',
     companyLabel: 'Store Name',

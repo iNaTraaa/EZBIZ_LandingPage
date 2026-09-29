@@ -69,6 +69,7 @@ onUnmounted(() => {
           <a href="#pricing" class="hover:text-sky-600 transition-colors">{{ $t('nav.pricing') }}</a>
           <a href="#team" class="hover:text-sky-600 transition-colors">{{ $t('nav.team') }}</a>
           <a href="#faq" class="hover:text-sky-600 transition-colors">{{ $t('nav.faq') }}</a>
+          <a href="#contact" class="hover:text-sky-600 transition-colors">{{ $t('nav.contact') }}</a>
         </nav>
 
         <!-- Desktop Right Actions (Language Switcher & Try Now) -->
@@ -209,6 +210,14 @@ onUnmounted(() => {
               class="p-2.5 rounded-xl hover:bg-sky-50 hover:text-sky-600 transition-colors flex items-center justify-between"
             >
               <span>{{ $t('nav.faq') }}</span>
+              <span class="text-xs text-slate-400">➔</span>
+            </a>
+            <a 
+              href="#contact" 
+              @click="closeMobileMenu"
+              class="p-2.5 rounded-xl hover:bg-sky-50 hover:text-sky-600 transition-colors flex items-center justify-between"
+            >
+              <span>{{ $t('nav.contact') }}</span>
               <span class="text-xs text-slate-400">➔</span>
             </a>
           </nav>
