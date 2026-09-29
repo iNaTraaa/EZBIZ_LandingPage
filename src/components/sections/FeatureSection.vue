@@ -86,7 +86,7 @@ const activeFeature = computed(() => mainFeatures.value[activeFeatureIndex.value
 const leftAdvantages = computed(() => activeFeature.value.advantages.slice(0, 2))
 const rightAdvantages = computed(() => activeFeature.value.advantages.slice(2, 4))
 const videoUrls = computed(() => mainFeatures.value.map((f) => f.videoUrl))
-const { isSectionVisible, preloadNext } = useLazyVideoPreloader(featuresSectionRef, videoUrls)
+const { isSectionVisible, getCachedSrc, preloadNext } = useLazyVideoPreloader(featuresSectionRef, videoUrls)
 
 const selectFeature = (index) => {
   if (activeFeatureIndex.value === index) return
@@ -97,7 +97,6 @@ const selectFeature = (index) => {
     setTimeout(() => {
       const videoEls = document.querySelectorAll('.feature-video-element')
       videoEls.forEach((el) => {
-        el.load()
         el.play().catch(() => {})
       })
     }, 20)
@@ -191,7 +190,7 @@ onMounted(() => {
                 <!-- Video Element -->
                 <div class="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
                   <video
-                    :src="isSectionVisible ? activeFeature.videoUrl : ''"
+                    :src="isSectionVisible ? getCachedSrc(activeFeature.videoUrl) : ''"
                     :autoplay="isSectionVisible"
                     loop
                     muted
@@ -282,7 +281,7 @@ onMounted(() => {
 
               <div class="relative w-full h-full flex items-center justify-center overflow-hidden bg-white">
                 <video
-                  :src="isSectionVisible ? activeFeature.videoUrl : ''"
+                  :src="isSectionVisible ? getCachedSrc(activeFeature.videoUrl) : ''"
                   :autoplay="isSectionVisible"
                   loop
                   muted

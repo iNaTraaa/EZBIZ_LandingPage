@@ -2,6 +2,7 @@
 import { ref, onMounted, watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
+import { useLazyVideoPreloader } from '@/composables/useLazyVideoPreloader'
 
 import demo1 from '@/assets/img/demo/demo_1.mp4'
 import demo2 from '@/assets/img/demo/demo_2.mp4'
@@ -12,6 +13,7 @@ const { t } = useI18n()
 const { animateFadeIn } = useScrollAnimation()
 
 const demoContainer = ref(null)
+const demoSectionRef = ref(null)
 const videoPlayer = ref(null)
 const isMuted = ref(true)
 const activeTab = ref(0)
@@ -75,6 +77,9 @@ const tabs = computed(() => [
   }
 ])
 
+const demoVideoUrls = computed(() => tabs.value.map((t) => t.video))
+const { getCachedSrc } = useLazyVideoPreloader(demoSectionRef, demoVideoUrls)
+
 const toggleMute = () => {
   if (videoPlayer.value) {
     videoPlayer.value.muted = !videoPlayer.value.muted
@@ -101,7 +106,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section id="demo" class="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-sky-50/20 to-white relative overflow-hidden">
+  <section ref="demoSectionRef" id="demo" class="py-20 sm:py-28 bg-gradient-to-b from-slate-50 via-sky-50/20 to-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
       
       <!-- Section Header -->
@@ -225,7 +230,7 @@ onMounted(() => {
                 <!-- Embedded Demo Video Player -->
                 <video
                   ref="videoPlayer"
-                  :src="tabs[activeTab].video"
+                  :src="getCachedSrc(tabs[activeTab].video)"
                   autoplay
                   loop
                   muted
