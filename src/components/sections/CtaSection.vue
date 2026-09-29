@@ -12,7 +12,8 @@ const GOOGLE_SHEET_SCRIPT_URL = ref(
 const form = ref({
   company: '',
   fullName: '',
-  phone: ''
+  phone: '',
+  note: ''
 })
 
 const isSubmitting = ref(false)
@@ -57,6 +58,7 @@ const handleSubmit = async () => {
         company: form.value.company,
         fullName: form.value.fullName,
         phone: form.value.phone,
+        note: form.value.note
       }
 
       // Gửi JSON dưới dạng text/plain để tránh CORS preflight và lỗi 404 redirect của Google
@@ -74,7 +76,7 @@ const handleSubmit = async () => {
     }
 
     isSuccess.value = true
-    form.value = { company: '', fullName: '', phone: '' }
+    form.value = { company: '', fullName: '', phone: '', note: '' }
   } catch (err) {
     console.error('Google Sheet Sync Error:', err)
     errorMessage.value = err.message || 'Lỗi gửi dữ liệu'
@@ -133,7 +135,7 @@ onMounted(() => {
               @click="resetForm" 
               class="px-6 py-3 rounded-full bg-slate-900 text-white font-extrabold text-xs hover:bg-sky-600 transition-colors shadow-md cursor-pointer"
             >
-              Gửi Thông Tin Khác ➔
+              Gửi Thông Tin Khác
             </button>
           </div>
 
@@ -194,16 +196,29 @@ onMounted(() => {
               />
             </div>
 
+            <!-- Ghi Chú -->
+            <div>
+              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
+                {{ $t('cta.noteLabel') }}
+              </label>
+              <textarea 
+                v-model="form.note"
+                rows="2"
+                :placeholder="$t('cta.notePlaceholder')"
+                class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all resize-none"
+              ></textarea>
+            </div>
+
             <!-- Submit Button -->
             <button 
               type="submit"
               :disabled="isSubmitting"
-              class="w-full h-14 rounded-2xl bg-gradient-to-r from-sky-500 via-sky-500 to-blue-500 text-white font-black text-base shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed mt-4"
+              class="w-full h-14 rounded-2xl bg-gradient-to-r from-sky-500 via-sky-500 to-sky-500 text-white font-black text-base shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed mt-4"
             >
-              <svg v-if="isSubmitting" class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+              <!-- <svg v-if="isSubmitting" class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
+              </svg> -->
               <span>{{ isSubmitting ? $t('cta.submitting') : $t('cta.btnSubmit') }}</span>
             </button>
 
