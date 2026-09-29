@@ -113,20 +113,20 @@ export default {
       subtitle: 'Auto reconciliation & instant debt clear',
       desc: 'When customers scan VietQR/ZaloPay, smart speaker instantly announces "Money received", avoiding fraud.',
       adv1: {
-        title: 'Voice Speaker Alert',
-        desc: 'Audio alert as soon as funds arrive.'
+        title: 'Modern Technology',
+        desc: 'Utilizes cutting-edge HybridSearch and GraphRag technologies.'
       },
       adv2: {
         title: 'Fraud Prevention',
-        desc: 'No need to inspect fake transfer screens.'
+        desc: 'Agent can detect and understand user intent accurately, preventing fake transfer screens.'
       },
       adv3: {
-        title: 'Auto Order Closing',
-        desc: 'System automatically reconciles & completes orders.'
+        title: 'Smart Reasoning',
+        desc: 'Applies cutting-edge LLM models for complex reasoning tasks.'
       },
       adv4: {
-        title: '40+ Banks Supported',
-        desc: 'Integrated with national VietQR standard.'
+        title: 'High-Tech',
+        desc: 'System can be upgraded to a comprehensive virtual assistant in the future.'
       }
     },
     item5: {

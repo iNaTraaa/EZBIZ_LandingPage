@@ -1,5 +1,5 @@
 <script setup>
-import logoEb from '@/assets/img/logo_eb.png'
+import logoEb from '@/assets/img/logo_eb.webp'
 </script>
 
 <template>

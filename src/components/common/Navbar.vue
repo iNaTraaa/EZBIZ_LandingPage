@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import logoEb from '@/assets/img/logo_eb.png'
+import logoEb from '@/assets/img/logo_eb.webp'
 import ScrollProgressBar from './ScrollProgressBar.vue'
 
 const { locale } = useI18n()

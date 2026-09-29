@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
-import logoEb from '@/assets/img/logo_eb.png'
+import logoEb from '@/assets/img/logo_eb.webp'
 
 const isVisible = ref(true)
 const splashContainer = ref(null)

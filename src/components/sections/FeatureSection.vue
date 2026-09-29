@@ -74,10 +74,10 @@ const mainFeatures = computed(() => [
     badge: t('features.item4.badge'),
     videoUrl: demo4,
     advantages: [
-      { icon: '🔊', title: t('features.item4.adv1.title'), desc: t('features.item4.adv1.desc') },
-      { icon: '🛡️', title: t('features.item4.adv2.title'), desc: t('features.item4.adv2.desc') },
-      { icon: '⚡', title: t('features.item4.adv3.title'), desc: t('features.item4.adv3.desc') },
-      { icon: '🏦', title: t('features.item4.adv4.title'), desc: t('features.item4.adv4.desc') }
+      { icon: '🤖', title: t('features.item4.adv1.title'), desc: t('features.item4.adv1.desc') },
+      { icon: '🔍', title: t('features.item4.adv2.title'), desc: t('features.item4.adv2.desc') },
+      { icon: '🧠', title: t('features.item4.adv3.title'), desc: t('features.item4.adv3.desc') },
+      { icon: '⚙️', title: t('features.item4.adv4.title'), desc: t('features.item4.adv4.desc') }
     ]
   }
 ])

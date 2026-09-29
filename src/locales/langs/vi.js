@@ -13,7 +13,7 @@ export default {
   hero: {
     badge: 'Nền Tảng Tự Động Hóa & Quản Lý Doanh Nghiệp Thế Hệ Mới',
     brandTitle: 'EZBIZ',
-    subTitle: 'Giải pháp hỗ trợ hộ kinh doanh trong buôn bán lẻ',
+    subTitle: 'Giải pháp hỗ trợ hộ kinh doanh & buôn bán lẻ',
     desc: 'Tối ưu bán hàng, quản lý kho bãi & báo cáo sổ sách thu chi tức thì – Đơn giản, dễ dùng, hiệu quả cao.',
     experienceOn: 'Trải nghiệm ngay trên',
     featureHeading: 'Chức năng nổi bật của EZBIZ',
@@ -113,20 +113,20 @@ export default {
       subtitle: 'Tự động đối soát & gạch nợ tức thì',
       desc: 'Khách quét QR VietQR/ZaloPay là hệ thống báo "Đã nhận tiền" qua loa thông minh, tránh lừa đảo.',
       adv1: {
-        title: 'Báo Tiền Qua Loa',
-        desc: 'Phát âm thanh báo tiền về ngay khi khách chuyển.'
+        title: 'Công nghệ hiện đại',
+        desc: 'Sử dụng công nghệ HybridSearch và GraphRag.'
       },
       adv2: {
-        title: 'Tránh Lừa Đảo',
-        desc: 'Không cần xem màn hình chuyển khoản giả của khách.'
+        title: 'Nhận diện ý định người dùng',
+        desc: 'Agent có khả năng nhận diện và hiểu ý định của người dùng một cách chuẩn xác.'
       },
       adv3: {
-        title: 'Gạch Nợ Đơn Hàng',
-        desc: 'Hệ thống tự đối soát & đóng đơn tức thì.'
+        title: 'Suy luận thông minh ',
+        desc: 'Áp dụng mô hình LLM hiện đại cho các suy luận phức tạp.'
       },
       adv4: {
-        title: 'Hỗ Trợ 40+ Ngân Hàng',
-        desc: 'Tích hợp mã VietQR chuẩn quốc gia.'
+        title: 'Kỹ thuật cao ',
+        desc: 'Hệ thống có thể nâng cấp thành trợ lí ảo toàn diện trong tương lai.'
       }
     },
     item5: {
