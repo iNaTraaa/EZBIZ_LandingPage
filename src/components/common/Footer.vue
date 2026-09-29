@@ -16,7 +16,7 @@ import logoEb from '@/assets/img/logo_eb.webp'
             />
             <span class="text-2xl font-black text-white">EZ<span class="text-gradient-blue">BIZ</span></span>
           </div>
-          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+          <p class="text-base text-slate-400 leading-relaxed mb-4">
             {{ $t('footer.tagline') }}
           </p>
           <div class="text-xs text-slate-400 space-y-1">
