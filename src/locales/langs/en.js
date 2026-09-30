@@ -362,7 +362,7 @@ export default {
     tagline: 'Solution for small businesses & retailers. Simple, convenient, cost-effective.',
     address: '📍 Headquarters: Ho Chi Minh City & Hanoi',
     hotline: '📞 Hotline: 1900 1234',
-    email: "✉️ Email: hotro{'@'}ezbiz.vn",
+    email: "✉️ Email: dmtezbiz{'@'}gmail.com",
     colProduct: 'Products',
     colSupport: 'Support & Security',
     colNewsletter: 'Subscribe Newsletter',

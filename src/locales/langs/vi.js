@@ -362,7 +362,7 @@ export default {
     tagline: 'Giải pháp hỗ trợ hộ kinh doanh & buôn bán lẻ. Đơn giản, tiện lợi, tối ưu chi phí.',
     address: '📍 Trụ sở chính: TP. Hồ Chí Minh & Hà Nội',
     hotline: '📞 Hotline: 1900 1234',
-    email: "✉️ Email: hotro{'@'}EZBIZ.vn",
+    email: "✉️ Email: dmtezbiz{'@'}gmail.com",
     colProduct: 'Sản Phẩm',
     colSupport: 'Hỗ Trợ & An Toàn',
     colNewsletter: 'Đăng Ký Nhận Bản Tin',
