@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
-import { Sparkles, XCircle, CheckCircle2, Smartphone, Package, Bot, ScanQrCode } from '@lucide/vue'
+import { Sparkles, XCircle, CheckCircle2, Smartphone, Package, Bot, ShoppingBasketIcon } from '@lucide/vue'
 
 const { animateFadeIn } = useScrollAnimation()
 const ctaSection = ref(null)
@@ -163,7 +163,7 @@ onMounted(() => {
                   <!-- Perk 1 -->
                   <div class="flex items-start gap-3">
                     <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
-                      <ScanQrCode class="w-4.5 h-4.5 stroke-[2.2]" />
+                      <ShoppingBasketIcon class="w-4.5 h-4.5 stroke-[2.2]" />
                     </div>
                     <div>
                       <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
