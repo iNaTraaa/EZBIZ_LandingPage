@@ -3,6 +3,26 @@ import { ref, onMounted, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 import { useLazyVideoPreloader } from '@/composables/useLazyVideoPreloader'
+import {
+  Zap,
+  Smartphone,
+  QrCode,
+  Printer,
+  BarChart3,
+  Flame,
+  Calendar,
+  Package,
+  AlertTriangle,
+  FileText,
+  Camera,
+  Bot,
+  Search,
+  Brain,
+  Settings,
+  ShoppingCart,
+  CreditCard,
+  Boxes
+} from '@lucide/vue'
 
 import demo1 from '@/assets/img/demo/demo_1.mp4'
 import demo2 from '@/assets/img/demo/demo_2.mp4'
@@ -28,62 +48,62 @@ const onVideoLoadStart = () => { isVideoLoading.value = true }
 const mainFeatures = computed(() => [
   {
     id: 0,
-    icon: '🛒',
+    icon: ShoppingCart,
     title: t('features.item1.title'),
     subtitle: t('features.item1.subtitle'),
     desc: t('features.item1.desc'),
     badge: t('features.item1.badge'),
     videoUrl: demo1,
     advantages: [
-      { icon: '⚡', title: t('features.item1.adv1.title'), desc: t('features.item1.adv1.desc') },
-      { icon: '📱', title: t('features.item1.adv2.title'), desc: t('features.item1.adv2.desc') },
-      { icon: '🔲', title: t('features.item1.adv3.title'), desc: t('features.item1.adv3.desc') },
-      { icon: '🖨️', title: t('features.item1.adv4.title'), desc: t('features.item1.adv4.desc') }
+      { icon: Zap, title: t('features.item1.adv1.title'), desc: t('features.item1.adv1.desc') },
+      { icon: Smartphone, title: t('features.item1.adv2.title'), desc: t('features.item1.adv2.desc') },
+      { icon: QrCode, title: t('features.item1.adv3.title'), desc: t('features.item1.adv3.desc') },
+      { icon: Printer, title: t('features.item1.adv4.title'), desc: t('features.item1.adv4.desc') }
     ]
   },
   {
     id: 1,
-    icon: '',
+    icon: BarChart3,
     title: t('features.item2.title'),
     subtitle: t('features.item2.subtitle'),
     desc: t('features.item2.desc'),
     badge: t('features.item2.badge'),
     videoUrl: demo2,
     advantages: [
-      { icon: '📊', title: t('features.item2.adv1.title'), desc: t('features.item2.adv1.desc') },
-      { icon: '🔥', title: t('features.item2.adv2.title'), desc: t('features.item2.adv2.desc') },
-      { icon: '⚡', title: t('features.item2.adv3.title'), desc: t('features.item2.adv3.desc') },
-      { icon: '📅', title: t('features.item2.adv4.title'), desc: t('features.item2.adv4.desc') }
+      { icon: BarChart3, title: t('features.item2.adv1.title'), desc: t('features.item2.adv1.desc') },
+      { icon: Flame, title: t('features.item2.adv2.title'), desc: t('features.item2.adv2.desc') },
+      { icon: Zap, title: t('features.item2.adv3.title'), desc: t('features.item2.adv3.desc') },
+      { icon: Calendar, title: t('features.item2.adv4.title'), desc: t('features.item2.adv4.desc') }
     ]
   },
   {
     id: 2,
-    icon: '',
+    icon: Boxes,
     title: t('features.item3.title'),
     subtitle: t('features.item3.subtitle'),
     desc: t('features.item3.desc'),
     badge: t('features.item3.badge'),
     videoUrl: demo3,
     advantages: [
-      { icon: '📦', title: t('features.item3.adv1.title'), desc: t('features.item3.adv1.desc') },
-      { icon: '⚠️', title: t('features.item3.adv2.title'), desc: t('features.item3.adv2.desc') },
-      { icon: '📜', title: t('features.item3.adv3.title'), desc: t('features.item3.adv3.desc') },
-      { icon: '📸', title: t('features.item3.adv4.title'), desc: t('features.item3.adv4.desc') }
+      { icon: Package, title: t('features.item3.adv1.title'), desc: t('features.item3.adv1.desc') },
+      { icon: AlertTriangle, title: t('features.item3.adv2.title'), desc: t('features.item3.adv2.desc') },
+      { icon: FileText, title: t('features.item3.adv3.title'), desc: t('features.item3.adv3.desc') },
+      { icon: Camera, title: t('features.item3.adv4.title'), desc: t('features.item3.adv4.desc') }
     ]
   },
   {
     id: 3,
-    icon: '💳',
+    icon: CreditCard,
     title: t('features.item4.title'),
     subtitle: t('features.item4.subtitle'),
     desc: t('features.item4.desc'),
     badge: t('features.item4.badge'),
     videoUrl: demo4,
     advantages: [
-      { icon: '🤖', title: t('features.item4.adv1.title'), desc: t('features.item4.adv1.desc') },
-      { icon: '🔍', title: t('features.item4.adv2.title'), desc: t('features.item4.adv2.desc') },
-      { icon: '🧠', title: t('features.item4.adv3.title'), desc: t('features.item4.adv3.desc') },
-      { icon: '⚙️', title: t('features.item4.adv4.title'), desc: t('features.item4.adv4.desc') }
+      { icon: Bot, title: t('features.item4.adv1.title'), desc: t('features.item4.adv1.desc') },
+      { icon: Search, title: t('features.item4.adv2.title'), desc: t('features.item4.adv2.desc') },
+      { icon: Brain, title: t('features.item4.adv3.title'), desc: t('features.item4.adv3.desc') },
+      { icon: Settings, title: t('features.item4.adv4.title'), desc: t('features.item4.adv4.desc') }
     ]
   }
 ])
@@ -169,8 +189,8 @@ onMounted(() => {
               :key="aIdx"
               class="ezbiz-card p-6 rounded-2xl bg-white border border-sky-100/80 shadow-md hover:shadow-xl transition-all duration-300 text-left hover:-translate-y-1"
             >
-              <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl mb-4 shadow-xs">
-                {{ adv.icon }}
+              <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 shadow-xs">
+                <component :is="adv.icon" class="w-6 h-6 stroke-[2.2]" />
               </div>
               <h4 class="text-base font-extrabold text-slate-900 mb-2">{{ adv.title }}</h4>
               <p class="text-slate-600 text-xs leading-relaxed">{{ adv.desc }}</p>
@@ -260,8 +280,8 @@ onMounted(() => {
               :key="aIdx"
               class="ezbiz-card p-6 rounded-2xl bg-white border border-sky-100/80 shadow-md hover:shadow-xl transition-all duration-300 text-left hover:-translate-y-1"
             >
-              <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-2xl mb-4 shadow-xs">
-                {{ adv.icon }}
+              <div class="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mb-4 shadow-xs">
+                <component :is="adv.icon" class="w-6 h-6 stroke-[2.2]" />
               </div>
               <h4 class="text-base font-extrabold text-slate-900 mb-2">{{ adv.title }}</h4>
               <p class="text-slate-600 text-xs leading-relaxed">{{ adv.desc }}</p>
@@ -374,8 +394,8 @@ onMounted(() => {
                 class="ezbiz-card p-5 rounded-2xl bg-white border border-sky-100 shadow-md hover:shadow-xl transition-all duration-300 text-left flex flex-col justify-between"
               >
                 <div>
-                  <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center text-xl mb-3 shadow-xs">
-                    {{ adv.icon }}
+                  <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mb-3 shadow-xs">
+                    <component :is="adv.icon" class="w-5 h-5 stroke-[2.2]" />
                   </div>
                   <h4 class="text-sm font-extrabold text-slate-900 mb-1.5">{{ adv.title }}</h4>
                   <p class="text-slate-600 text-xs leading-relaxed">{{ adv.desc }}</p>

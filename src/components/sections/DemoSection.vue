@@ -3,6 +3,7 @@ import { ref, onMounted, watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 import { useLazyVideoPreloader } from '@/composables/useLazyVideoPreloader'
+import { Smartphone, Package, BarChart3, Sparkles } from '@lucide/vue'
 
 import demo1 from '@/assets/img/demo/demo_1.mp4'
 import demo2 from '@/assets/img/demo/demo_2.mp4'
@@ -22,7 +23,7 @@ const tabs = computed(() => [
   {
     id: 0,
     title: t('demo.tab0.title'),
-    icon: '📱',
+    icon: Smartphone,
     badge: t('demo.tab0.badge'),
     heading: t('demo.tab0.heading'),
     desc: t('demo.tab0.desc'),
@@ -36,7 +37,7 @@ const tabs = computed(() => [
   {
     id: 1,
     title: t('demo.tab1.title'),
-    icon: '📦',
+    icon: Package,
     badge: t('demo.tab1.badge'),
     heading: t('demo.tab1.heading'),
     desc: t('demo.tab1.desc'),
@@ -50,7 +51,7 @@ const tabs = computed(() => [
   {
     id: 2,
     title: t('demo.tab2.title'),
-    icon: '📊',
+    icon: BarChart3,
     badge: t('demo.tab2.badge'),
     heading: t('demo.tab2.heading'),
     desc: t('demo.tab2.desc'),
@@ -64,7 +65,7 @@ const tabs = computed(() => [
   {
     id: 3,
     title: t('demo.tab3.title'),
-    icon: '✨',
+    icon: Sparkles,
     badge: t('demo.tab3.badge'),
     heading: t('demo.tab3.heading'),
     desc: t('demo.tab3.desc'),
@@ -141,7 +142,7 @@ onMounted(() => {
               : 'bg-white text-slate-600 border-sky-100 hover:bg-sky-50/80 hover:text-sky-600 hover:border-sky-200'
           ]"
         >
-          <span class="text-base sm:text-lg">{{ tab.icon }}</span>
+          <component :is="tab.icon" class="w-4 h-4 sm:w-5 sm:h-5 stroke-[2.2]" />
           <span>{{ tab.title }}</span>
         </button>
       </div>
@@ -157,7 +158,7 @@ onMounted(() => {
             
             <div>
               <span class="px-4 py-1.5 text-xs font-black uppercase tracking-wider rounded-full bg-sky-50 text-sky-600 border border-sky-200 shadow-xs inline-flex items-center gap-2">
-                <span>{{ tabs[activeTab].icon }}</span>
+                <component :is="tabs[activeTab].icon" class="w-4 h-4 stroke-[2.2]" />
                 <span>{{ tabs[activeTab].badge }}</span>
               </span>
             </div>
