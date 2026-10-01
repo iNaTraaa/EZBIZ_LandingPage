@@ -1,13 +1,56 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import logoEb from '@/assets/img/logo_eb.webp'
+import { useScrollAnimation } from '@/composables/useScrollAnimation'
+
+const { gsap } = useScrollAnimation()
+const footerRef = ref(null)
+
+onMounted(() => {
+  if (footerRef.value) {
+    const cols = footerRef.value.querySelectorAll('.footer-col')
+    const bottomBar = footerRef.value.querySelector('.footer-bottom')
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: footerRef.value,
+        start: 'top 88%',
+        toggleActions: 'play none play reverse'
+      }
+    })
+
+    if (cols.length) {
+      tl.from(cols, {
+        y: 45,
+        opacity: 0,
+        duration: 0.85,
+        stagger: 0.12,
+        ease: 'back.out(1.4)'
+      })
+    }
+
+    if (bottomBar) {
+      tl.from(
+        bottomBar,
+        {
+          y: 20,
+          opacity: 0,
+          duration: 0.6,
+          ease: 'power2.out'
+        },
+        '-=0.3'
+      )
+    }
+  }
+})
 </script>
 
 <template>
-  <footer class="bg-slate-900 border-t border-slate-800 text-slate-400 text-sm pt-16 pb-12">
+  <footer ref="footerRef" class="bg-slate-900 border-t border-slate-800 text-slate-400 text-sm pt-16 pb-12 overflow-hidden">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         <!-- Col 1: Brand Info -->
-        <div class="md:col-span-1">
+        <div class="footer-col md:col-span-1">
           <div class="flex items-center gap-3 mb-4">
             <img 
               :src="logoEb" 
@@ -27,7 +70,7 @@ import logoEb from '@/assets/img/logo_eb.webp'
         </div>
 
         <!-- Col 2: Sản Phẩm -->
-        <div>
+        <div class="footer-col">
           <h4 class="text-white font-bold text-sm mb-4">{{ $t('footer.colProduct') }}</h4>
           <ul class="space-y-2.5 text-xs">
             <li><a href="#features" class="hover:text-sky-400 transition-colors">{{ $t('features.item1.title') }}</a></li>
@@ -38,7 +81,7 @@ import logoEb from '@/assets/img/logo_eb.webp'
         </div>
 
         <!-- Col 3: Hỗ Trợ & An Toàn -->
-        <div>
+        <div class="footer-col">
           <h4 class="text-white font-bold text-sm mb-4">{{ $t('footer.colSupport') }}</h4>
           <ul class="space-y-2.5 text-xs">
             <li><a href="#" class="hover:text-sky-400 transition-colors">{{ $t('features.item4.title') }}</a></li>
@@ -49,7 +92,7 @@ import logoEb from '@/assets/img/logo_eb.webp'
         </div>
 
         <!-- Col 4: Nhận tin -->
-        <div>
+        <div class="footer-col">
           <h4 class="text-white font-bold text-sm mb-4">{{ $t('footer.colNewsletter') }}</h4>
           <p class="text-xs text-slate-400 mb-4">
             {{ $t('footer.newsletterDesc') }}
@@ -63,7 +106,7 @@ import logoEb from '@/assets/img/logo_eb.webp'
         </div>
       </div>
 
-      <div class="border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+      <div class="footer-bottom border-t border-slate-800/80 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
         <div>
           {{ $t('footer.copyright') }}
         </div>
