@@ -97,7 +97,7 @@ const mainFeatures = computed(() => [
   {
     id: 3,
     tabName: t('features.tab4'),
-    icon: CreditCard,
+    icon: Bot,
     title: t('features.item4.title'),
     subtitle: t('features.item4.subtitle'),
     desc: t('features.item4.desc'),
