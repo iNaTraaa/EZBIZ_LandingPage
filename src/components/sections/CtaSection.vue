@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
+import { Sparkles, XCircle, CheckCircle2, Smartphone, Package, Bot, XCircleIcon } from '@lucide/vue'
 
 const { animateFadeIn } = useScrollAnimation()
 const ctaSection = ref(null)
@@ -116,118 +117,197 @@ onMounted(() => {
         </p>
       </div>
 
-      <!-- Vertical Form Card -->
-      <div class="max-w-xl mx-auto">
-        <div class="ezbiz-card p-6 sm:p-10 rounded-3xl bg-white border-2 border-sky-100 shadow-xl relative text-left">
+      <!-- Combined Single Card Container with Divider -->
+      <div class="max-w-5xl mx-auto">
+        <div class="ezbiz-card p-6 sm:p-10 rounded-3xl bg-white border-2 border-sky-100 shadow-xl text-left">
           
-          <!-- Success State Banner -->
-          <div v-if="isSuccess" class="py-8 px-4 text-center">
-            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-xs">
-              ✓
-            </div>
-            <h3 class="text-2xl font-black text-slate-900 mb-2">
-              {{ $t('cta.successTitle') }}
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-6 max-w-md mx-auto font-medium">
-              {{ $t('cta.successDesc') }}
-            </p>
-            <button 
-              @click="resetForm" 
-              class="px-6 py-3 rounded-full bg-slate-900 text-white font-extrabold text-xs hover:bg-sky-600 transition-colors shadow-md cursor-pointer"
-            >
-              Gửi Thông Tin Khác
-            </button>
-          </div>
-
-          <!-- Vertical Form -->
-          <form v-else @submit.prevent="handleSubmit" class="space-y-4">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
             
-            <div class="mb-6">
-              <h3 class="text-xl sm:text-2xl font-black text-slate-900 mb-1">
-                {{ $t('cta.formTitle') }}
-              </h3>
-              <p class="text-xs text-slate-500 font-medium">
-                {{ $t('cta.formSubtitle') }}
-              </p>
+            <!-- LEFT SIDE: Information & Perks -->
+            <div class="lg:col-span-5 space-y-5 lg:border-r lg:border-sky-100/80 lg:pr-8 border-b lg:border-b-0 border-sky-100/80 pb-8 lg:pb-0">
+              
+              <!-- LEFT HEADER -->
+              <div>
+                <span class="px-3.5 py-1 text-xs font-black uppercase tracking-wider rounded-full bg-sky-50 text-sky-600 border border-sky-200 inline-flex items-center gap-1.5 mb-2.5">
+                  <Sparkles class="w-3.5 h-3.5" />
+                  <span>{{ $t('cta.perksHeader') }}</span>
+                </span>
+                <h3 class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+                  {{ $t('cta.leftTitle') }}
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm mt-1.5 leading-relaxed font-medium">
+                  {{ $t('cta.leftSubtitle') }}
+                </p>
+              </div>
+
+              <!-- BEFORE EZBIZ BOX -->
+              <div class="p-4 rounded-2xl bg-rose-50/80 border border-rose-100 text-slate-800">
+                <div class="flex items-center gap-2 font-black text-rose-600 text-xs sm:text-sm uppercase tracking-wider mb-1.5">
+                  <XCircle class="w-4.5 h-4.5 text-rose-500 shrink-0" />
+                  <span>{{ $t('cta.beforeHeader') }}</span>
+                </div>
+                <p class="text-rose-950/80 text-xs sm:text-sm leading-relaxed font-medium">
+                  {{ $t('cta.beforeDesc') }}
+                </p>
+              </div>
+
+              <!-- AFTER EZBIZ SECTION -->
+              <div class="space-y-4 pt-1">
+                <div class="flex items-center gap-2 font-black text-emerald-600 text-xs sm:text-sm uppercase tracking-wider">
+                  <CheckCircle2 class="w-4.5 h-4.5 text-emerald-500 shrink-0" />
+                  <span>{{ $t('cta.afterHeader') }}</span>
+                </div>
+
+                <!-- Perks List -->
+                <div class="space-y-3.5 pl-1">
+                  <!-- Perk 1 -->
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
+                      <Smartphone class="w-4.5 h-4.5 stroke-[2.2]" />
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                        {{ $t('cta.perk1Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk1Desc') }}</span>
+                      </h4>
+                    </div>
+                  </div>
+
+                  <!-- Perk 2 -->
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
+                      <Package class="w-4.5 h-4.5 stroke-[2.2]" />
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                        {{ $t('cta.perk2Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk2Desc') }}</span>
+                      </h4>
+                    </div>
+                  </div>
+
+                  <!-- Perk 3 -->
+                  <div class="flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
+                      <Bot class="w-4.5 h-4.5 stroke-[2.2]" />
+                    </div>
+                    <div>
+                      <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                        {{ $t('cta.perk3Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk3Desc') }}</span>
+                      </h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <!-- Tên Cửa Hàng / Doanh Nghiệp -->
-            <div>
-              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
-                {{ $t('cta.companyLabel') }}
-              </label>
-              <input 
-                v-model="form.company"
-                type="text"
-                :placeholder="$t('cta.companyPlaceholder')"
-                class="w-full h-13 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all"
-              />
+            <!-- RIGHT SIDE: Vertical Form -->
+            <div class="lg:col-span-7">
+              <!-- Success State Banner -->
+              <div v-if="isSuccess" class="py-8 px-4 text-center">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-xs">
+                  ✓
+                </div>
+                <h3 class="text-2xl font-black text-slate-900 mb-2">
+                  {{ $t('cta.successTitle') }}
+                </h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6 max-w-md mx-auto font-medium">
+                  {{ $t('cta.successDesc') }}
+                </p>
+                <button 
+                  @click="resetForm" 
+                  class="px-6 py-3 rounded-full bg-slate-900 text-white font-extrabold text-xs hover:bg-sky-600 transition-colors shadow-md cursor-pointer"
+                >
+                  Gửi Thông Tin Khác
+                </button>
+              </div>
+
+              <!-- Form Inputs -->
+              <form v-else @submit.prevent="handleSubmit" class="space-y-4">
+                
+                <div class="mb-4">
+                  <h3 class="text-xl sm:text-2xl font-black text-slate-900 mb-1">
+                    {{ $t('cta.formTitle') }}
+                  </h3>
+                  <p class="text-xs text-slate-500 font-medium">
+                    {{ $t('cta.formSubtitle') }}
+                  </p>
+                </div>
+
+                <!-- Tên Cửa Hàng / Doanh Nghiệp -->
+                <div>
+                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
+                    {{ $t('cta.companyLabel') }}
+                  </label>
+                  <input 
+                    v-model="form.company"
+                    type="text"
+                    :placeholder="$t('cta.companyPlaceholder')"
+                    class="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all"
+                  />
+                </div>
+
+                <!-- Họ Và Tên (*) -->
+                <div>
+                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
+                    {{ $t('cta.nameLabel') }}
+                  </label>
+                  <input 
+                    v-model="form.fullName"
+                    type="text"
+                    required
+                    :placeholder="$t('cta.namePlaceholder')"
+                    class="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all"
+                  />
+                </div>
+
+                <!-- Số Điện Thoại (*) -->
+                <div>
+                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
+                    {{ $t('cta.phoneLabel') }}
+                  </label>
+                  <input 
+                    :value="form.phone"
+                    @keydown="handlePhoneKeydown"
+                    @input="handlePhoneInput"
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="10"
+                    required
+                    :placeholder="$t('cta.phonePlaceholder')"
+                    class="w-full h-12 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all"
+                  />
+                </div>
+
+                <!-- Ghi Chú -->
+                <div>
+                  <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
+                    {{ $t('cta.noteLabel') }}
+                  </label>
+                  <textarea 
+                    v-model="form.note"
+                    rows="2"
+                    :placeholder="$t('cta.notePlaceholder')"
+                    class="w-full p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all resize-none"
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                  type="submit"
+                  :disabled="isSubmitting"
+                  class="w-full h-13 rounded-2xl bg-gradient-to-r from-sky-500 via-sky-500 to-sky-500 text-white font-black text-base shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed mt-3"
+                >
+                  <span>{{ isSubmitting ? $t('cta.submitting') : $t('cta.btnSubmit') }}</span>
+                </button>
+
+                <!-- Footer Bar: Security Note -->
+                <div class="mt-4 pt-4 border-t border-slate-100 text-center text-xs text-slate-500 font-medium">
+                  <p>{{ $t('cta.securityNote') }}</p>
+                </div>
+
+              </form>
             </div>
 
-            <!-- Họ Và Tên (*) -->
-            <div>
-              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
-                {{ $t('cta.nameLabel') }}
-              </label>
-              <input 
-                v-model="form.fullName"
-                type="text"
-                required
-                :placeholder="$t('cta.namePlaceholder')"
-                class="w-full h-13 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all"
-              />
-            </div>
-
-            <!-- Số Điện Thoại (*) -->
-            <div>
-              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
-                {{ $t('cta.phoneLabel') }}
-              </label>
-              <input 
-                :value="form.phone"
-                @keydown="handlePhoneKeydown"
-                @input="handlePhoneInput"
-                type="text"
-                inputmode="numeric"
-                maxlength="10"
-                required
-                :placeholder="$t('cta.phonePlaceholder')"
-                class="w-full h-13 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all"
-              />
-            </div>
-
-            <!-- Ghi Chú -->
-            <div>
-              <label class="block text-xs font-extrabold text-slate-700 uppercase tracking-wider mb-2">
-                {{ $t('cta.noteLabel') }}
-              </label>
-              <textarea 
-                v-model="form.note"
-                rows="2"
-                :placeholder="$t('cta.notePlaceholder')"
-                class="w-full p-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 text-sm font-semibold focus:outline-none focus:border-sky-500 focus:bg-white focus:ring-2 focus:ring-sky-100 transition-all resize-none"
-              ></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <button 
-              type="submit"
-              :disabled="isSubmitting"
-              class="w-full h-14 rounded-2xl bg-gradient-to-r from-sky-500 via-sky-500 to-sky-500 text-white font-black text-base shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/40 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 disabled:opacity-75 disabled:cursor-not-allowed mt-4"
-            >
-              <!-- <svg v-if="isSubmitting" class="animate-spin h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg> -->
-              <span>{{ isSubmitting ? $t('cta.submitting') : $t('cta.btnSubmit') }}</span>
-            </button>
-
-            <!-- Footer Bar: Security Note & Direct Hotline -->
-            <div class="mt-6 pt-5 border-t border-slate-100 space-y-2 text-center text-xs text-slate-500 font-medium">
-              <p>{{ $t('cta.securityNote') }}</p>
-            </div>
-
-          </form>
+          </div>
 
         </div>
       </div>
