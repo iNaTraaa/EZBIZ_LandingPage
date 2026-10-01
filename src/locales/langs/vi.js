@@ -40,6 +40,10 @@ export default {
     titleHighlight: '4 Chức Năng Cốt Lõi',
     titleSuffix: 'Của EZBIZ',
     subtitle: 'Bấm chọn các chức năng bên dưới để xem video demo ứng dụng thực tế.',
+    tab1: 'Chức Năng Bán Hàng',
+    tab2: 'Thống Kê Doanh Thu',
+    tab3: 'Quản Lý Kho Hàng',
+    tab4: 'AI Hỗ Trợ Thuế',
     learnMore: 'Tìm hiểu chi tiết',
     item1: {
       badge: 'Phổ Biến',

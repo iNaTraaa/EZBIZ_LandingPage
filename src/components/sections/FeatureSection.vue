@@ -48,6 +48,7 @@ const onVideoLoadStart = () => { isVideoLoading.value = true }
 const mainFeatures = computed(() => [
   {
     id: 0,
+    tabName: t('features.tab1'),
     icon: ShoppingCart,
     title: t('features.item1.title'),
     subtitle: t('features.item1.subtitle'),
@@ -63,6 +64,7 @@ const mainFeatures = computed(() => [
   },
   {
     id: 1,
+    tabName: t('features.tab2'),
     icon: BarChart3,
     title: t('features.item2.title'),
     subtitle: t('features.item2.subtitle'),
@@ -78,6 +80,7 @@ const mainFeatures = computed(() => [
   },
   {
     id: 2,
+    tabName: t('features.tab3'),
     icon: Boxes,
     title: t('features.item3.title'),
     subtitle: t('features.item3.subtitle'),
@@ -93,6 +96,7 @@ const mainFeatures = computed(() => [
   },
   {
     id: 3,
+    tabName: t('features.tab4'),
     icon: CreditCard,
     title: t('features.item4.title'),
     subtitle: t('features.item4.subtitle'),
@@ -169,14 +173,16 @@ onMounted(() => {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
       
       <!-- Section Header -->
-      <div ref="sectionHeader" class="text-center max-w-3xl mx-auto mb-10">
+      <div ref="sectionHeader" class="text-center max-w-3xl mx-auto mb-5">
         <span class="text-xs font-bold tracking-widest text-sky-600 uppercase mb-2 inline-block">{{ $t('features.sectionTag') }}</span>
         <h2 class="text-3xl sm:text-5xl font-black text-slate-900">
           {{ $t('features.titlePrefix') }} <span class="text-gradient-blue">{{ $t('features.titleHighlight') }}</span> {{ $t('features.titleSuffix') }}
         </h2>
-        <p class="mt-4 text-slate-600 text-base sm:text-lg">
-          {{ $t('features.subtitle') }}
-        </p>
+        <!-- Dynamic Active Feature Name Display -->
+        <div class="mt-5 inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-sky-50 border border-sky-200/80 text-sky-600 font-extrabold text-sm sm:text-base shadow-xs">
+          <component :is="activeFeature.icon" class="w-5 h-5 stroke-[2.2]" />
+          <span class="text-gradient-blue">{{ activeFeature.tabName }}</span>
+        </div>
       </div>
 
       <div ref="showcaseContainer" class="max-w-7xl mx-auto">
@@ -327,7 +333,7 @@ onMounted(() => {
                   <div class="w-8 h-8 rounded-full border-2 border-white/40 border-t-sky-500 animate-spin"></div>
                 </div>
 
-                <button 
+                <!-- <button 
                   @click="togglePlay"
                   class="absolute inset-0 flex items-center justify-center transition-colors cursor-pointer group"
                   title="Bấm để tạm dừng / phát"
@@ -338,7 +344,7 @@ onMounted(() => {
                   >
                     <span class="text-xl pl-1">▶</span>
                   </div>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>

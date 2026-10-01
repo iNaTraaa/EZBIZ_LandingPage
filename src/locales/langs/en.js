@@ -40,6 +40,10 @@ export default {
     titleHighlight: '4 Core Features',
     titleSuffix: 'Of EZBIZ',
     subtitle: 'Select any feature below to watch real application demo videos.',
+    tab1: 'POS Sales Feature',
+    tab2: 'Revenue Statistics',
+    tab3: 'Inventory Control',
+    tab4: 'AI Tax Assistant',
     learnMore: 'Learn more',
     item1: {
       badge: 'Popular',
