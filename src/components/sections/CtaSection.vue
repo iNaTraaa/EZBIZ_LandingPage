@@ -203,8 +203,13 @@ onMounted(() => {
             <div class="lg:col-span-7">
               <!-- Success State Banner -->
               <div v-if="isSuccess" class="py-8 px-4 text-center">
-                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4 shadow-xs">
-                  ✓
+                <!-- Lottie Animation -->
+                <div class="w-28 h-28 mx-auto mb-2 flex items-center justify-center overflow-hidden">
+                  <iframe 
+                    src="https://lottie.host/embed/f45eb12e-469a-41a0-a32e-c68051f8fbd1/k2E3aV5ZxY.lottie"
+                    class="w-full h-full border-0 pointer-events-none"
+                    title="Success Animation"
+                  ></iframe>
                 </div>
                 <h3 class="text-2xl font-black text-slate-900 mb-2">
                   {{ $t('cta.successTitle') }}

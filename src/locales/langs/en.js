@@ -331,14 +331,14 @@ export default {
     sectionTag: 'Frequently Asked Questions',
     titlePrefix: 'We Answer Your',
     titleSuffix: 'Common Questions',
-    q1: 'Does EzBiz support migrating data from legacy systems?',
-    a1: 'Yes! EzBiz assist in exporting and syncing all data from Excel to EzBiz completely free.',
+    q1: 'Does EZBIZ support migrating data from legacy systems?',
+    a1: 'Yes! EZBIZ assist in exporting and syncing all data from Excel to EZBIZ completely free.',
     q2: 'Is my enterprise data guaranteed 100% secure?',
-    a2: 'EzBiz commits to 100% data security adhering to ISO/IEC 27001 standards. Data is 256-bit SSL/TLS encrypted and backed up daily on enterprise cloud infrastructure.',
-    q3: 'Can I try EzBiz before purchasing a subscription?',
+    a2: 'EZBIZ commits to 100% data security adhering to ISO/IEC 27001 standards. Data is 256-bit SSL/TLS encrypted and backed up daily on enterprise cloud infrastructure.',
+    q3: 'Can I try EZBIZ before purchasing a subscription?',
     a3: 'Absolutely! You get a 14-day free trial with full access to advanced features without entering credit card details.',
-    q4: 'Does EzBiz issue official invoices for tax purposes?',
-    a4: 'EzBiz aims to connect with tax authorities in the future to provide valid electronic VAT invoices.'
+    q4: 'Does EZBIZ issue official invoices for tax purposes?',
+    a4: 'EZBIZ aims to connect with tax authorities in the future to provide valid electronic VAT invoices.'
   },
   cta: {
     tag: 'Free Consultation & Trial',
@@ -371,7 +371,7 @@ export default {
     btnSubmit: 'Submit Details',
     submitting: 'Submitting...',
     successTitle: 'Details Received! 🎉',
-    successDesc: 'Thank you. EzBiz will contact you directly within the shortest time possible.',
+    successDesc: 'Thank you. EZBIZ will contact you directly within the shortest time possible.',
     securityNote: '100% Data Privacy Guaranteed & Zero Spam',
     hotlineNote: '📞 Or call Hotline directly:'
   },
@@ -385,13 +385,13 @@ export default {
     colNewsletter: 'Subscribe Newsletter',
     newsletterDesc: 'Get the latest features & business management insights.',
     btnSubscribe: 'Send',
-    copyright: '© 2026 EzBiz - Solution for small businesses & retailers. All rights reserved.',
+    copyright: '© 2026 EZBIZ - Solution for small businesses & retailers. All rights reserved.',
     terms: 'Terms',
     privacy: 'Privacy',
     sitemap: 'Sitemap'
   },
   stickyBar: {
-    trialTitle: 'EzBiz 14-Day Trial',
+    trialTitle: 'EZBIZ 14-Day Trial',
     trialDesc: 'Optimize operations today',
     btnAction: 'Experience Now ➔'
   }
