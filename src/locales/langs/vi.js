@@ -187,7 +187,7 @@ export default {
     }
   },
   stats: {
-    item1: 'Doanh nghiệp tin dùng',
+    item1: 'Hộ kinh doanh tin dùng',
     item2: 'Độ tin cậy Uptime',
     item3: 'Giao dịch xử lý / tháng',
     item4: 'Hỗ trợ kỹ thuật 24/7'

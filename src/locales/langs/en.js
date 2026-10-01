@@ -187,7 +187,7 @@ export default {
     }
   },
   stats: {
-    item1: 'Trusted Businesses',
+    item1: 'Trusted by Thousands of Businesses',
     item2: 'Uptime Reliability',
     item3: 'Monthly Transactions',
     item4: '24/7 Tech Support'

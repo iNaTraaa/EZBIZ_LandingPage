@@ -12,9 +12,9 @@ const statsContainer = ref(null)
 
 onMounted(() => {
   if (statsContainer.value) animateFadeIn(statsContainer.value)
-  if (stat1.value) animateCounter(stat1.value, 10000, '+')
+  if (stat1.value) animateCounter(stat1.value, 500, '+')
   if (stat2.value) animateCounter(stat2.value, 99.9, '%')
-  if (stat3.value) animateCounter(stat3.value, 50, 'M+')
+  if (stat3.value) animateCounter(stat3.value, 1, 'M+')
   if (stat4.value) animateCounter(stat4.value, 24, '/7')
 })
 </script>
