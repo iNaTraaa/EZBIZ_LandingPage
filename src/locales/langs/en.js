@@ -247,7 +247,7 @@ export default {
       f1: 'All features from Basic Plan',
       f2: 'Multi-device access (Mobile, Tablet, PC)',
       f3: 'Advanced inventory & stock alerts',
-      f4: 'AI HKD tax filing assistant',
+      f4: 'AI tax assistant for household businesses',
       f5: 'Free new feature updates',
       f6: '24/7 Priority technical support'
     },

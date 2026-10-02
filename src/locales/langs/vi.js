@@ -247,7 +247,7 @@ export default {
       f1: 'Tất cả tính năng của Gói Cơ Bản',
       f2: 'Sử dụng đa thiết bị (Mobile, Tablet, PC)',
       f3: 'Quản lý tồn kho nâng cao & cảnh báo',
-      f4: 'AI trợ lý kê khai thuế HKD',
+      f4: ' Trợ lí AI hỗ trợ thuế cho HKD',
       f5: 'Miễn phí nâng cấp tính năng mới',
       f6: 'Hỗ trợ kỹ thuật 24/7'
     },
