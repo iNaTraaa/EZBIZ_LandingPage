@@ -295,13 +295,13 @@ export default {
       name: 'Nguyễn Thị Thanh Vy',
       role: 'Marketing',
       roleDetail: 'Marketing Lead',
-      desc: 'Brand strategy & growth marketing across markets.'
+      desc: 'Brand strategy & growth documentation.'
     },
     member5: {
       name: 'Nguyễn Đinh Mai Thy',
       role: 'Marketing',
       roleDetail: 'Marketing Lead',
-      desc: 'Brand strategy & growth marketing across markets.'
+      desc: 'Brand strategy & growth documentation.'
     }
   },
   awards: {
@@ -309,22 +309,22 @@ export default {
     titlePrefix: 'Our Prestigious',
     titleSuffix: 'Product Awards',
     subtitle: 'Demonstrating technological solution quality and recognition from prestigious organizations.',
-    viewCert: 'View Certificate ↗',
+    viewCert: 'Go to document',
     verifiedDoc: 'Official Verification',
     hint: 'Hover to view contest information',
     award1: {
       tag: 'Data Science 2026',
-      title: 'First Prize - Faculty of IT Data Science Competition 2026',
+      title: 'First Prize - Data Science Competition NTTU 2026',
       org: 'Faculty of IT - Nguyen Tat Thanh University (NTTU)',
       desc: 'First Prize at the 2026 Data Science Competition for the project "EZBIZ AI supporting household businesses & retail".',
       details: 'Team DMT convincingly surpassed top finalist teams to win over the Board of Judges with the EZBIZ AI solution, applying Data Science & AI to optimize retail operations, cash flow management, and tax filing for small businesses.'
     },
     award2: {
       tag: 'Artificial Intelligence 2026',
-      title: 'Faculty of IT Artificial Intelligence Competition 2026',
+      title: 'First Prize - Artificial Intelligence Competition NTTU 2026',
       org: 'Faculty of IT - Nguyen Tat Thanh University (NTTU)',
       desc: 'Innovation & Breakthrough Award at the 2026 AI Contest for "EZBIZ - Business Automation Platform".',
-      details: 'EZBIZ made a powerful impression at the 2026 Faculty of IT Artificial Intelligence Competition with its smart AI Assistant integrating POS retail, automated inventory, and instant financial reconciliation for businesses.'
+      details: 'EZBIZ made a powerful impression at the 2026 Faculty of IT Artificial Intelligence Competition with its smart AI Assistant integrating POS retail, automated inventory, and instant financial reconciliation for small businesses.'
     }
   },
   faq: {
@@ -377,7 +377,7 @@ export default {
   },
   footer: {
     tagline: 'Solution for small businesses & retailers. Simple, convenient, cost-effective.',
-    address: '📍 Headquarters: Ho Chi Minh City & Hanoi',
+    address: '📍 Headquarters: Ho Chi Minh City',
     hotline: '📞 Hotline: 1900 1234',
     email: "✉️ Email: dmtezbiz{'@'}gmail.com",
     colProduct: 'Products',

@@ -295,13 +295,13 @@ export default {
       name: 'Nguyễn Thị Thanh Vy',
       role: 'Marketing',
       roleDetail: 'Marketing ',
-      desc: 'Xây dựng thương hiệu & phát triển thị trường toàn quốc.'
+      desc: 'Xây dựng thương hiệu & phát triển tài liệu cho sản phẩm .'
     },
     member5: {
       name: 'Nguyễn Đinh Mai Thy',
       role: 'Marketing',
       roleDetail: 'Marketing',
-      desc: 'Xây dựng thương hiệu & phát triển thị trường toàn quốc.'
+      desc: 'Xây dựng thương hiệu & phát triển tài liệu cho sản phẩm .'
     }
   },
   awards: {
@@ -309,22 +309,22 @@ export default {
     titlePrefix: 'Giải Thưởng',
     titleSuffix: 'Sản Phẩm Đạt Được',
     subtitle: 'Minh chứng cho chất lượng giải pháp công nghệ và sự công nhận từ các tổ chức uy tín.',
-    viewCert: 'Xem chứng nhận ↗',
+    viewCert: 'Đi tới bài viết',
     verifiedDoc: 'Xác minh chính thức',
     hint: 'Rê chuột để xem thông tin cuộc thi',
     award1: {
       tag: 'Khoa Học Dữ Liệu 2026',
-      title: 'Giải Nhất Cuộc Thi Khoa Học Dữ Liệu Khoa CNTT 2026',
+      title: 'Giải Nhất Cuộc Thi Khoa Học Dữ Liệu NTTU 2026',
       org: 'Khoa CNTT - Trường Đại học Nguyễn Tất Thành (NTTU)',
       desc: 'Giải Nhất Cuộc thi Khoa học Dữ liệu 2026 dành cho Dự án "EZBIZ AI hỗ trợ hộ kinh doanh và buôn bán lẻ".',
       details: 'Đội DMT xuất sắc vượt qua các đội thi chung kết để chinh phục Hội đồng Ban Giám khảo nhờ giải pháp EZBIZ AI ứng dụng Khoa học dữ liệu & Trí tuệ nhân tạo, tối ưu hóa vận hành, quản lý dòng tiền và kê khai thuế cho hộ kinh doanh bán lẻ.'
     },
     award2: {
       tag: 'Trí Tuệ Nhân Tạo 2026',
-      title: 'Cuộc Thi Trí Tuệ Nhân Tạo Khoa CNTT 2026',
+      title: 'Cuộc Thi Trí Tuệ Nhân Tạo NTTU 2026',
       org: 'Khoa CNTT - Trường Đại học Nguyễn Tất Thành (NTTU)',
       desc: 'Giải Thưởng Đột Phá tại Cuộc thi Trí tuệ Nhân tạo 2026 với Giải pháp "EZBIZ - Nền Tảng Tự Động Hóa & Quản Lý Doanh Nghiệp".',
-      details: 'EZBIZ xuất sắc ghi dấu ấn tại Cuộc thi Trí tuệ Nhân tạo Khoa CNTT 2026 nhờ ứng dụng Trợ lý AI thông minh kết hợp bán hàng POS, tự động hóa quản lý kho bãi và đối soát tài chính tức thì cho doanh nghiệp.'
+      details: 'EZBIZ xuất sắc ghi dấu ấn tại Cuộc thi Trí tuệ Nhân tạo Khoa CNTT 2026 nhờ ứng dụng Trợ lý AI thông minh kết hợp bán hàng POS, tự động hóa quản lý kho bãi và đối soát tài chính tức thì cho hộ kinh doanh bán lẻ.'
     }
   },
   faq: {
@@ -377,7 +377,7 @@ export default {
   },
   footer: {
     tagline: 'Giải pháp hỗ trợ hộ kinh doanh & buôn bán lẻ. Đơn giản, tiện lợi, tối ưu chi phí.',
-    address: '📍 Trụ sở chính: TP. Hồ Chí Minh & Hà Nội',
+    address: '📍 Trụ sở chính: TP. Hồ Chí Minh',
     hotline: '📞 Hotline: 1900 1234',
     email: "✉️ Email: dmtezbiz{'@'}gmail.com",
     colProduct: 'Sản Phẩm',
