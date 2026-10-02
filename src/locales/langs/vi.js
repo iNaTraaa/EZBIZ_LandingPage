@@ -187,6 +187,7 @@ export default {
     }
   },
   stats: {
+    sectionTitle: 'EZBIZ Hướng Tới',
     item1: 'Hộ kinh doanh tin dùng',
     item2: 'Độ tin cậy Uptime',
     item3: 'Giao dịch xử lý / tháng',
