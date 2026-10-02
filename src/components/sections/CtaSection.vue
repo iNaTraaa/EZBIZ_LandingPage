@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
-import { Sparkles, XCircle, CheckCircle2, Smartphone, Package, Bot, PhoneCall, ShoppingBasketIcon } from '@lucide/vue'
+import { Sparkles, XCircle, CheckCircle2, Smartphone, Package, Bot, ShoppingBasketIcon } from '@lucide/vue'
 
 const { animateFadeIn } = useScrollAnimation()
 const ctaSection = ref(null)
@@ -200,8 +200,6 @@ onMounted(() => {
                 </div>
               </div>
 
-              <!-- Hotline Box -->
-              
 
             </div>
 
