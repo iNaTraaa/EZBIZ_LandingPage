@@ -47,7 +47,7 @@ export default {
     learnMore: 'Learn more',
     item1: {
       badge: 'Popular',
-      title: 'Point of Sale (POS)',
+      title: 'Sale By Mobile (POS)',
       subtitle: 'Create invoices & scan payment QR in 3s',
       desc: 'Superfast checkout, handheld receipt printing, and dynamic QR generation for instant payments.',
       adv1: {
@@ -69,7 +69,7 @@ export default {
     },
     item2: {
       badge: 'Real-time',
-      title: 'AI Financial & KPI Reports',
+      title: 'Revenue & Profit Analytics',
       subtitle: 'Automated revenue & profit summary',
       desc: 'No manual bookkeeping needed! AI automatically summarizes daily, weekly, monthly sales and analyzes top-selling items.',
       adv1: {
@@ -135,7 +135,7 @@ export default {
     },
     item5: {
       badge: 'Scalable',
-      title: 'Bank API & QR Code Integration',
+      title: 'AI Tax Support For Small Businesses',
       desc: 'Reconcile bank transfers and e-commerce platforms automatically in one click.'
     },
     item6: {
@@ -223,42 +223,42 @@ export default {
     titlePrefix: 'Flexible Plans For',
     titleSuffix: 'Every Business Size',
     subtitle: 'No hidden fees. Easily choose the plan that best fits your business model.',
-    popularBadge: '🔥 Recommended - Save 35%',
-    lifetimeBadge: 'Lifetime Access',
+    popularBadge: '🔥 Recommended - Most Popular',
+    lifetimeBadge: '💡 Best Value',
     starterBadge: 'Basic Plan',
     btnSelect: 'Get Started',
     btnPopular: 'Choose Recommended Plan',
     starter: {
-      name: '1-Month Plan',
-      price: '$7',
-      unit: '/ Month',
-      desc: 'Flexible monthly billing, ideal for small businesses trying out.',
+      name: 'Basic Plan',
+      price: '79,000',
+      unit: 'VND / Month',
+      desc: 'Cost-effective starter option for small shops to manage basic sales.',
       f1: 'Mobile POS sales app',
       f2: 'Basic product & stock management',
       f3: 'Fast QR code payments',
       f4: 'Revenue & expense reporting'
     },
     business: {
-      name: '1-Year Plan (Basic)',
-      price: '$49',
-      unit: '/ Year (~$4/mo)',
-      desc: 'Most popular & cost-effective choice for long-term operations.',
-      f1: 'All features from 1-Month Plan',
+      name: '1-Month Plan',
+      price: '199,000',
+      unit: 'VND / Month',
+      desc: 'Full access to advanced features & AI tax assistant billed monthly.',
+      f1: 'All features from Basic Plan',
       f2: 'Multi-device access (Mobile, Tablet, PC)',
       f3: 'Advanced inventory & stock alerts',
       f4: 'AI HKD tax filing assistant',
-      f5: 'Free new feature updates for 1 year',
+      f5: 'Free new feature updates',
       f6: '24/7 Priority technical support'
     },
     enterprise: {
-      name: 'Lifetime Plan',
-      price: '$149',
-      unit: '/ Lifetime',
-      desc: 'One-time payment, lifetime access with no recurring renewal fees.',
-      f1: '100% Lifetime software ownership',
+      name: '1-Year Plan',
+      price: '2,199,000',
+      unit: 'VND / Year (~183k/mo)',
+      desc: 'Annual subscription for long-term operational savings.',
+      f1: 'Full access to premium features & AI tax',
       f2: 'Unlimited data & store management',
-      f3: 'Full premium features & AI tax',
-      f4: 'Free lifetime version updates',
+      f3: 'Save costs compared to monthly billing',
+      f4: 'Continuous version updates',
       f5: '1-on-1 VIP technical support'
     }
   },
@@ -293,15 +293,15 @@ export default {
     },
     member4: {
       name: 'Nguyễn Thị Thanh Vy',
-      role: 'Marketing',
-      roleDetail: 'Marketing Lead',
-      desc: 'Brand strategy & growth documentation.'
+      role: 'Designer',
+      roleDetail: 'Designer',
+      desc: 'Brand strategy & growth image, documentation.'
     },
     member5: {
       name: 'Nguyễn Đinh Mai Thy',
-      role: 'Marketing',
-      roleDetail: 'Marketing Lead',
-      desc: 'Brand strategy & growth documentation.'
+      role: 'Designer',
+      roleDetail: 'Designer',
+      desc: 'Brand strategy & growth image, documentation.'
     }
   },
   awards: {
@@ -378,7 +378,7 @@ export default {
   footer: {
     tagline: 'Solution for small businesses & retailers. Simple, convenient, cost-effective.',
     address: '📍 Headquarters: Ho Chi Minh City',
-    hotline: '📞 Hotline: 1900 1234',
+    hotline: '📞 Hotline: 0379 9299612',
     email: "✉️ Email: dmtezbiz{'@'}gmail.com",
     colProduct: 'Products',
     colSupport: 'Support & Security',

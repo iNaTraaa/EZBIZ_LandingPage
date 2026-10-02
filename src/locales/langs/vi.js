@@ -47,7 +47,7 @@ export default {
     learnMore: 'Tìm hiểu chi tiết',
     item1: {
       badge: 'Phổ Biến',
-      title: 'Bán Hàng Tại Điểm (POS)',
+      title: 'Bán Hàng Tại Bằng Điện Thoại (POS)',
       subtitle: 'Tạo hóa đơn & quét mã thanh toán 3s',
       desc: 'Hỗ trợ tính tiền siêu tốc, in hóa đơn cầm tay và tạo mã QR động cho khách quét thanh toán tức thì.',
       adv1: {
@@ -69,7 +69,7 @@ export default {
     },
     item2: {
       badge: 'Thời Gian Thực',
-      title: 'Báo Cáo KPI & Tài Chính AI',
+      title: 'Thống Kê  & Trực Quan Danh Thu',
       subtitle: 'Tổng hợp doanh thu & lợi nhuận tự động',
       desc: 'Không cần ghi sổ tay! AI tự động tổng hợp doanh số ngày, tuần, tháng và phân tích món bán chạy.',
       adv1: {
@@ -135,7 +135,7 @@ export default {
     },
     item5: {
       badge: 'Mở Rộng',
-      title: 'Kết Nối API Ngân Hàng & QR Code',
+      title: 'AI Hỗ Trợ Thuế Cho Hộ Kinh Doanh',
       desc: 'Tự động đối soát chuyển khoản ngân hàng, sàn thương mại điện tử chỉ với 1-click.'
     },
     item6: {
@@ -223,42 +223,42 @@ export default {
     titlePrefix: 'Gói Dịch Vụ',
     titleSuffix: 'Tiết Kiệm & Linh Hoạt',
     subtitle: 'Không phí ẩn. Dễ dàng chọn gói phù hợp nhất với mô hình kinh doanh của bạn.',
-    popularBadge: '🔥 Khuyên Dùng - Tiết Kiệm 35%',
-    lifetimeBadge: 'Sở Hữu Trọn Đời',
-    starterBadge: 'Gói Cơ Bản',
+    popularBadge: '🔥 Khuyên Dùng - Phổ Biến Nhất',
+    lifetimeBadge: '💡 Tiết Kiệm Nhất',
+    starterBadge: 'Cơ bản nhất',
     btnSelect: 'Đăng Ký Ngay',
     btnPopular: 'Đăng Ký Gói Khuyên Dùng',
     starter: {
-      name: 'Gói 1 Tháng',
-      price: '149.000',
+      name: 'Gói Cơ Bản',
+      price: '79.000',
       unit: 'đ / Tháng',
-      desc: 'Linh hoạt theo tháng, phù hợp hộ kinh doanh trải nghiệm thử.',
+      desc: 'Chi phí tối ưu dành cho cửa hàng nhỏ trải nghiệm tính năng cơ bản.',
       f1: 'POS bán hàng trên điện thoại',
       f2: 'Quản lý sản phẩm & tồn kho cơ bản',
       f3: 'Quét mã QR thanh toán nhanh',
       f4: 'Báo cáo thu chi & doanh thu'
     },
     business: {
-      name: 'Gói 1 Năm (Cơ Bản)',
-      price: '1.190.000',
-      unit: 'đ / Năm (~99k/tháng)',
-      desc: 'Lựa chọn phổ biến & tiết kiệm nhất cho hộ kinh doanh vận hành lâu dài.',
-      f1: 'Tất cả tính năng của Gói 1 Tháng',
+      name: 'Gói 1 Tháng',
+      price: '199.000',
+      unit: 'đ / Tháng',
+      desc: 'Đầy đủ tính năng nâng cao & AI trợ lý thuế, thanh toán linh hoạt theo tháng.',
+      f1: 'Tất cả tính năng của Gói Cơ Bản',
       f2: 'Sử dụng đa thiết bị (Mobile, Tablet, PC)',
       f3: 'Quản lý tồn kho nâng cao & cảnh báo',
       f4: 'AI trợ lý kê khai thuế HKD',
-      f5: 'Miễn phí nâng cấp tính năng mới 1 năm',
-      f6: 'Hỗ trợ ưu tiên kỹ thuật 24/7'
+      f5: 'Miễn phí nâng cấp tính năng mới',
+      f6: 'Hỗ trợ kỹ thuật 24/7'
     },
     enterprise: {
-      name: 'Gói Vĩnh Viễn',
-      price: '3.490.000',
-      unit: 'đ / Trọn Đời',
-      desc: 'Thanh toán 1 lần duy nhất, sở hữu trọn đời không lo phí gia hạn.',
-      f1: 'Sở hữu vĩnh viễn phần mềm 100%',
+      name: 'Gói 1 Năm',
+      price: '2.199.000',
+      unit: 'đ / Năm (~183k/tháng)',
+      desc: 'Đăng ký theo năm tiết kiệm chi phí vận hành lâu dài cho cửa hàng.',
+      f1: 'Trọn bộ đầy đủ tính năng cao cấp & AI thuế',
       f2: 'Không giới hạn dữ liệu & cửa hàng',
-      f3: 'Đầy đủ tính năng cao cấp & AI thuế',
-      f4: 'Cập nhật phiên bản mới trọn đời',
+      f3: 'Tiết kiệm chi phí so với đăng ký lẻ từng tháng',
+      f4: 'Cập nhật phiên bản mới liên tục',
       f5: 'Hỗ trợ kỹ thuật VIP 1:1 ưu tiên'
     }
   },
@@ -293,15 +293,15 @@ export default {
     },
     member4: {
       name: 'Nguyễn Thị Thanh Vy',
-      role: 'Marketing',
-      roleDetail: 'Marketing ',
-      desc: 'Xây dựng thương hiệu & phát triển tài liệu cho sản phẩm .'
+      role: 'Designer',
+      roleDetail: 'Designer',
+      desc: 'Xây dựng thương hiệu & phát triển hình ảnh, tài liệu cho sản phẩm.'
     },
     member5: {
       name: 'Nguyễn Đinh Mai Thy',
-      role: 'Marketing',
-      roleDetail: 'Marketing',
-      desc: 'Xây dựng thương hiệu & phát triển tài liệu cho sản phẩm .'
+      role: 'Designer',
+      roleDetail: 'Designer',
+      desc: 'Xây dựng thương hiệu & phát triển hình ảnh, tài liệu cho sản phẩm .'
     }
   },
   awards: {
@@ -321,7 +321,7 @@ export default {
     },
     award2: {
       tag: 'Trí Tuệ Nhân Tạo 2026',
-      title: 'Cuộc Thi Trí Tuệ Nhân Tạo NTTU 2026',
+      title: 'Giải Nhất Cuộc Thi Trí Tuệ Nhân Tạo NTTU 2026',
       org: 'Khoa CNTT - Trường Đại học Nguyễn Tất Thành (NTTU)',
       desc: 'Giải Thưởng Đột Phá tại Cuộc thi Trí tuệ Nhân tạo 2026 với Giải pháp "EZBIZ - Nền Tảng Tự Động Hóa & Quản Lý Doanh Nghiệp".',
       details: 'EZBIZ xuất sắc ghi dấu ấn tại Cuộc thi Trí tuệ Nhân tạo Khoa CNTT 2026 nhờ ứng dụng Trợ lý AI thông minh kết hợp bán hàng POS, tự động hóa quản lý kho bãi và đối soát tài chính tức thì cho hộ kinh doanh bán lẻ.'
@@ -378,12 +378,12 @@ export default {
   footer: {
     tagline: 'Giải pháp hỗ trợ hộ kinh doanh & buôn bán lẻ. Đơn giản, tiện lợi, tối ưu chi phí.',
     address: '📍 Trụ sở chính: TP. Hồ Chí Minh',
-    hotline: '📞 Hotline: 1900 1234',
+    hotline: '📞 Hotline: 0379 9299612',
     email: "✉️ Email: dmtezbiz{'@'}gmail.com",
     colProduct: 'Sản Phẩm',
     colSupport: 'Hỗ Trợ & An Toàn',
     colNewsletter: 'Đăng Ký Nhận Bản Tin',
-    newsletterDesc: 'Cập nhật tính năng mới & kinh nghiệm quản trị doanh nghiệp hiệu quả.',
+    newsletterDesc: 'Cập nhật tính năng mới & các ưu đãi từ EZBIZ.',
     btnSubscribe: 'Gửi',
     copyright: '© 2026 EZBIZ - Giải pháp hỗ trợ hộ kinh doanh & buôn bán lẻ. All rights reserved.',
     terms: 'Điều khoản',
