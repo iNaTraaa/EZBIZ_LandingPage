@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
-import { Sparkles, XCircle, CheckCircle2, Smartphone, Package, Bot, ShoppingBasketIcon } from '@lucide/vue'
+import { Sparkles, XCircle, CheckCircle2, Smartphone, Package, Bot, PhoneCall, ShoppingBasketIcon } from '@lucide/vue'
 
 const { animateFadeIn } = useScrollAnimation()
 const ctaSection = ref(null)
@@ -121,82 +121,88 @@ onMounted(() => {
       <div class="max-w-5xl mx-auto">
         <div class="ezbiz-card p-6 sm:p-10 rounded-3xl bg-white border-2 border-sky-100 shadow-xl text-left">
           
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
             
             <!-- LEFT SIDE: Information & Perks -->
-            <div class="lg:col-span-5 space-y-5 lg:border-r lg:border-sky-100/80 lg:pr-8 border-b lg:border-b-0 border-sky-100/80 pb-8 lg:pb-0">
+            <div class="lg:col-span-5 flex flex-col justify-between h-full space-y-4 lg:border-r lg:border-sky-100/80 lg:pr-8 border-b lg:border-b-0 border-sky-100/80 pb-8 lg:pb-0">
               
-              <!-- LEFT HEADER -->
-              <div>
-                <span class="px-3.5 py-1 text-xs font-black uppercase tracking-wider rounded-full bg-sky-50 text-sky-600 border border-sky-200 inline-flex items-center gap-1.5 mb-2.5">
-                  <Sparkles class="w-3.5 h-3.5" />
-                  <span>{{ $t('cta.perksHeader') }}</span>
-                </span>
-                <h3 class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
-                  {{ $t('cta.leftTitle') }}
-                </h3>
-                <p class="text-slate-600 text-xs sm:text-sm mt-1.5 leading-relaxed font-medium">
-                  {{ $t('cta.leftSubtitle') }}
-                </p>
-              </div>
-
-              <!-- BEFORE EZBIZ BOX -->
-              <div class="p-4 rounded-2xl bg-rose-50/80 border border-rose-100 text-slate-800">
-                <div class="flex items-center gap-2 font-black text-rose-600 text-xs sm:text-sm uppercase tracking-wider mb-1.5">
-                  <XCircle class="w-4.5 h-4.5 text-rose-500 shrink-0" />
-                  <span>{{ $t('cta.beforeHeader') }}</span>
-                </div>
-                <p class="text-rose-950/80 text-xs sm:text-sm leading-relaxed font-medium">
-                  {{ $t('cta.beforeDesc') }}
-                </p>
-              </div>
-
-              <!-- AFTER EZBIZ SECTION -->
-              <div class="space-y-4 pt-1">
-                <div class="flex items-center gap-2 font-black text-emerald-600 text-xs sm:text-sm uppercase tracking-wider">
-                  <CheckCircle2 class="w-4.5 h-4.5 text-emerald-500 shrink-0" />
-                  <span>{{ $t('cta.afterHeader') }}</span>
+              <div class="space-y-4">
+                <!-- LEFT HEADER -->
+                <div>
+                  <span class="px-3.5 py-1 text-xs font-black uppercase tracking-wider rounded-full bg-sky-50 text-sky-600 border border-sky-200 inline-flex items-center gap-1.5 mb-2.5">
+                    <Sparkles class="w-3.5 h-3.5" />
+                    <span>{{ $t('cta.perksHeader') }}</span>
+                  </span>
+                  <h3 class="text-xl sm:text-2xl font-black text-slate-900 leading-tight">
+                    {{ $t('cta.leftTitle') }}
+                  </h3>
+                  <p class="text-slate-600 text-xs sm:text-sm mt-1.5 leading-relaxed font-medium">
+                    {{ $t('cta.leftSubtitle') }}
+                  </p>
                 </div>
 
-                <!-- Perks List -->
-                <div class="space-y-3.5 pl-1">
-                  <!-- Perk 1 -->
-                  <div class="flex items-start gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
-                      <ShoppingBasketIcon class="w-4.5 h-4.5 stroke-[2.2]" />
-                    </div>
-                    <div>
-                      <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
-                        {{ $t('cta.perk1Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk1Desc') }}</span>
-                      </h4>
-                    </div>
+                <!-- BEFORE EZBIZ BOX -->
+                <div class="p-4 rounded-2xl bg-rose-50/80 border border-rose-100 text-slate-800">
+                  <div class="flex items-center gap-2 font-black text-rose-600 text-xs sm:text-sm uppercase tracking-wider mb-1.5">
+                    <XCircle class="w-4.5 h-4.5 text-rose-500 shrink-0" />
+                    <span>{{ $t('cta.beforeHeader') }}</span>
+                  </div>
+                  <p class="text-rose-950/80 text-xs sm:text-sm leading-relaxed font-medium">
+                    {{ $t('cta.beforeDesc') }}
+                  </p>
+                </div>
+
+                <!-- AFTER EZBIZ SECTION -->
+                <div class="space-y-3 pt-1">
+                  <div class="flex items-center gap-2 font-black text-emerald-600 text-xs sm:text-sm uppercase tracking-wider">
+                    <CheckCircle2 class="w-4.5 h-4.5 text-emerald-500 shrink-0" />
+                    <span>{{ $t('cta.afterHeader') }}</span>
                   </div>
 
-                  <!-- Perk 2 -->
-                  <div class="flex items-start gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
-                      <Package class="w-4.5 h-4.5 stroke-[2.2]" />
+                  <!-- Perks List -->
+                  <div class="space-y-3.5 pl-1">
+                    <!-- Perk 1 -->
+                    <div class="flex items-start gap-3">
+                      <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
+                        <ShoppingBasketIcon class="w-4.5 h-4.5 stroke-[2.2]" />
+                      </div>
+                      <div>
+                        <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                          {{ $t('cta.perk1Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk1Desc') }}</span>
+                        </h4>
+                      </div>
                     </div>
-                    <div>
-                      <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
-                        {{ $t('cta.perk2Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk2Desc') }}</span>
-                      </h4>
-                    </div>
-                  </div>
 
-                  <!-- Perk 3 -->
-                  <div class="flex items-start gap-3">
-                    <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
-                      <Bot class="w-4.5 h-4.5 stroke-[2.2]" />
+                    <!-- Perk 2 -->
+                    <div class="flex items-start gap-3">
+                      <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
+                        <Package class="w-4.5 h-4.5 stroke-[2.2]" />
+                      </div>
+                      <div>
+                        <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                          {{ $t('cta.perk2Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk2Desc') }}</span>
+                        </h4>
+                      </div>
                     </div>
-                    <div>
-                      <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
-                        {{ $t('cta.perk3Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk3Desc') }}</span>
-                      </h4>
+
+                    <!-- Perk 3 -->
+                    <div class="flex items-start gap-3">
+                      <div class="w-9 h-9 rounded-xl bg-sky-50 text-sky-600 border border-sky-100 flex items-center justify-center shrink-0 shadow-xs">
+                        <Bot class="w-4.5 h-4.5 stroke-[2.2]" />
+                      </div>
+                      <div>
+                        <h4 class="text-xs sm:text-sm font-extrabold text-slate-900 leading-snug">
+                          {{ $t('cta.perk3Title') }}: <span class="font-medium text-slate-600">{{ $t('cta.perk3Desc') }}</span>
+                        </h4>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Hotline Box -->
+              
+
             </div>
 
             <!-- RIGHT SIDE: Vertical Form -->
