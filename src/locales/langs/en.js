@@ -40,14 +40,15 @@ export default {
     titleHighlight: '4 Core Features',
     titleSuffix: 'Of EZBIZ',
     subtitle: 'Select any feature below to watch real application demo videos.',
-    tab1: 'POS Sales Feature',
+    tab1: 'Retail POS Sales',
+    tab1a: 'FnB POS Sales',
     tab2: 'Revenue Statistics',
     tab3: 'Inventory Control',
     tab4: 'AI Tax Assistant',
     learnMore: 'Learn more',
     item1: {
       badge: 'Popular',
-      title: 'Sale By Mobile (POS)',
+      title: 'Sale By Mobile (Retail POS)',
       subtitle: 'Create invoices & scan payment QR in 3s',
       desc: 'Superfast checkout, handheld receipt printing, and dynamic QR generation for instant payments.',
       adv1: {
@@ -65,6 +66,28 @@ export default {
       adv4: {
         title: 'Printer Connection',
         desc: 'Supports all Bluetooth & Wi-Fi receipt printers.'
+      }
+    },
+    item1a: {
+      badge: 'FnB Specialized',
+      title: 'FnB Sales & Table Layout Management',
+      subtitle: 'Table map layout, order taking & pay at table',
+      desc: 'Optimized for cafes, restaurants & eateries. Real-time table layout management, fast ordering, and instant VietQR checkout.',
+      adv1: {
+        title: 'Visual Table Map',
+        desc: 'Track vacant vs occupied tables, transfer & merge tables easily.'
+      },
+      adv2: {
+        title: 'Ultra-Fast Ordering',
+        desc: 'Order by table with dine-in or take-away options.'
+      },
+      adv3: {
+        title: 'Pay at Table',
+        desc: 'Auto-generate table QR codes & instant payment settlement.'
+      },
+      adv4: {
+        title: 'Kitchen Order Tickets',
+        desc: 'Auto-print kitchen tickets & customer invoices.'
       }
     },
     item2: {
@@ -150,13 +173,22 @@ export default {
     titleHighlight: 'Mobile Devices',
     subtitle: 'Explore POS sales, stock management, and financial flow visually right on your mobile phone.',
     tab0: {
-      title: 'POS Sales & Payment',
-      badge: 'Key Feature',
+      title: 'Retail POS Sales',
+      badge: 'Fast Retail',
       heading: 'High-speed Checkout in Seconds',
       desc: 'Minimalist POS cashier interface, auto VietQR generation saving 80% customer service time.',
       f1: 'Automatic VietQR code generation per order',
       f2: 'Instant sync with inventory & financial books',
       f3: 'Runs smoothly on all mobile devices'
+    },
+    tab0a: {
+      title: 'FnB POS Sales',
+      badge: 'Table Layout Control',
+      heading: 'Table-Based Ordering & Instant Checkout',
+      desc: 'Specialized for Cafes, Restaurants & Eateries. Manage real-time table maps, dine-in/take-away orders, and automatic QR payments.',
+      f1: 'Real-time tracking of vacant and occupied tables',
+      f2: 'Quick item ordering and add-ons per table',
+      f3: 'Auto VietQR code creation & table bill settlement'
     },
     tab1: {
       title: 'Inventory Control',

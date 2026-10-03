@@ -41,13 +41,14 @@ export default {
     titleSuffix: 'Của EZBIZ',
     subtitle: 'Bấm chọn các chức năng bên dưới để xem video demo ứng dụng thực tế.',
     tab1: 'Chức Năng Bán Hàng',
+    tab1a: 'Chức Năng Bán Hàng FnB',
     tab2: 'Thống Kê Doanh Thu',
     tab3: 'Quản Lý Kho Hàng',
     tab4: 'AI Hỗ Trợ Thuế',
     learnMore: 'Tìm hiểu chi tiết',
     item1: {
       badge: 'Phổ Biến',
-      title: 'Bán Hàng Tại Bằng Điện Thoại (POS)',
+      title: 'Bán Hàng Bằng Điện Thoại (POS Bán Lẻ)',
       subtitle: 'Tạo hóa đơn & quét mã thanh toán 3s',
       desc: 'Hỗ trợ tính tiền siêu tốc, in hóa đơn cầm tay và tạo mã QR động cho khách quét thanh toán tức thì.',
       adv1: {
@@ -65,6 +66,28 @@ export default {
       adv4: {
         title: 'Kết Nối Máy In',
         desc: 'Hỗ trợ tất cả máy in hóa đơn Bluetooth & Wi-Fi.'
+      }
+    },
+    item1a: {
+      badge: 'Chuyên Biệt FnB',
+      title: 'Bán Hàng FnB & Sơ Đồ Bàn Phục Vụ',
+      subtitle: 'Quản lý sơ đồ bàn, order món & thanh toán tại bàn',
+      desc: 'Tối ưu cho quán cafe, nhà hàng, quán ăn. Quản lý sơ đồ bàn phục vụ, order món nhanh và gạch nợ thanh toán QR tự động.',
+      adv1: {
+        title: 'Sơ Đồ Bàn Trực Quan',
+        desc: 'Theo dõi tình trạng bàn trống, bàn có khách & chuyển/gộp bàn dễ dàng.'
+      },
+      adv2: {
+        title: 'Order Món Siêu Tốc',
+        desc: 'Gọi món theo bàn, tùy chọn ăn tại chỗ hoặc mang về nhanh chóng.'
+      },
+      adv3: {
+        title: 'Thanh Toán Tại Bàn',
+        desc: 'Tự động tạo mã VietQR theo bàn & gạch nợ tức thì khi khách quét.'
+      },
+      adv4: {
+        title: 'In Hóa Đơn Phục Vụ',
+        desc: 'Tự động xuất phiếu order cho nhà bếp & hóa đơn tính tiền cho khách.'
       }
     },
     item2: {
@@ -150,13 +173,22 @@ export default {
     titleHighlight: 'Thiết Bị Di Động',
     subtitle: 'Khám phá sức mạnh quản lý bán hàng, theo dõi kho bãi và luồng tiền trực quan ngay trên chiếc điện thoại của bạn.',
     tab0: {
-      title: 'Bán Hàng POS & Thanh Toán',
-      badge: 'Tính Năng Nổi Bật',
+      title: 'Bán Hàng POS Bán Lẻ',
+      badge: 'Bán Lẻ Siêu Tốc',
       heading: 'Bán Hàng Tốc Độ Chỉ Trong Vài Thao Tác',
       desc: 'Giao diện thu ngân POS tối giản, tạo đơn bán hàng và hiển thị mã VietQR thanh toán tự động giúp tiết kiệm 80% thời gian phục vụ khách hàng.',
       f1: 'Tự động tạo mã VietQR theo từng đơn hàng',
       f2: 'Đồng bộ tức thì với kho bãi & sổ sách thu chi',
       f3: 'Hoạt động mượt mà trên mọi thiết bị di động'
+    },
+    tab0a: {
+      title: 'Bán Hàng POS FnB',
+      badge: 'Quản Lý Sơ Đồ Bàn',
+      heading: 'Order Theo Bàn & Thanh Toán Tại Bàn Tức Thì',
+      desc: 'Chuyên biệt cho mô hình Cafe, Quán ăn & Nhà hàng. Quản lý sơ đồ bàn phục vụ, order món ăn tại chỗ/mang về và quét QR thanh toán tự động.',
+      f1: 'Quản lý sơ đồ bàn trống, bàn có khách theo thời gian thực',
+      f2: 'Order món & gọi thêm món nhanh chóng theo từng bàn',
+      f3: 'Tự động tạo mã VietQR thanh toán & gạch nợ đơn bàn'
     },
     tab1: {
       title: 'Quản Lý Kho Hàng',

@@ -3,9 +3,10 @@ import { ref, onMounted, watch, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 import { useLazyVideoPreloader } from '@/composables/useLazyVideoPreloader'
-import { Smartphone, Package, BarChart3, Sparkles } from '@lucide/vue'
+import { Smartphone, Package, BarChart3, Sparkles, Utensils } from '@lucide/vue'
 
 import demo1 from '@/assets/img/demo/demo_1.mp4'
+import demo1a from '@/assets/img/demo/demo_1_a.mp4'
 import demo2 from '@/assets/img/demo/demo_2.mp4'
 import demo3 from '@/assets/img/demo/demo_3.mp4'
 import demo4 from '@/assets/img/demo/demo_4.mp4'
@@ -36,6 +37,20 @@ const tabs = computed(() => [
   },
   {
     id: 1,
+    title: t('demo.tab0a.title'),
+    icon: Utensils,
+    badge: t('demo.tab0a.badge'),
+    heading: t('demo.tab0a.heading'),
+    desc: t('demo.tab0a.desc'),
+    video: demo1a,
+    features: [
+      t('demo.tab0a.f1'),
+      t('demo.tab0a.f2'),
+      t('demo.tab0a.f3')
+    ]
+  },
+  {
+    id: 2,
     title: t('demo.tab1.title'),
     icon: Package,
     badge: t('demo.tab1.badge'),
@@ -49,7 +64,7 @@ const tabs = computed(() => [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: t('demo.tab2.title'),
     icon: BarChart3,
     badge: t('demo.tab2.badge'),
@@ -63,7 +78,7 @@ const tabs = computed(() => [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: t('demo.tab3.title'),
     icon: Sparkles,
     badge: t('demo.tab3.badge'),

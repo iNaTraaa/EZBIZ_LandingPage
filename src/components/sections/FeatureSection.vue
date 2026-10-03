@@ -21,10 +21,12 @@ import {
   Settings,
   ShoppingCart,
   CreditCard,
-  Boxes
+  Boxes,
+  Utensils
 } from '@lucide/vue'
 
 import demo1 from '@/assets/img/demo/demo_1.mp4'
+import demo1a from '@/assets/img/demo/demo_1_a.mp4'
 import demo2 from '@/assets/img/demo/demo_2.mp4'
 import demo3 from '@/assets/img/demo/demo_3.mp4'
 import demo4 from '@/assets/img/demo/demo_4.mp4'
@@ -64,6 +66,22 @@ const mainFeatures = computed(() => [
   },
   {
     id: 1,
+    tabName: t('features.tab1a'),
+    icon: Utensils,
+    title: t('features.item1a.title'),
+    subtitle: t('features.item1a.subtitle'),
+    desc: t('features.item1a.desc'),
+    badge: t('features.item1a.badge'),
+    videoUrl: demo1a,
+    advantages: [
+      { icon: Smartphone, title: t('features.item1a.adv1.title'), desc: t('features.item1a.adv1.desc') },
+      { icon: Zap, title: t('features.item1a.adv2.title'), desc: t('features.item1a.adv2.desc') },
+      { icon: QrCode, title: t('features.item1a.adv3.title'), desc: t('features.item1a.adv3.desc') },
+      { icon: Printer, title: t('features.item1a.adv4.title'), desc: t('features.item1a.adv4.desc') }
+    ]
+  },
+  {
+    id: 2,
     tabName: t('features.tab2'),
     icon: BarChart3,
     title: t('features.item2.title'),
@@ -79,7 +97,7 @@ const mainFeatures = computed(() => [
     ]
   },
   {
-    id: 2,
+    id: 3,
     tabName: t('features.tab3'),
     icon: Boxes,
     title: t('features.item3.title'),
@@ -95,7 +113,7 @@ const mainFeatures = computed(() => [
     ]
   },
   {
-    id: 3,
+    id: 4,
     tabName: t('features.tab4'),
     icon: Bot,
     title: t('features.item4.title'),
